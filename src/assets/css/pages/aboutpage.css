@@ -1,0 +1,17 @@
+
+.about-page__container {
+	position: relative;
+	/padding-top: 80px;
+}
+
+.about-page__container .image-banner__container {
+    height: calc(100vh - var(--navigation-height) - 80px);
+}
+
+.about-page__container .image-banner__container .image-wrapper {
+	height: 100%;
+}
+
+.about-page__container .image-banner__container img {
+    object-position: top;
+}

@@ -1,0 +1,193 @@
+
+.design-studio-page__container {
+	position: relative;
+	--grid-gap:  10px;
+	--page-top-padding: 80px;
+
+	/padding-top: var(--page-top-padding);
+}
+
+.design-studio-page__container .image-banner__container.intro-image {
+    height: calc(100vh - var(--navigation-height) - var(--page-top-padding));
+    overflow: hidden;
+}
+
+.design-studio-page__container .intro-image .image-wrapper {
+	height: 100%;
+}
+
+.design-studio-page__container .image-banner__container.intro-image .image-overlay {
+	background: radial-gradient(circle, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.6) 51%, rgba(0,0,0,0.9) 66%);
+	opacity: 0.5;
+}
+
+.design-studio-page__container .process-phases__container {
+	display: flex;
+    flex-wrap: wrap;
+	background-color: #07646e;
+
+	/flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+	.design-studio-page__container .process-phases__container {
+    	height: 30vh;
+		/flex-direction: row;
+	}
+}
+
+.design-studio-page__container .process-phases__container .process-phases__item {
+	max-height: 100%;
+}
+
+.design-studio-page__container .process-phases__container .image-wrapper {
+	height: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.design-studio-page__container .process-phases__container.col-4 .process-phases__item {
+	flex: 0 0 calc((100% / 2));
+}
+
+@media screen and (min-width: 768px) {
+	.design-studio-page__container .process-phases__container .image-wrapper {
+		padding: 40px;
+	}
+
+	.design-studio-page__container .process-phases__container.col-4 .process-phases__item {
+		flex: 0 0 calc((100% / 4));
+	}
+}
+
+.design-studio-page__container .process-phases__container img {
+	object-fit: contain;
+}
+
+
+
+.design-studio-page__container .design-and-architecture__tiles-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+.design-studio-page__container .design-and-architecture__tiles-group {
+	flex: 0 0 100%;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+	.design-studio-page__container .design-and-architecture__tiles-wrapper {
+    	max-height: 50vh;
+	}
+
+	.design-studio-page__container .design-and-architecture__tiles-group {
+    	grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.design-studio-page__container.design-and-architecture__tiles-group:first-child {
+	margin-left: 0;
+}
+
+.design-studio-page__container .design-and-architecture__tile {
+	flex: 0 0 50%;
+	align-self: stretch;
+}
+
+.design-studio-page__container .t-1 { order: 2 }
+.design-studio-page__container .t-2 { order: 1 }
+.design-studio-page__container .t-3 { order: 4 }
+.design-studio-page__container .t-4 { order: 3 }
+
+.design-studio-page__container .t-5 { order: 6 }
+.design-studio-page__container .t-6 { order: 5 }
+.design-studio-page__container .t-7 { order: 8 }
+.design-studio-page__container .t-8 { order: 7 }
+
+@media screen and (min-width: 768px) {
+	.design-studio-page__container .t-1 { order: 1 }
+	.design-studio-page__container .t-2 { order: 2 }
+	.design-studio-page__container .t-3 { order: 4 }
+	.design-studio-page__container .t-4 { order: 3 }
+
+	.design-studio-page__container .t-5 { order: 5 }
+	.design-studio-page__container .t-6 { order: 6 }
+	.design-studio-page__container .t-7 { order: 8 }
+	.design-studio-page__container .t-8 { order: 7 }
+}
+
+
+.design-studio-page__container .content-tile {
+    box-sizing: border-box;
+	padding: calc(var(--section-padding) / 3 * 2) var(--section-padding);
+	color: #FFF;
+}
+
+.design-studio-page__container .image-tile {
+	height: auto;
+	overflow: hidden;
+}
+
+.design-studio-page__container .design-and-architecture__tile img {
+	display: flex;
+	object-fit: cover;
+	width: 100%;
+	    height: 100%;
+	object-position: center;
+}
+
+.design-studio-page__container .design-and-architecture__cta {
+	text-decoration: none;
+    color: #FFF;
+    border: 1px solid #ffffff57;
+    border-radius: 100px;
+    padding: var(--btn-padding-md);
+    line-height: 1;
+    margin-top: 8px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.design-studio-page__container .design-and-architecture__tile .underline__container {
+	margin: 10px 0;
+    margin-top: 2px;
+    height: 3px;
+    opacity: 0.85;
+}
+
+.design-studio-page__container .image-carousel__container .image-carousel__images-container {
+	padding-top: 30px;;
+    box-sizing: border-box;
+}
+
+.design-studio-page__container .design-studio-page__wall-types-description .image-banner__content {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.design-studio-page__container .wall-types-arrow.icon_container {
+    position: absolute;
+    left: 50%;
+}
+
+.design-studio-page__container .wall-types-arrow.icon_container.icon-chevron-right {
+    transform: translate(-50%,-40px) scaleX(1.5) rotate(90deg);
+}
+
+.design-studio-page__container .wall-types-arrow.icon_container.icon-chevron-bold-bottom {
+    transform: translate(-50%,-50px) scaleX(1.5);
+}
+
+.design-studio-page__container .wall-types-arrow.icon_container .icon {
+	background-color: #FFF;
+    width: 30px;
+    height: 30px;
+}
+
+.design-studio-page__container .design-studio-page__wall-types-tooltip .text-block__inner-section {
+	margin-top: 0;
+}

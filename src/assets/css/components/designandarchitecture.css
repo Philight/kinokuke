@@ -1,0 +1,163 @@
+
+.design-and-architecture__container {
+	display: flex;
+    overflow: hidden;
+
+    flex-direction: column;
+}
+
+.design-and-architecture__container .fullheight-heading {
+	flex: 0 0 12%;
+}
+
+.design-and-architecture__container .design-and-architecture__tiles-wrapper {
+	flex: 1 1 90%;
+    display: flex;
+    overflow: hidden;
+}
+
+.design-and-architecture__container .design-and-architecture__tiles-group {
+	flex: 0 0 100%;
+	display: flex;
+    flex-wrap: wrap;
+    /margin-left: 60px;
+
+justify-content: stretch;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+}
+
+@media screen and (min-width: 768px) {
+	.design-and-architecture__container {
+    	max-height: 100vh; 
+	}
+
+	.design-and-architecture__container .design-and-architecture__tiles-group {
+    	grid-template-columns: repeat(2, 1fr);
+    	grid-template-rows: none;
+	    grid-auto-rows: 1fr;
+	}
+}
+
+.design-and-architecture__container .design-and-architecture__tiles-group:first-child {
+	margin-left: 0;
+}
+
+.design-and-architecture__container .design-and-architecture__tile {
+	flex: 0 0 50%;
+	align-self: stretch;
+}
+
+.design-and-architecture__container .t-1 { order: 2 }
+.design-and-architecture__container .t-2 { order: 1 }
+.design-and-architecture__container .t-3 { order: 4 }
+.design-and-architecture__container .t-4 { order: 3 }
+
+.design-and-architecture__container .t-5 { order: 6 }
+.design-and-architecture__container .t-6 { order: 5 }
+.design-and-architecture__container .t-7 { order: 8 }
+.design-and-architecture__container .t-8 { order: 7 }
+
+@media screen and (min-width: 768px) {
+	.design-and-architecture__container .t-1 { order: 1 }
+	.design-and-architecture__container .t-2 { order: 2 }
+	.design-and-architecture__container .t-3 { order: 4 }
+	.design-and-architecture__container .t-4 { order: 3 }
+
+	.design-and-architecture__container .t-5 { order: 5 }
+	.design-and-architecture__container .t-6 { order: 6 }
+	.design-and-architecture__container .t-7 { order: 8 }
+	.design-and-architecture__container .t-8 { order: 7 }
+}
+
+.design-and-architecture__container .content-tile {
+    box-sizing: border-box;
+	padding: calc(var(--section-padding) / 3 * 2) var(--section-padding);
+	color: #FFF;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 25vh;
+}
+
+.design-and-architecture__container .image-tile {
+	height: auto;
+	overflow: hidden;
+	max-height: 30vh;
+}
+
+@media screen and (min-width: 768px) {
+	.design-and-architecture__container .content-tile,
+	.design-and-architecture__container .image-tile {
+	    max-height: none;
+	}
+}
+
+.design-and-architecture__container img {
+	display: flex;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-position: center;
+}
+
+.design-and-architecture__container .show-desktop {
+	display: none;
+}
+
+.design-and-architecture__container .btn-wrapper {
+	display: flex;
+    justify-content: flex-end;
+}
+
+.design-and-architecture__container .underline__container {
+	margin: 10px 0;
+	margin-top: 2px;
+    height: 3px;
+    opacity: 0.85;
+}
+
+.design-and-architecture__container .section-subheading {
+	/font-size: 18px;
+    text-transform: uppercase;    
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.design-and-architecture__container .design-and-architecture__cta {
+	text-decoration: none;
+    color: #FFF;
+    border: 1px solid #ffffff57;
+    border-radius: 100px;
+	padding: 8px 20px;
+	padding: var(--btn-padding-md);
+    line-height: 1;
+    margin-top: 8px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+	.design-and-architecture__container .show-desktop {
+		display: block;
+	}
+	
+	.design-and-architecture__container .underline__container {
+		margin: 16px 0;
+	}
+
+	.design-and-architecture__container .section-subheading {
+		font-size: 20px;
+	}
+
+	.design-and-architecture__container .btn-wrapper {
+    	justify-content: flex-start;
+	}
+
+	.design-and-architecture__container .design-and-architecture__cta {
+		padding: 10px 24px;
+	    margin-top: 8px;
+	}
+}

@@ -1,0 +1,45 @@
+import React from "react";
+
+import ImageBanner from "./ImageBanner.js";
+
+import "./../assets/css/components/textblock.css";
+
+const FloorPlan = (props) => {
+	let { floorPlan, technicalCharacteristics, roomDetails } = props;
+
+	const replaceNewline = (textWithoutBreaks) => {
+		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n');
+
+		//textWithBreaks = textWithoutBreaks.split('<br/>').join('');
+console.log(textWithBreaks);
+		return textWithBreaks;
+	}
+
+	const images = [
+
+	]
+
+	return (
+		<div className="floor-plan__container section">
+			<ImageBanner 
+				images={[{ src: floorPlan }]}
+			/>
+			<div className="floor-plan__technical-details">
+				<h3>Celkový rozmer</h3>
+				<div className="floor-plan__data">
+					<span>Surface (Gross)</span><span>{technicalCharacteristics.surfaceGross}</span>
+					<span>Surface (Net)</span><span>{technicalCharacteristics.surfaceNet}</span>
+				</div>
+				<h3>Detaily jednotlivých izieb</h3>
+				<div className="floor-plan__data">
+				{ Object.entries(roomDetails).map( ([key, item], index) => (
+					<><span>{index+1+'. '+ key}</span><span>{item} m²</span></>
+				))}
+				</div>
+			</div>
+
+		</div>
+	)
+}
+
+export default FloorPlan;

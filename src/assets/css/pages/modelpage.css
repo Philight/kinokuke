@@ -1,0 +1,209 @@
+
+.model-page__container {
+	position: relative;
+    --page-top-padding: 80px;
+    --details-grid-gap: 20px;
+    /padding-top: var(--navigation-height);
+}
+
+@media screen and (min-width: 768px) {
+	.model-page__container {
+    	--details-grid-gap: 14px;
+	}
+}
+
+.model-page__container .image-banner__container {
+    height: calc(100vh - var(--navigation-height) - var(--page-top-padding));
+    overflow: hidden;
+}
+
+.model-page__container .model-page__details-container {
+	display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+	.model-page__container .model-page__details-container {
+	    display: grid;
+	    grid-template-columns: repeat(3, 1fr);
+	    grid-template-rows: repeat(2, 1fr);
+	}
+}
+
+.model-page__container .text-block__container {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.model-page__container .text-block__container {
+    	grid-area: 1 / 1 / 1 / 3;
+	    margin-right: var(--details-grid-gap);
+	}
+}
+
+.model-page__container .text-block__inner-section {
+	flex-direction: column;
+	margin: 0;
+}
+
+.model-page__container .text-block__inner-section .section-subheading {
+	padding: var(--section-padding);
+    font-weight: 400;
+    font-family: var(--font-heading-2);
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #484848;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.model-page__container .text-block__inner-section .model-page__details-list {
+  columns: 1;
+  -webkit-columns: 1;
+  -moz-columns: 1;
+  margin: 0;
+  padding: 30px 40px;
+  padding-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.model-page__container .text-block__inner-section .model-page__details-list {
+	  columns: 2;
+	  -webkit-columns: 2;
+	  -moz-columns: 2;
+	}
+}
+
+.model-page__container .text-block__inner-section .model-page__details-list li {
+	margin-bottom: 8px;
+	font-family: var(--font-heading-2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #707070;
+}
+
+.model-page__container .gallery-carousel__container {
+    margin-top: var(--details-grid-gap);
+}
+
+.model-page__container .model-page__contacts-container {
+	padding: var(--section-padding);
+    background-color: var(--main-color);
+    color: #fff;
+    margin-top: var(--details-grid-gap);
+}
+
+@media screen and (min-width: 768px) {
+	.model-page__container .gallery-carousel__container {
+	    grid-area: 2 / 1 / 2 / 3;
+    	margin-top: 0;
+	    margin-right: var(--details-grid-gap);
+	}
+
+	.model-page__container .model-page__contacts-container {
+		padding: 50px 70px;
+		grid-area: 1 / 3 / 3 / 3;
+    	margin-top: 0;
+	}
+}
+
+.model-page__container .model-page__contacts-profiles {
+	display: inline-flex;
+	width: 100%;
+    justify-content: center;
+}
+
+.model-page__container .model-page__contacts-profiles .image-wrapper img {
+	border: 3px solid var(--hermes-green-1);
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: 0 6px;
+}
+
+.model-page__container .model-page__contacts-text h3 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+
+	font-size: 16px;
+}
+
+.model-page__container .model-page__contacts-text p {
+	font-size: 14px;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.model-page__container .floor-plan__container {
+	display: flex;
+	flex-direction: column;
+    margin: 60px 0;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.model-page__container .floor-plan__container {
+	    display: grid;
+	    grid-auto-columns: 1fr 1fr 1fr;
+	}
+
+	.model-page__container .floor-plan__container .image-banner__container{
+	    grid-column: 1 / span 2;
+	}
+}
+
+.model-page__container .floor-plan__container .image-banner__container {
+	overflow: visible;
+	position: relative;
+    padding-top: 100%;
+    height: auto;
+}
+
+.model-page__container .floor-plan__container .image-wrapper {
+
+}
+
+.model-page__container .floor-plan__container img {
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.model-page__container .floor-plan__container .floor-plan__technical-details {
+	grid-column: 3;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.model-page__container .floor-plan__container .floor-plan__technical-details h3 {
+    font-family: var(--font-heading-1);
+	background-color: var(--btn-color-1);
+	color: #fff;
+	padding: 6px 14px;
+	font-weight: 500;
+	font-size: 18px;
+	margin: 0;
+	margin-top: 10px;
+}
+
+.model-page__container .floor-plan__container .floor-plan__technical-details .floor-plan__data {
+	padding: 18px;
+}
+
+.model-page__container .floor-plan__container .floor-plan__technical-details span {
+	    font-family: var(--font-heading-2);
+	    letter-spacing: 1px;
+	display: inline-block;
+	width: calc(60% - 6px);
+	margin-bottom: 6px;
+	margin-right: 6px;
+}
+
+.model-page__container .floor-plan__container .floor-plan__technical-details span:nth-child(2n+2) {
+	width: calc(40% - 6px);
+}

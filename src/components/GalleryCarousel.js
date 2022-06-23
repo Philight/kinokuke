@@ -1,0 +1,68 @@
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+import SectionHeading from "./SectionHeading.js";
+import Icon from "./Icon.js";
+//import HeadingUnderline from "./HeadingUnderline.js";
+//import SectionSubheading from "./SectionSubheading.js";
+
+import "./../assets/css/components/gallerycarousel.css";
+
+const GalleryCarousel = (props) => {
+	let { gallery, columns, rows } = props;
+
+	const [activeIndex, setActiveIndex] = useState(0);
+	const [isMobile, setIsMobile] = useState(false);
+
+	// override columns
+	isMobile ? columns=1 : '';
+
+	useEffect(() => {
+		if (window.innerWidth < 768) { setIsMobile(true); }
+	}, [])
+
+	const updateIndex = (newIndex) => {
+		console.log('click');
+//		if (newIndex > React.Children.count(posts)) {
+console.log(newIndex);
+console.log(gallery.length);
+
+		if (newIndex > (gallery.length)/columns/rows-1) {
+			newIndex = Math.floor((gallery.length)/columns/rows-1);
+		
+		} else if (newIndex < 0) {
+			newIndex = 0
+		}
+		setActiveIndex(newIndex);
+	}
+
+	return (
+		<div className={`gallery-carousel__container row-${rows} col-${columns}`}>
+			<Icon 
+				icon="chevron-right" 
+				className={`nav left ${activeIndex==0 ? 'disabled' :'' }`}
+				onClick={() => {updateIndex(activeIndex - 1)}}
+			/>
+			<div className="gallery-carousel__slider-wrapper">
+				<div className="gallery-carousel__slider" style={{ transform: `translateX(-${activeIndex * 100}%)`}}>
+					{ gallery.map((item, index) => (
+						<div className="gallery-carousel__slide">
+							<div className="image-wrapper">
+								<img src={item.imageSrc} />
+							</div>
+							<h3 className="gallery-carousel__slide-title">{item.title}</h3>
+						</div>
+					))}
+				</div>
+			</div>
+			<Icon 
+				icon="chevron-right" 
+				className={`nav right ${activeIndex==Math.floor((gallery.length)/columns/rows-1) ? 'disabled' :'' }`}
+				onClick={() => { updateIndex(activeIndex + 1) }}
+			/>
+		</div>
+
+	)
+}
+
+export default GalleryCarousel;

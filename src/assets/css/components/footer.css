@@ -1,0 +1,111 @@
+
+.footer__container {
+	background-color: #494949;
+	color: #fff;
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer__container .footer__navigation {
+	display: flex;
+    justify-content: space-between;
+        margin-bottom: 30px;
+}
+
+.footer__container .footer__navigation-container {
+	display: inline-flex;
+	list-style: none;
+	padding: 0;
+	margin:  0;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+	.footer__container .footer__navigation-container {
+		flex-direction: row;
+	}
+}
+
+.footer__container .footer__navigation-item {
+	margin-right: 30px;
+	list-style: none;
+	text-transform: lowercase;
+}
+
+.footer__container .footer__navigation-item a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer__container .footer__navigation-item:last-child {
+	margin-right: 0;
+}
+
+.footer__container .footer__logo-slogan {
+	display: inline-flex;
+	align-items: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.footer__container .footer__logo-slogan-text span {
+    color: var(--btn-color-1);
+}
+
+.footer__container .kinokuke-logo__container {
+	margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	.footer__container .footer__logo-slogan {
+    	font-size: 14px;
+	}
+
+	.footer__container .kinokuke-logo__container {
+		margin-right: 14px;
+	}
+}
+.footer__container .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__container .footer__social {
+	display: inline-flex;
+	align-items: center;
+}
+
+.footer__container .icon_container {
+	display: inline-flex;
+	margin-right: 14px;
+}
+
+.footer__container .icon_container:last-child {
+	margin-right: 0px;
+}
+
+.footer__container .footer__social .icon {
+	background-color: #FFF;
+	width: 24px; height: 24px;
+}
+
+.footer__container .icon_container.youtube {
+    margin-top: 2px;
+}
+
+.footer__container .icon_container.youtube .icon {
+	width: 27px;
+    height: 27px;
+}
+
+.footer__container .icon_container.linkedin {
+    margin-top: -1px;
+}
+
+.footer__container .footer-copyright {
+    font-family: 'Cervo Thin';
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    color: #d5d5d5;
+}

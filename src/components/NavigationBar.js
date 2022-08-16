@@ -19,6 +19,7 @@ const NavigationBar = (props) => {
 
 	const navRef = useRef(null);
 
+    const [hideNavigation, setHideNavigation] = useState(false);
     const [menuShown, setMenuShown] = useState(false);
     const [submenuShown, setSubmenuShown] = useState(false);
 
@@ -49,6 +50,15 @@ console.log(e.target);
 		//document
 
         return () => window.removeEventListener('click', closeNav);
+	}, [])
+
+	useEffect(() => {
+		window.addEventListener('hidenavigation', (e) => {
+			console.log(e.detail);
+			setHideNavigation(e.detail);
+		});
+
+		return () => window.removeEventListener('hidenavigation');
 	}, [])
 
     useEffect(() => {
@@ -99,15 +109,19 @@ console.log(e.target);
    	);
 
    	const LinkWrap = ({ link, className, children }) => (
-   		!isMobile ? 
+//   		!isMobile ? 
 			<Link to={link} className={className}>
 				{children}
 			</Link>
-		: children
+//		: children
    	);
 
 	return (
-		<div className={`navigation-bar__container ${menuShown ? 'menu-shown' :''} ${submenuShown ? 'submenu-shown' :''}`}>
+		<div className={`
+			navigation-bar__container ${menuShown ? 'menu-shown' :''} 
+			${submenuShown ? 'submenu-shown' :''}
+			${hideNavigation ? 'hidden' :''}
+		`}>
 			<div className={`navigation-bar__wrapper ${scrollDown ? 'scrolling' : ''}`} ref={navRef}>
 				<Link to="/" className="logo-container navigation-bar__link">
 					<KinoKukeLogo />
@@ -118,6 +132,7 @@ console.log(e.target);
 					<span className="navigation-bar__navigation-item-label">NÁJDI SVOJ DOMOV</span>
 					</Link>
 				</li>	
+				
 				<div style={{display: 'flex', alignItems: 'center'}}>
 					<Icon 
 						icon="menu-medium"
@@ -130,7 +145,7 @@ console.log(e.target);
 						onClick={handleBurgerShow}
 					/>
 				</div>
-{/*{scrollOffset}{prevScrollOffset}*/}
+
 				<nav className="navigation-bar__navigation">
 					<ul className="navigation-bar__navigation-container left" data-level="1">
 						<li className={`navigation-bar__navigation-item has-child ${submenuShown ? 'selected' :''}`} 
@@ -138,13 +153,16 @@ console.log(e.target);
 						>
 							<LinkWrap link="/design/features" className={`navigation-bar__link`}>
 								<span className="navigation-bar__navigation-item-label" 
-									onMouseEnter={() => setSubmenuShown(true)} 
-									onClick={() => setSubmenuShown(true)}
+									//onMouseEnter={() => setSubmenuShown(true)} 
+									//onClick={() => setSubmenuShown(true)}
 								>
-									dizajn<Icon icon="chevron-bold-bottom"/>
+									dizajn
+{/*
+									<Icon icon="chevron-bold-bottom"/>
+*/}
 								</span>
 							</LinkWrap>
-							{//submenuShown && (
+							{/*
 								<ul className={`navigation-bar__navigation-container section`} data-level="2"
 									onMouseLeave={() => setSubmenuShown(false)}
 								>
@@ -163,7 +181,7 @@ console.log(e.target);
 									</Link>
 									</li>									
 								</ul>
-							}
+							*/}
 						</li>
 						<li className="navigation-bar__navigation-item" data-level="1">
 							<Link to="/process" className="navigation-bar__link">
@@ -177,7 +195,7 @@ console.log(e.target);
 */}
 						<li className="navigation-bar__navigation-item findyourhome show-desktop" data-level="1">
 							<Link to="/findyourhome" className="navigation-bar__link">
-							<span className="navigation-bar__navigation-item-label">NAJDI SVOJ DOMOV</span>
+							<span className="navigation-bar__navigation-item-label">NÁJDI SVOJ DOMOV</span>
 							</Link>
 						</li>						
 					</ul>
@@ -188,7 +206,9 @@ console.log(e.target);
 							</Link>
 						</li>
 						<li className="navigation-bar__navigation-item" data-level="1">
+							<Link to="/gallery" className="navigation-bar__link">
 							<span className="navigation-bar__navigation-item-label">galéria</span>
+							</Link>
 						</li>
 						<li className="navigation-bar__navigation-item" data-level="1">
 							<Link to="/contact" className="navigation-bar__link">

@@ -7,6 +7,22 @@ import DescriptionWithImage from "./DescriptionWithImage.js";
 const ModelsHouses = (props) => {
 	let { className, houses, columns } = props;
 
+	const getRooms = (number) => {
+console.log('getRooms');		
+console.log(number);		
+	    switch(number) {
+		    case '1':
+		    	return 'izba';
+		    case '2':
+		    case '3':
+		    case '4':
+		    	return 'izby';
+
+		    default:
+		    	return 'izieb';
+	    }
+	}
+
 	return (
 		<div className={`models-houses__container section col-${columns}`}>
 			{ houses.map((house, index) => (
@@ -18,17 +34,19 @@ const ModelsHouses = (props) => {
 								<div className="models-houses__item-description">
 									<div className="models-houses__item-heading">
 										<span className={`${house.status.toLowerCase().includes('preorder') ? 'preorder' :''}`}>{house.status}</span>
-										<span className={`models-houses__item-rooms ${house.rooms>4 ? 'large' :''}`}>{house.rooms} rooms</span>
+										<span className={`models-houses__item-rooms ${house.rooms>4 ? 'large' :''}`}>{house.rooms} {getRooms(house.rooms)}</span>
 									</div>
 									<h3 className="models-houses__item-title">{house.title}</h3>
 									<h4 className="models-houses__item-size">{house.size}</h4>
-									<h4 className="models-houses__item-price">{house.price} € </h4>
+									<h4 className="models-houses__item-price">{house.price}</h4>
 								</div>
+{/*								
 								<ul className="models-houses__item-characteristics">
 									{ house.characteristics.map((characteristic, index) => (
 										<li>{characteristic}</li>
 									)) }
 								</ul>
+*/}
 							</div>
 						</div>
 					</Link>

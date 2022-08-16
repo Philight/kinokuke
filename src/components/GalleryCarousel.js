@@ -18,7 +18,7 @@ const GalleryCarousel = (props) => {
 	isMobile ? columns=1 : '';
 
 	useEffect(() => {
-		if (window.innerWidth < 768) { setIsMobile(true); }
+		if (window.innerWidth < 1024) { setIsMobile(true); }
 	}, [])
 
 	const updateIndex = (newIndex) => {
@@ -28,7 +28,7 @@ console.log(newIndex);
 console.log(gallery.length);
 
 		if (newIndex > (gallery.length)/columns/rows-1) {
-			newIndex = Math.floor((gallery.length)/columns/rows-1);
+			newIndex = Math.ceil((gallery.length)/columns/rows-1);
 		
 		} else if (newIndex < 0) {
 			newIndex = 0
@@ -39,8 +39,8 @@ console.log(gallery.length);
 	return (
 		<div className={`gallery-carousel__container row-${rows} col-${columns}`}>
 			<Icon 
-				icon="chevron-right" 
-				className={`nav left ${activeIndex==0 ? 'disabled' :'' }`}
+				icon="chevron-left" 
+				className={`nav-arrow left ${activeIndex==0 ? 'disabled' :'' }`}
 				onClick={() => {updateIndex(activeIndex - 1)}}
 			/>
 			<div className="gallery-carousel__slider-wrapper">
@@ -57,7 +57,7 @@ console.log(gallery.length);
 			</div>
 			<Icon 
 				icon="chevron-right" 
-				className={`nav right ${activeIndex==Math.floor((gallery.length)/columns/rows-1) ? 'disabled' :'' }`}
+				className={`nav-arrow right ${activeIndex==Math.ceil((gallery.length)/columns/rows-1) ? 'disabled' :'' }`}
 				onClick={() => { updateIndex(activeIndex + 1) }}
 			/>
 		</div>

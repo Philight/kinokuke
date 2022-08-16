@@ -4,8 +4,15 @@ import React from "react";
 
 const SectionSubheading = (props) => {
 	let { subheading, className } = props;
+
+	const replaceNewline = (textWithoutBreaks) => {
+		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n').split('<br />').join('\n');
+
+		return textWithBreaks;
+	}
+
 	return (
-		<h2 className={`section-subheading ${className}`}>{subheading}</h2>
+		<h2 className={`section-subheading newline-text ${className}`}>{replaceNewline(subheading)}</h2>
 	)
 }
 

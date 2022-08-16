@@ -6,7 +6,7 @@ import Icon from "../components/Icon.js";
 
 const ProcessSteps = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
-	let { className, steps } = props;
+	let { className, steps, delay } = props;
 	
 	//const [contentShown, setContentShown] = useState(false);
 
@@ -14,7 +14,12 @@ const ProcessSteps = (props) => {
 		<div className="process-steps__container">
 			<div className="process-steps__steps-container">
 				{ steps.map((step, index) => (
-					<ProcessStep step={step} />
+					<ProcessStep 
+						step={step} 
+						index={index}
+						enableAutoHide
+						delay="5000" 
+					/>
 				))}
 			</div>
 		</div>

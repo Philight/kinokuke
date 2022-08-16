@@ -132,7 +132,7 @@ const CompanyValues = ((props) => {
 			iconRef.current.style.top = 25+25*ratio+'%'; // 50% - 25%
 			iconRef.current.style.transform = "translate(-50%, -50%) scale("+(0.5+0.5*ratio)+")" // scale 1 - 0.5
 			//overlayRef.current.style.opacity = 0.15+0.75*ratio+''; // 0.9 - 0.15
-			overlayRef.current.style.opacity = 0.2+0.7*ratio+''; // 0.9 - 0.2
+			overlayRef.current.style.opacity = 0.35+0.55*ratio+''; // 0.9 - 0.35
 
 
 		} else if ((covering || showContent) && posTop > 0 && posTop < (windowInnerHeight/3)) {
@@ -167,10 +167,10 @@ const CompanyValues = ((props) => {
 			iconRef.current.style.top = 50-25*ratio+'%'; // 50% - 25%
 			iconRef.current.style.transform = "translate(-50%, -50%) scale("+(1-0.5*ratio)+")" // scale 1 - 0.5
 			//overlayRef.current.style.opacity = 0.9-0.75*ratio+''; // 0.9 - 0.15
-			overlayRef.current.style.opacity = 0.9-0.7*ratio+''; // 0.9 - 0.2
+			overlayRef.current.style.opacity = 0.9-0.55*ratio+''; // 0.9 - 0.35
 
 		} else if (posTop <= (-windowInnerHeight/3)
-			&& posTop > (-windowInnerHeight*2/3)) {
+				&& posTop > (-windowInnerHeight*2/3)) {
 			setShowContent(true);
 			//containerRef.current.classList.add("show-content");
 
@@ -230,7 +230,7 @@ const CompanyValues = ((props) => {
     }, [scrollDown]);
 
 	return (
-		<div className={`company-values__container ${moveContainer ? 'move-container' :''}`} ref={containerRef} data-id={id}>
+		<div className={`company-values__container nav-visible ${moveContainer ? 'move-container' :''}`} ref={containerRef} data-id={id}>
 			{/*<div style={{color: '#fff', position: 'fixed', zIndex: '100', top: 0, background: '#000'}}>
 				{scrollOffset}, Height|{windowInnerHeight}, {scrollDown ? 'DOWN' : 'UP'}
 			</div>*/}

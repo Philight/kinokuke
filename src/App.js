@@ -4,6 +4,8 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 //import { HashRouter, Route, Routes } from 'react-router-dom';
 
+import ScrollToTop from "./components/ScrollToTop";
+
 import AboutPage from "./pages/AboutPage.js";
 import ContactPage from "./pages/ContactPage.js";
 import DesignPage from "./pages/DesignPage.js";
@@ -12,6 +14,8 @@ import ProcessPage from "./pages/ProcessPage.js";
 import ModelsPage from "./pages/ModelsPage.js";
 import LandingPage from "./pages/LandingPage.js";
 import ModelPage from "./pages/ModelPage.js";
+import GalleryPage from "./pages/GalleryPage.js";
+import GDPRPage from "./pages/GDPRPage.js";
 
 import V2LandingPage from "./v2/pages/LandingPage.js";
 import V2ProcessPage from "./v2/pages/ProcessPage.js";
@@ -26,31 +30,37 @@ import "./v2/assets/css/V2app.css";
 const App = () => {
       return (
          <BrowserRouter>
-            <Routes>
-               {/*<RouteWrapper exact path="/" component={LandingPage} layout={LandingLayout} />*/}
-               <Route exact path="/" element={<LandingLayout><LandingPage /></LandingLayout>} />
-               <Route path="/about" element={<LandingLayout><AboutPage /></LandingLayout>} />
-               <Route path="/contact" element={<LandingLayout><ContactPage /></LandingLayout>} />
-               <Route path="/design/features" element={<LandingLayout><DesignPage /></LandingLayout>} />
-               <Route path="/design/models" element={<LandingLayout><ModelsPage /></LandingLayout>} />
-               <Route path="/design/studio" element={<LandingLayout><DesignStudioPage /></LandingLayout>} />
-               <Route path="/process" element={<LandingLayout><ProcessPage /></LandingLayout>} />
-               <Route path="/findyourhome" element={<LandingLayout><ModelsPage /></LandingLayout>} />
-               <Route path="/model" element={<LandingLayout><ModelPage /></LandingLayout>} />
-               <Route path="/model/:id" element={<LandingLayout><ModelPage /></LandingLayout>} />
-
-               <Route path="/v2" element={<V2LandingLayout><V2LandingPage /></V2LandingLayout>} />
-               <Route path="/v2/process" element={<V2LandingLayout><V2ProcessPage /></V2LandingLayout>} />
-               <Route path="/v2/models" element={<V2LandingLayout><V2ModelsPage /></V2LandingLayout>} />
-
+            <ScrollToTop>
+               <Routes>
+                  {/*<RouteWrapper exact path="/" component={LandingPage} layout={LandingLayout} />*/}
+                  <Route exact path="/" element={<LandingLayout><LandingPage /></LandingLayout>} />
+                  <Route path="/about" element={<LandingLayout><AboutPage /></LandingLayout>} />
+                  <Route path="/contact" element={<LandingLayout><ContactPage /></LandingLayout>} />
+                  <Route path="/design/features" element={<LandingLayout><DesignPage /></LandingLayout>} />
+                  <Route path="/design/models" element={<LandingLayout><ModelsPage /></LandingLayout>} />
    {/*
-               <Route exact path="/" render={(props) =>
-                  <LandingLayout {...props}>
-                     <LandingPage {...props} />
-                  </LandingLayout>
-               } />
+                  <Route path="/design/studio" element={<LandingLayout><DesignStudioPage /></LandingLayout>} />
    */}
-            </Routes>
+                  <Route path="/process" element={<LandingLayout><ProcessPage /></LandingLayout>} />
+                  <Route path="/findyourhome" element={<LandingLayout><ModelsPage /></LandingLayout>} />
+                  <Route path="/model" element={<LandingLayout><ModelPage /></LandingLayout>} />
+                  <Route path="/model/:id" element={<LandingLayout><ModelPage /></LandingLayout>} />
+                  <Route path="/gallery" element={<LandingLayout><GalleryPage /></LandingLayout>} />
+                  <Route path="/gdpr" element={<LandingLayout><GDPRPage /></LandingLayout>} />
+
+                  <Route path="/v2" element={<V2LandingLayout><V2LandingPage /></V2LandingLayout>} />
+                  <Route path="/v2/process" element={<V2LandingLayout><V2ProcessPage /></V2LandingLayout>} />
+                  <Route path="/v2/models" element={<V2LandingLayout><V2ModelsPage /></V2LandingLayout>} />
+
+      {/*
+                  <Route exact path="/" render={(props) =>
+                     <LandingLayout {...props}>
+                        <LandingPage {...props} />
+                     </LandingLayout>
+                  } />
+      */}
+               </Routes>
+            </ScrollToTop>
         </BrowserRouter>
       )
    

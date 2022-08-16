@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import HeadingBlock from "../components/HeadingBlock.js";
@@ -7,6 +7,8 @@ import ImageBanner from "../components/ImageBanner.js";
 import FullwidthHeading from "../components/FullwidthHeading.js";
 import GalleryCarousel from "../components/GalleryCarousel.js";
 import FloorPlan from "../components/FloorPlan.js";
+import ModelDescription from "../components/ModelDescription.js";
+import ContactUsModal from "../components/ContactUsModal.js";
 
 import "./../assets/css/pages/modelpage.css";
 
@@ -49,258 +51,11 @@ const ModelPage = (props) => {
 	
 	const { id } = useParams();
 	const imagePath = "../assets/images/housemodels/" + id.toLowerCase() + ".png";
-	
+
 	const profileImages = [
 		'https://www.nwhm.com/sites/default/files/2019-01/Deborah_4.jpg',
 		'https://www.nwhm.com/sites/all/themes/nwhm/images/branding/Justyna_Headshot_Web_Final_4.jpg'
 	];
-/*
-	const houses = [
-		{
-			title: 'Verona',
-			rooms: '4',
-			size: '76.69 m²',
-			price: '20.400',
-			status: 'NOW SELLING',
-			imageSrc: verona,
-			gallery: [
-				{
-					title: 'Interier',
-					imageSrc: veronaInterior
-				},
-				{
-					title: 'Vyberte si svoj dizajn',
-					imageSrc: veronaInterior
-				},
-				{
-					title: 'Interaktivna prehliadka',
-					imageSrc: veronaInterior
-				},
-				{
-					title: 'Komunitna galeria',
-					imageSrc: veronaInterior
-				}		
-			],
-			plan: veronaPlan,
-			characteristics: [ 
-				'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-				'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-				'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-			],
-			technicalCharacteristics: {
-				surfaceGross: '164 m²',
-				surfaceNet: '148.9 m²'
-			},
-			roomDetails: {
-				entrance: '3.22',
-				corridor: '15.02',
-				closet: '6.15',
-				livingAndKitchen: '43.23',
-				bedroom1: '13.65',
-				terase: '9.28',
-				bedroom2: '26.40',
-				bedroom3: '16.02',
-				bathroom1: '12.25',
-				bathroom2: '3.68'
-			}
-		},
-		{
-			title: 'Venezia',
-			rooms: '5',
-			size: '163.78 m²',
-			price: '20.400',
-			status: 'NOW SELLING',
-			imageSrc: venezia,
-			gallery: [
-				{
-					title: 'Interier',
-					imageSrc: veneziaInterior
-				},
-				{
-					title: 'Vyberte si svoj dizajn',
-					imageSrc: veneziaInterior
-				},
-				{
-					title: 'Interaktivna prehliadka',
-					imageSrc: veneziaInterior
-				},
-				{
-					title: 'Komunitna galeria',
-					imageSrc: veneziaInterior
-				}				
-			],
-			plan: veneziaPlan,
-			characteristics: [ 
-				'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-				'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-				'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-			],
-			technicalCharacteristics: {
-				surfaceGross: '164 m²',
-				surfaceNet: '148.9 m²'
-			},
-			roomDetails: {
-				entrance: '3.22',
-				corridor: '15.02',
-				closet: '6.15',
-				livingAndKitchen: '43.23',
-				bedroom1: '13.65',
-				terase: '9.28',
-				bedroom2: '26.40',
-				bedroom3: '16.02',
-				bathroom1: '12.25',
-				bathroom2: '3.68'
-			}
-		},
-		{
-			title: 'Monaco',
-			rooms: '4',
-			size: '89.12 m²',
-			price: '31.200',
-			status: 'NOW SELLING',
-			imageSrc: monaco,
-			gallery: [
-				{
-					title: 'Interier',
-					imageSrc: monacoInterior
-				},
-				{
-					title: 'Vyberte si svoj dizajn',
-					imageSrc: monacoInterior
-				},
-				{
-					title: 'Interaktivna prehliadka',
-					imageSrc: monacoInterior
-				},
-				{
-					title: 'Komunitna galeria',
-					imageSrc: monacoInterior
-				}				
-			],
-			plan: monacoPlan,
-			characteristics: [ 
-				'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-				'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-				'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-			],
-			technicalCharacteristics: {
-				surfaceGross: '164 m²',
-				surfaceNet: '148.9 m²'
-			},
-			roomDetails: {
-				entrance: '3.22',
-				corridor: '15.02',
-				closet: '6.15',
-				livingAndKitchen: '43.23',
-				bedroom1: '13.65',
-				terase: '9.28',
-				bedroom2: '26.40',
-				bedroom3: '16.02',
-				bathroom1: '12.25',
-				bathroom2: '3.68'
-			}
-		},
-		{
-			title: 'Miami',
-			rooms: '7',
-			size: '121.30 m²',
-			price: '31.200',
-			status: 'PREORDER IN 2024',
-			imageSrc: miami,
-			gallery: [
-				{
-					title: 'Interier',
-					imageSrc: miamiBack
-				},
-				{
-					title: 'Vyberte si svoj dizajn',
-					imageSrc: miamiBack
-				},
-				{
-					title: 'Interaktivna prehliadka',
-					imageSrc: miamiBack
-				},
-				{
-					title: 'Komunitna galeria',
-					imageSrc: miamiBack
-				}		
-			],
-			plan: miamiPlan,
-			characteristics: [ 
-				'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-				'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-				'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-			],
-			technicalCharacteristics: {
-				surfaceGross: '164 m²',
-				surfaceNet: '148.9 m²'
-			},
-			roomDetails: {
-				entrance: '3.22',
-				corridor: '15.02',
-				closet: '6.15',
-				livingAndKitchen: '43.23',
-				bedroom1: '13.65',
-				terase: '9.28',
-				bedroom2: '26.40',
-				bedroom3: '16.02',
-				bathroom1: '12.25',
-				bathroom2: '3.68'
-			}
-		},
-		{
-			title: 'Milano',
-			rooms: '7',
-			size: '121.30 m²',
-			price: '31.200',
-			status: 'PREORDER IN 2024',
-			imageSrc: milano,
-			gallery: [
-				{
-					title: 'Interier',
-					imageSrc: milano
-				},
-				{
-					title: 'Vyberte si svoj dizajn',
-					imageSrc: milano
-				},
-				{
-					title: 'Interaktivna prehliadka',
-					imageSrc: milano
-				},
-				{
-					title: 'Komunitna galeria',
-					imageSrc: milano
-				}	
-			],
-			plan: milanoPlan,
-			characteristics: [ 
-				'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-				'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-				'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-			],
-			technicalCharacteristics: {
-				surfaceGross: '164 m²',
-				surfaceNet: '148.9 m²'
-			},
-			roomDetails: {
-				entrance: '3.22',
-				corridor: '15.02',
-				closet: '6.15',
-				livingAndKitchen: '43.23',
-				bedroom1: '13.65',
-				terase: '9.28',
-				bedroom2: '26.40',
-				bedroom3: '16.02',
-				bathroom1: '12.25',
-				bathroom2: '3.68'
-			}
-		}		
-	]
-*/
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
 
 	let HTMLString = '<ul class="model-page__details-list">';
 	let gallery = [];
@@ -308,7 +63,23 @@ const ModelPage = (props) => {
 	let roomDetails = [];
 	let floorPlan = [];
 
+	let thisHouse = {};
 
+	useEffect(() => {
+//		window.scrollTo(0, 0);
+	}, []);
+
+	for (let house of houses) {
+console.log('house');			
+console.log(house);			
+		if (house.title == id) {
+			thisHouse = house;
+			//setHouseModel(house);
+console.log(house.gallery);			
+
+		}
+	}
+/*
 	for (let house of houses) {
 //console.log('house');			
 //console.log(house);			
@@ -329,27 +100,38 @@ console.log(HTMLString);
 			floorPlan = house.plan;
 		}
 	}
+*/
+	
+		
 
 	return (
 		<div className="model-page__container">
 			<HeadingBlock heading1="KINO KUKE DOMOV" heading2={id} />
 			<ImageBanner 
-				images={[{ src: imagePath }]}
+				images={[{ src: thisHouse.imageSrc }]}
 			/>
+			<ContactUsModal houseModel={thisHouse.title}/>
 			
 			{/* Overview */}
 			<div className="model-page__details-container section">
+{/*
 				<TextBlock 
 					heading={id}
 					text={HTMLString}
 					isHTML
 				/>
+*/}
+				<ModelDescription 
+					model={thisHouse}
+				/>
+
 				{/* Gallery */}
 				<GalleryCarousel 
-					gallery={gallery}
-					columns="3"
+					gallery={thisHouse.gallery}
+					columns="2"
 					rows="1"
 				/>
+{/*
 				<div className="model-page__contacts-container">
 					<div className="model-page__contacts-profiles">
 						{ profileImages.map((profile, index) => (
@@ -376,14 +158,15 @@ console.log(HTMLString);
 						<h3>Model Homes Now Open</h3>
 					</div>
 				</div>
+*/}
 			</div>
 
 			{/* Technical characteristics */}
 			<FullwidthHeading heading1={`technická`} heading2={`špecifikácia`} />
 			<FloorPlan 
-				technicalCharacteristics={technicalCharacteristics}
-				roomDetails={roomDetails}
-				floorPlan={floorPlan}
+				technicalCharacteristics={thisHouse.technicalCharacteristics}
+				roomDetails={thisHouse.roomDetails}
+				plan={thisHouse.plan}
 			/>
 
 		</div>

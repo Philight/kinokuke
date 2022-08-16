@@ -16,6 +16,13 @@ import newsletterImage from "./../assets/images/newsletter-image.jpg";
 import landingPageBkg from "./../assets/images/landing-page-background.png";
 import findYourHomeBkg from "./../assets/images/find-your-home-background.png";
 
+import livingCanvas from "../assets/images/design-architecture/living-canvas.png";
+import greenLife from "../assets/images/design-architecture/green-life.png";
+import balancedLiving from "../assets/images/design-architecture/balanced-living.png";
+import smartHome from "../assets/images/design-architecture/smart-home.png";
+
+import social from "../data/social.js";
+
 import milanoURL from "./../assets/images/housemodels/milano.png";
 import veneziaURL from "./../assets/images/housemodels/venezia.png";
 import veronaURL from "./../assets/images/housemodels/verona.png";
@@ -25,52 +32,72 @@ import miamiBack from "./../assets/images/housemodels/miami_back.png";
 
 const LandingPage = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
-
+/*
 	const housesData = [
 		{ name: 'VERONA', src: veronaURL }, 
 		{ name: 'MILANO', src: milanoURL  },
 		{ name: 'VENEZIA', src: veneziaURL },
 		{ name: 'MIAMI', src: miamiURL }
 	];
-
+*/
 	const designAndArchitectureData = [
 		{ 
 			title: 'LIFE SPACE', 
 			slogan: 'Komplexné a efektívne využitie domáceho prostredia', 
-			text: 'Life Space offers flexible home designs to meet the needs of today’s families based on how they really use the space', 
+//			text: 'Life Space offers flexible home designs to meet the needs of today’s families based on how they really use the space', 
+			text: 'Life Space ponúka flexibilný dizajn, ktorý spĺňa potreby dnešných domácností na základe toho koľko reálne využívaju priestor',
 			ctaText: 'Prečítajte si viac', 
 			ctaSrc: '/design/features',
-			imageSrc: 'https://delightfull.eu/inspirations/wp-content/uploads/2020/01/5-9-1024x683.jpg',
+//			imageSrc: 'https://delightfull.eu/inspirations/wp-content/uploads/2020/01/5-9-1024x683.jpg',
+			imageSrc: 'http://images.ctfassets.net/skkgb8fetgpj/1MU9ItomkC3hgB2MGvmFdP/cc7e801bc2c8ba3ae4a45718c85bda6f/House_extension_plans_and_drawings.jpg',
 			backgroundColor: 'var(--hermes-blue-2)' 
 		},
 		{ 
 			title: 'GREEN LIFE', 
 			slogan: 'Udržateľnosť. Energetická úspornosť. Zeleň.', 
 			text: 'Program, ktorý sa zaväzuje realizovať udržateľné stavebné prvky - od energeticky úsporných spotrebičov až po solárne vylepšenia, ktoré v konečnom dôsledku majú pozitívny efekt na životné prostredie.', 
-			ctaText: 'Prečítajte si viac' , 
+			ctaText: 'Prečítajte si viac', 
 			ctaSrc: '/design/features',
-			imageSrc: 'https://www.impressiveinteriordesign.com/wp-content/uploads/2014/09/Eco-Friendly-House-With-A-Contemporary-Design-1.jpg',
+			imageSrc: greenLife,
 			backgroundColor: 'rgb(0 177 142)' 
 		},
+/*
 		{ 
 			title: 'LIVING CANVAS', 
-			slogan: '', 
-			text: 'The New Home Company offers you the unique opportunity to design and install custom landscape exteriors including patios, pools, spas and outdoor kitchens while your home is still under construction.', 
-			ctaText: 'Prečítajte si viac' , 
+			slogan: 'Krajinný exteriér podľa vlastných predstáv', 
+//			text: 'The New Home Company offers you the unique opportunity to design and install custom landscape exteriors including patios, pools, spas and outdoor kitchens while your home is still under construction.', 
+			text: 'Kino Kuke ponúka unikátnú príležitosť nadizajnovať a nainštalovať si krajinný exteriér na mieru, vrátane terás, bazénov, kúpeľov a vonkajších kuchýň, zatiaľ čo sa ešte stavia Váš dom',
+			ctaText: 'Prečítajte si viac', 
 			ctaSrc: '/design/features',
-			imageSrc: '' 
+			imageSrc: livingCanvas, 
+			backgroundColor: '#99946C' 
 		},
+*/
+		{ 
+			title: 'SMART HOME', 
+//			slogan: 'Krajinný exteriér podľa vlastných predstáv', 
+			slogan: 'Modernizovať dnešné nové domy ideami zo zajtrajška', 
+//			text: 'The New Home Company offers you the unique opportunity to design and install custom landscape exteriors including patios, pools, spas and outdoor kitchens while your home is still under construction.', 
+//			text: 'Kino Kuke ponúka unikátnú príležitosť nadizajnovať a nainštalovať si krajinný exteriér na mieru, vrátane terás, bazénov, kúpeľov a vonkajších kuchýň, zatiaľ čo sa ešte stavia Váš dom',
+			text: 'Uvádzame Home TECH balíček - štandardný smart-home technologický balíček ponúkaný v každom novom domove. Progresívny integračný systém domova, ktorý nám umožňuje centralizovať a kontrolovať všetko od služieb až po bezpečnost a zábavu pre pohodlie a úsporu základov. Možností je nekonečno.',
+			ctaText: 'Prečítajte si viac', 
+			ctaSrc: '/design/features',
+			imageSrc: smartHome, 
+			backgroundColor: '#99946C' 
+		},		
 		{ 
 			title: 'BALANCED LIVING', 
-			slogan: '', 
-			text: 'Balanced Living applies principles of Feng Shui to ensure good fortune for all homeowners', 
-			ctaText: 'Prečítajte si viac' , 
+			slogan: 'Princípy starodávného umenia a vedy', 
+//			text: 'Balanced Living applies principles of Feng Shui to ensure good fortune for all homeowners', 
+			text: 'Balanced Living aplikuje princípy Feng Shui, aby zaručila veľa šťastia pre všetkých členov domácnosti', 
+			ctaText: 'Prečítajte si viac', 
 			ctaSrc: '/design/features',
-			imageSrc: '' 
+			imageSrc: balancedLiving,
+			backgroundColor: '#813232' 
 		}
 	
 	];
-
+/*
 	const socialData = [
 		{
 			text: '1 We pride ourselves on being the most recognized builder in customer experience! Read our Homeowner Reviews. 💬',
@@ -167,11 +194,10 @@ const LandingPage = (props) => {
 			imageSrc: miamiBack 
 			//imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ7gIX4_QSS9TV8GbAACeWylAKhWBK5TEZCg&usqp=CAU'
 		}
-
 	];
-
+*/
 	useEffect(() => {
-		window.scrollTo(0, 0)
+		//window.scrollTo(0, 0)
 	}, [])
 	
 	return (
@@ -185,7 +211,7 @@ const LandingPage = (props) => {
 			<ImageBanner 
 				className="landing-page__intro-image"
 				images={[{src: landingPageBkg}]}  
-				heading="Lepší Zážitok<br/>Lepší Domov<br/><span>Lepší Život</span>"
+				heading="Lepší Začiatok<br/>Lepší Domov<br/><span>Lepší Život</span>"
 				btnText="Naše Hodnoty"
 				btnSrc="/about"
 				showOverlay
@@ -220,14 +246,14 @@ const LandingPage = (props) => {
 			/>			
 			<FindYourHome
 				columns="3"
-				houses={housesData}
 				enableAutoplay
 				interval="3000"
+				enableNavigation
 			/>
 			<SocialGrid 
 				columns="3"
 				rows="2"
-				posts={socialData}
+				posts={social}
 				enableAutoplay
 				interval="2000"
 			/>

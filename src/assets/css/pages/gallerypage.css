@@ -1,0 +1,30 @@
+
+.gallery-page__container {
+	position: relative;
+	padding-top: var(--navigation-height);
+    background-color: var(--hermes-orange-2);
+
+    z-index: 0;
+}
+
+.gallery-page__container .image-banner__container {
+	height: calc(100% - var(--navigation-height));
+    position: absolute;
+    z-index: -1;
+}
+
+.gallery-page__container .gallery-page__inner-section {
+	display: flex;
+    flex-direction: column;
+    background-color: transparent;
+
+    box-sizing: border-box;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+@media screen and (min-width: 1024px) {
+    .gallery-page__container .image-banner__container {
+    }
+
+}

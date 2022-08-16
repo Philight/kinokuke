@@ -18,44 +18,39 @@ const Footer = (props) => {
 	return (
 		<div className="footer__container section">
 			<nav className="footer__navigation">
-				<ul className="footer__navigation-container left" data-level="1">
-					<li className="footer__navigation-item" data-level="1">
-						<Link to="/">
-							Privacy Policy
-						</Link>
-					</li>					
-					<li className="footer__navigation-item" data-level="1">
-						<Link to="/">
-							Terms of Use
-						</Link>
-					</li>		
-					<li className="footer__navigation-item" data-level="1">
-					<Link to="/design/features">
-						DIZAJN
-					</Link>
-					</li>
-					<li className="footer__navigation-item" data-level="1">
-					<Link to="/process">
-						PROCES
-					</Link>
-					</li>	
-				</ul>
-				<ul className="footer__navigation-container right" data-level="1">
-					<li className="footer__navigation-item" data-level="1">
-					<Link to="/about">
-						O NÁS
-					</Link>
-					</li>
-					<li className="footer__navigation-item" data-level="1">GALÉRIA</li>
-					<li className="footer__navigation-item" data-level="1">KONTAKT</li>
-{/*
-					<li className="footer__navigation-item" data-level="1">
-						<Link to="/v2">
-							V2
-						</Link>
-					</li>
-*/}
-				</ul>
+				<div className="footer__navigation-container-section top">
+					<ul className="footer__navigation-container left" data-level="1">				
+						<li className="footer__navigation-item" data-level="1">
+							<Link to="/design/features">DIZAJN</Link>
+						</li>
+						<li className="footer__navigation-item" data-level="1">
+							<Link to="/process">PROCES</Link>
+						</li>	
+						<li className="footer__navigation-item findyourhome" data-level="1">
+							<Link to="/findyourhome">Nájdi svoj domov</Link>
+						</li>				
+			
+					</ul>
+					<ul className="footer__navigation-container right" data-level="1">
+						<li className="footer__navigation-item" data-level="1">
+							<Link to="/about">O NÁS</Link>
+						</li>
+						<li className="footer__navigation-item" data-level="1">
+							<Link to="/gallery">GALÉRIA</Link>
+						</li>
+						<li className="footer__navigation-item" data-level="1">
+							<Link to="/contact">KONTAKT</Link>
+						</li>
+					</ul>
+				</div>
+
+				<div className="footer__navigation-container-section bottom">
+					<ul className="footer__navigation-container bottom" data-level="1">
+						<li className="footer__navigation-item" data-level="1">
+							<Link to="/gdpr">Ochrana osobných údajov</Link>
+						</li>	
+					</ul>
+				</div>
 			</nav>
 			<div className="footer__bottom">
 				<div className="footer__logo-slogan">
@@ -71,7 +66,7 @@ const Footer = (props) => {
 				</div>
 			</div>
 			<div className="footer-copyright">
-				Copyright © 2022 KK KINO KUKE. All rights reserved.
+				Copyright © {new Date().getFullYear()} KK KINO KUKE. All rights reserved.
 			</div>
 		</div>
 	)

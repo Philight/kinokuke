@@ -53,7 +53,8 @@
 
 .contact-page__container .google-map__container .google-map__address {
 	flex: 1 1 0;
-	padding: calc(var(--section-padding) / 2);
+    padding: var(--section-padding);
+	padding-top: calc(var(--section-padding) / 2);
     box-sizing: border-box;
 }
 
@@ -73,4 +74,23 @@
     font-size: 14px;
     line-height: 1.5;
     color: #4a4a4a;
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-page__container .image-banner__container {
+        height: 200vh;
+    }
+
+    .contact-page__container .google-map__container .google-map__map-title {
+        padding: calc(var(--section-padding) / 2);
+        font-size: 24px;
+    }
+
+    .contact-page__container .google-map__container .google-map__address h3 {
+        font-size: 20px;
+    }
+
+    .contact-page__container .google-map__container .google-map__address p {
+        font-size: 16px;
+    }
 }

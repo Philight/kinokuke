@@ -5,8 +5,22 @@ import ImageBanner from "../components/ImageBanner.js";
 import TextBlock from "../components/TextBlock.js";
 import FullwidthHeading from "../components/FullwidthHeading.js";
 import DesignValues from "../components/DesignValues.js";
+import DesignAndArchitectureTiles from "../components/DesignAndArchitectureTiles.js";
+import ImageCarousel from "../components/ImageCarousel.js";
 
 import "./../assets/css/pages/designpage.css";
+
+import introBkg from "./../assets/images/page-bkg/design-features-page-bkg.png";
+
+
+import processStep1 from "./../assets/images/process-steps/process-step-1.png";
+import processStep2 from "./../assets/images/process-steps/process-step-2.png";
+import processStep3 from "./../assets/images/process-steps/process-step-3.png";
+import processStep4 from "./../assets/images/process-steps/process-step-4.png";
+import processStep5 from "./../assets/images/process-steps/process-step-5.png";
+import processStep6 from "./../assets/images/process-steps/process-step-6.png";
+import processStep7 from "./../assets/images/process-steps/process-step-7.png";
+import processStep8 from "./../assets/images/process-steps/process-step-8.png";
 
 import BLImage from "./../assets/images/design-values/balanced-living.png";
 import GLImage from "./../assets/images/design-values/green-life.png";
@@ -23,57 +37,111 @@ const DesignPage = (props) => {
 
 	const images = [
 		{
-			src: 'https://www.nwhm.com/sites/default/files/2018-06/DFeatures_Banner_2160x723px_1_2.jpg'
+//			src: 'https://www.nwhm.com/sites/default/files/2018-06/DFeatures_Banner_2160x723px_1_2.jpg'
+			src: introBkg
 		}
 	];
+
+	const processPhases = [
+		{
+			src: processStep1,
+			columns: 1,
+			url: '/process'
+		},
+		{
+			src: processStep2,
+			columns: 1,
+			url: '/process'
+		},
+		{
+			src: processStep3,
+			columns: 1,
+			url: '/process'
+		},
+		{
+			src: processStep4,
+			columns: 1,
+			url: '/process'
+		},
+		{
+			src: processStep5,
+			columns: 1,
+			url: '/process'
+		},
+		{
+			src: processStep6,
+			columns: 1,
+			url: '/process'
+		},
+		{
+			src: processStep7,
+			columns: 1,
+			url: '/process'
+		},
+		{
+			src: processStep8,
+			columns: 1,
+			url: '/process'
+		},
+	];
+
+	const tile = { 
+		title: 'GREEN LIFE', 
+		slogan: 'Udržateľnosť. Energetická úspornosť. Zeleň.', 
+		text: 'Program, ktorý sa zaväzuje realizovať udržateľné stavebné prvky - od energeticky úsporných spotrebičov až po solárne vylepšenia, ktoré v konečnom dôsledku majú pozitívny efekt na životné prostredie.', 
+		//ctaText: 'Prečítajte si viac' , 
+		//ctaSrc: '/design/features',
+		imageSrc: 'https://www.impressiveinteriordesign.com/wp-content/uploads/2014/09/Eco-Friendly-House-With-A-Contemporary-Design-1.jpg',
+		backgroundColor: '#a8b53a' 
+	};
 
 	const tiles = [
 		{
 			heading: 'Life Space',
-			title: '[*TO TRANSLATE*]FLOORPLAN OPTIONS THAT FIT YOUR LIFE',
-			text: '[*TO TRANSLATE*] Life Space offers flexible home designs to meet the needs of today’s families based on how they really use the space',
+			title: 'Možnosti podlažných plánov, ktoré sa prispôsobia Vášmu životu',
+			text: 'Life Space ponúka flexibilný dizajn, ktorý spĺňa potreby dnešných domácností na základe toho koľko reálne využívaju priestor',
 			imageSrc: LSImage
 		},
 				{
 			heading: 'Green Life',
-			title: 'GREEN LIFE',
-			text: '[*TO TRANSLATE*] Is a program to committed to implementing ustenable building featires from energy efficient appliances to solar upgrades that will ultimately a p[ositive effect on our enviroment',
+			title: 'Udržateľnosť. Energetická úspornosť. Zeleň.',
+			text: 'Program, ktorý sa zaväzuje realizovať udržateľné stavebné prvky - od energeticky úsporných spotrebičov až po solárne vylepšenia, ktoré v konečnom dôsledku majú pozitívny efekt na životné prostredie.',
 			imageSrc: GLImage
 		},
 				{
 			heading: 'Balanced Living',
-			title: '[*TO TRANSLATE*]AN ANCIENT ART AND SCIENCE',
-			text: '[*TO TRANSLATE*] Balanced Living applies principles of Feng Shui to ensure good fortune for all homeowners.',
+			title: 'Princípy starodávného umenia a vedy',
+			text: 'Balanced Living aplikuje princípy Feng Shui, aby zaručila veľa šťastia pre všetkých členov domácnosti.',
 			imageSrc: BLImage
 		},
 		{
 			heading: 'Smart Home',
-			title: '[*TO TRANSLATE*]UPDATING TODAY’S NEW HOMES WOTH TOMORRO’S IDEAS',
-			text: '[*TO TRANSLATE*] Introducing Home TECH package’s standard smart-home technology package offered in every new home . Advanced home integration systems that allow us to centraliza and control everything from utilities , security and entertainment for increased convinience and cost saving . The possibilities are endless',
+			title: 'Modernizovať dnešné domy nápadmi zo zajtrajška',
+			text: 'Uvádzame Home TECH balíček - štandardný smart-home technologický balíček ponúkaný v každom novom domove. Progresívny integračný systém domova, ktorý nám umožňuje centralizovať a kontrolovať všetko od služieb až po bezpečnost a zábavu pre pohodlie a úsporu základov. Možností je nekonečno.',
 			imageSrc: SHImage
 		},
 		{
 			heading: 'Home HO',
-			title: '[*TO TRANSLATE*]FUNCTIONAL OPPORTUNITIES FOR THE HOME OFFICE OF YOUR DREAMS',
-			text: '[*TO TRANSLATE*] CAT 5/6 Wiring for Hi-Speed Internet, TV Outlets Throughout the Home, Surround Sound Throughout the Home, Home Automation, HDMI Pre-Wire, Built-In Tech Desks with File Storage',
+			title: 'Funkčné príležitosti pre Home Office vašich snov',
+			text: 'CAT 5/6 Elektrické vedenie pre Hi-Speed Internet, TV zásuvky v celom dome, Surround Sound naprieč celým domom, domáca automatizácia, HDMI Pre-Wire, Vstavané technické stoly s ukladaním súborov',
 			imageSrc: HOImage
 		},
 		{
 			heading: 'Live Well',
-			title: '[*TO TRANSLATE*]DESIGNED WITH YOUR HEALTH IN MIND',
-			text: '[*TO TRANSLATE*]Relaxing Outdoor Spaces, Solar Panel Lease, Air Filtration & Purification Systems, Water Filtration & Purification Systems, Reverse Osmosis System',
+			title: 'Navrhnuté pre Vaše zdravie',
+			text: 'Relaxačné Outdoor priestory, Prenájom solárnych panelov, Systémy na filtráciu a čistenie vzduchu, Systémy na filtráciu a čistenie vody, Systém reverznej osmózy',
 			imageSrc: LWImage
 		},
 		{
 			heading: 'Home Spa',
-			title: '[*TO TRANSLATE*]YOUR IN-HOME SPA',
-			text: '[*TO TRANSLATE*]Beautiful Designer Finishes in Primary & Secondary Bathrooms, Quartz and Marble Countertops, Drop-In Tubs, Spacious Showers with Curated Feautures, Adjacent Walk-In Closets',
+			title: 'Vaše domáce SPA',
+			text: 'Krásne Dizajnérske povrchové úpravy v základných a stredných kúpeľniach, Kremenné a Mramorové dosky, Drop-In Vaňe, Priestranné sprchy s upravenými funkciami, Priľahlé šatne',
 			imageSrc: HSImage
 		},
 		{
 			heading: 'Master Chef',
-			title: '[*TO TRANSLATE*]BECAUSE THE KITCHEN IS THE HEART OF THE HOME',
-			text: '[*TO TRANSLATE*]Stainless Steel Appliance Packages Including Oven, Microwave, Range, Hood and Dishwasher, Quartz Countertops and Backsplash',
+			title: 'Pretože Kuchyňa je Srdcom Domova',
+			text: 'Balíky zariadení z nehrdzavejúcej ocele vrátane Rúry, Mikrovlnná rúra, Sporák, Digestor a umývačka riadu, Kremenné kuchynné dosky and Nástenné panely',
 			imageSrc: MCImage
 		}
 	]
@@ -82,7 +150,7 @@ const DesignPage = (props) => {
 	const timeoutRef = useRef(null);
 
 	useEffect(() => {
-		window.scrollTo(0, 0)
+//		window.scrollTo(0, 0)
 	}, [])
 
 	const resetTimeout = () => {
@@ -117,16 +185,32 @@ console.log('autoplay');
 				images={images}
 			/>
 			<TextBlock 
-				heading="[*TO TRANSLATE*] Designed for how you want to live"
-				text="[*TO TRANSLATE*] WE COMMIT ourselves fully to the art of design and the transformation of the newly built house into a home as rare and precious as the family who will live and thrive within it.
-				<br/><br/>WE BELIEVE that when you come home, you should come home to yourself.
-				<br/>This mantra serves to encourage the highest level of personal expression among our homebuyers and engages our wide ranging, individualized design services including green life, living canvas, balanced living, and life space.
-				<br/><br/>WE EMBRACE the architectural integrity and character of every home and believe that every home is unique to every family. We believe the design decisions made by our homebuyers are shaped by the places they have traveled, the depth of their life experiences, and the people they have loved along the way."
+				heading="Nadizajnované podľa toho ako chcete žiť"
+				text="Zaväzujeme sa naplno k umeniu dizajnu a transformácií novo vybudovaného domovu k domovu tak vzácného a výnimočného ako je rodina, ktorá bude v ňom bývať a prosperovať.
+				<br/><br/>Veríme v to, že keď prídete domov, mali by ste prísť domov k sebe.
+				<br/>Táto mantra slúži na povzbudenie najvyššieho levelu osobného vyjadrovania sa napriek našími kupcami domov a zapája našu široko rozsiahlú, indivizualizovanú ponuku dizajnových služieb vrátane green life, living canvas, balanced living, and life space.
+				<br/><br/>Podporujeme architektonickú integritu a osobnosť každého domovu a veríme, že každý domov je unikátny pre každú rodinu. Veríme, že rozhodnutia v dizajne naších kupcov sú tvarované miestami, ktoré precestovali, hĺbkou ich životných skúseností a ľuďmi, ktorých ľúbili."
 			/>
+			<FullwidthHeading heading1={`dizajn štúdio`} heading2={`proces`}/>
+
+			<ImageCarousel 
+				className="design-page_process-phases"
+				images={processPhases}
+				showViewBox
+				showStartBtn
+				startBtnText="štart"
+			/>
+
+			<FullwidthHeading heading1={`udržateľný`} heading2={`dizajn`}/>
+			<div className="design-and-architecture__tiles-wrapper">
+				<div className="design-and-architecture__tiles-group">
+					<DesignAndArchitectureTiles tile={tile} index="0" />
+				</div>
+			</div>
 			<FullwidthHeading heading1={`dizajn`} heading2={`hodnoty`}/>
 			<DesignValues
 				tiles={tiles}
-				columns="4"
+				columns="3"
 				enableAutoplay
 				interval="3000"
 			/>

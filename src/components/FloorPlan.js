@@ -5,7 +5,7 @@ import ImageBanner from "./ImageBanner.js";
 import "./../assets/css/components/textblock.css";
 
 const FloorPlan = (props) => {
-	let { floorPlan, technicalCharacteristics, roomDetails } = props;
+	let { plan, technicalCharacteristics, roomDetails } = props;
 
 	const replaceNewline = (textWithoutBreaks) => {
 		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n');
@@ -15,20 +15,16 @@ console.log(textWithBreaks);
 		return textWithBreaks;
 	}
 
-	const images = [
-
-	]
-
 	return (
 		<div className="floor-plan__container section">
 			<ImageBanner 
-				images={[{ src: floorPlan }]}
+				images={[{ src: plan }]}
 			/>
 			<div className="floor-plan__technical-details">
 				<h3>Celkový rozmer</h3>
 				<div className="floor-plan__data">
-					<span>Surface (Gross)</span><span>{technicalCharacteristics.surfaceGross}</span>
-					<span>Surface (Net)</span><span>{technicalCharacteristics.surfaceNet}</span>
+					<span>Plocha (Neobývateľných)</span><span>{technicalCharacteristics.surfaceGross}</span>
+					<span>Plocha (Obývateľných)</span><span>{technicalCharacteristics.surfaceNet}</span>
 				</div>
 				<h3>Detaily jednotlivých izieb</h3>
 				<div className="floor-plan__data">

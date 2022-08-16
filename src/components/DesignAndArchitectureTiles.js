@@ -16,11 +16,11 @@ const DesignAndArchitectureTiles = (props) => {
 			<HeadingUnderline color="#FFF" className="" />
 			<SectionSubheading subheading={tile.slogan} />
 			<p className="show-desktop">{tile.text}</p>
-			<div className="btn-wrapper">
+			{tile.ctaText && <div className="btn-wrapper">
 				<Link to={tile.ctaSrc} className="design-and-architecture__cta">
 					<span className="">{tile.ctaText}</span>
 				</Link>
-			</div>
+			</div> }
 		</div>
 		<div className={`design-and-architecture__tile image-tile t-${index*2+2}`}>
 			<img src={tile.imageSrc} />

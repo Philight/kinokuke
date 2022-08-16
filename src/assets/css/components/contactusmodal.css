@@ -1,0 +1,237 @@
+.contact-us-modal__container {
+    --field-spacing: 10px;
+}
+@media screen and (min-width: 1024px) {
+    .contact-us-modal__container {
+        --field-spacing: 6px;
+    }
+}
+
+.contact-us-modal__container .contact-us-modal__open {
+    position: fixed;
+    /top: 50%;
+    /transform: translateY(-50%);
+    bottom: 15px;
+    right: calc(15px + 40px + 10px);
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: var(--main-color);
+    z-index: 50;
+    cursor: pointer;
+}
+
+.contact-us-modal__container .contact-us-modal__open .icon {
+    background-color: #FFF;
+    width: 32px;
+    height: 32px;
+}
+
+.contact-us-modal__container .contact-us-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+    .contact-us-modal__container .contact-us-modal__close {
+    }
+}
+
+.contact-us-modal__container .contact-us-modal__close .icon {
+    background-color: #fff9;
+}
+
+.contact-us-modal__container .contact-us-modal__form-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    padding: calc(2*var(--section-padding)) var(--section-padding);
+    box-sizing: border-box;
+    z-index: -100;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: opacity .4s ease-in-out;
+}
+
+@media screen and (min-width: 600px) {
+    .contact-us-modal__container .contact-us-modal__form-wrapper {
+        right: 15px;
+        bottom: 60px;
+        padding: 0;
+        width: 270px;
+        height: auto;
+        border: 1px solid #d3d3d3;
+        border-radius: 14px;
+    }
+    .contact-us-modal__container .contact-us-modal__form-background {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-us-modal__container .contact-us-modal__form-wrapper {
+        /padding: calc(var(--section-padding) / 4) var(--section-padding);
+    }
+}
+
+.contact-us-modal__container .contact-us-modal__form-wrapper.visible {
+    z-index: 100;
+    opacity: 1;
+}
+
+.contact-us-modal__container .contact-us-modal__form-background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000000a3;
+}
+
+.contact-us-modal__container .contact-us-modal__notices {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    color: #FFF;
+    background-color: var(--btn-color-1);
+    padding: 8px var(--section-padding);
+    letter-spacing: 1px;
+    transition: top .3s ease-in-out;
+}
+
+@media screen and (min-width: 600px) {
+    .contact-us-modal__container .contact-us-modal__notices {
+        display: none;
+    }
+}
+
+.contact-us-modal__container .contact-us-modal__notices.visible {
+    top: 0;
+}
+
+.contact-us-modal__container .contact-us-modal__heading {
+    position: relative;
+    background-color: var(--hermes-orange-2);
+    color: #fff;
+    font-weight: 400;
+    font-family: var(--font-heading-2);
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: initial;
+    text-align: center;
+    margin: 0;
+    padding: var(--section-padding) calc(var(--section-padding) / 2);
+    border-radius: 6px 6px 0px 0;
+}
+
+@media screen and (min-width: 600px) {
+    .contact-us-modal__container .contact-us-modal__heading {
+        padding: calc(var(--section-padding) / 2) var(--section-padding);
+        border-radius: 14px 14px 0px 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-us-modal__container .contact-us-modal__heading {
+        padding: calc(var(--section-padding) / 4);
+    }
+}
+
+.contact-us-modal__container .contact-us-modal__form  {
+    flex: 1;
+    padding: var(--section-padding);
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 6px 6px;
+}
+
+@media screen and (min-width: 600px) {
+    .contact-us-modal__container .contact-us-modal__form {
+        padding: calc(var(--section-padding) / 2);
+        border-radius: 0 0 14px 14px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-us-modal__container .contact-us-modal__form {
+        padding: calc(var(--section-padding) / 4);
+    }
+}
+
+.contact-us-modal__container .contact-us-modal__heading,
+.contact-us-modal__container .contact-us-modal__form  {
+    transform: translateX(-200%);
+    transition: transform .4s ease;
+}
+.contact-us-modal__container .contact-us-modal__form-wrapper.visible .contact-us-modal__heading,
+.contact-us-modal__container .contact-us-modal__form-wrapper.visible .contact-us-modal__form  {
+    transform: translateX(0);
+}
+
+.contact-us-modal__container .contact-us-modal__form fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.contact-us-modal__container fieldset.contact-us-modal__form-personal-info  {
+    padding-bottom: var(--field-spacing);
+}
+
+.contact-us-modal__container .contact-us-modal__form fieldset.contact-us-modal__form-message {
+    border-top: 1px solid #b8b8b8;
+    padding-top: calc(2*var(--field-spacing));
+}
+
+.contact-us-modal__container .contact-us-modal__form input,
+.contact-us-modal__container .contact-us-modal__form textarea {
+    width: 100%;
+    padding: var(--btn-padding-lg);
+    margin-bottom: var(--field-spacing);
+    background: none;
+    border: 1px solid var(--hermes-orange-2);
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-heading-1);
+    transition: border .2s ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+    .contact-us-modal__container .contact-us-modal__form input,
+    .contact-us-modal__container .contact-us-modal__form textarea {
+        padding: var(--btn-padding-md);
+    }
+}
+
+.contact-us-modal__container .contact-us-modal__form input.invalid,
+.contact-us-modal__container .contact-us-modal__form textarea.invalid {
+    border: 3px solid #ff0000;
+}
+
+.contact-us-modal__container .contact-us-modal__form input:focus,
+.contact-us-modal__container .contact-us-modal__form textarea:focus {
+    border: 3px solid var(--hermes-orange-2);
+    outline: none;
+}
+
+.contact-us-modal__container .contact-us-modal__form textarea {
+    min-height: 100px;
+    border-radius: 25px;
+    resize: none;
+}
+.contact-us-modal__container .contact-us-modal__form input[type="submit"] {
+    background-color: var(--main-color);
+    text-align: left;
+    border: none;
+    color: #FFF;
+    margin-bottom: 0;
+}

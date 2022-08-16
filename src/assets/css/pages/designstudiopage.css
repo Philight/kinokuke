@@ -8,7 +8,6 @@
 }
 
 .design-studio-page__container .image-banner__container.intro-image {
-    height: calc(100vh - var(--navigation-height) - var(--page-top-padding));
     overflow: hidden;
 }
 
@@ -29,7 +28,7 @@
 	/flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
 	.design-studio-page__container .process-phases__container {
     	height: 30vh;
 		/flex-direction: row;
@@ -50,9 +49,9 @@
 	flex: 0 0 calc((100% / 2));
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
 	.design-studio-page__container .process-phases__container .image-wrapper {
-		padding: 40px;
+		padding: 10px;
 	}
 
 	.design-studio-page__container .process-phases__container.col-4 .process-phases__item {
@@ -60,6 +59,9 @@
 	}
 }
 
+@media screen and (min-width: 1024px) {
+
+}
 .design-studio-page__container .process-phases__container img {
 	object-fit: contain;
 }
@@ -79,13 +81,17 @@
     grid-auto-rows: 1fr;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
 	.design-studio-page__container .design-and-architecture__tiles-wrapper {
-    	max-height: 50vh;
 	}
 
 	.design-studio-page__container .design-and-architecture__tiles-group {
     	grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.design-studio-page__container .design-and-architecture__tiles-wrapper {
 	}
 }
 
@@ -108,7 +114,7 @@
 .design-studio-page__container .t-7 { order: 8 }
 .design-studio-page__container .t-8 { order: 7 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 	.design-studio-page__container .t-1 { order: 1 }
 	.design-studio-page__container .t-2 { order: 2 }
 	.design-studio-page__container .t-3 { order: 4 }
@@ -159,6 +165,30 @@
     opacity: 0.85;
 }
 
+@media screen and (min-width: 600px) {
+	.design-studio-page__container .design-and-architecture__cta {
+	    padding: var(--btn-padding-lg);
+    	font-size: 14px;
+	}
+
+	.design-studio-page__container .design-and-architecture__tile .underline__container {
+		margin: 14px 0;
+    	margin-top: 8px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.design-studio-page__container .design-and-architecture__tile .underline__container {
+		margin: 16px 0;
+    	margin-top: 10px;
+    	height: 4px;
+	}
+
+	.design-studio-page__container .design-and-architecture__tile p {
+		margin: 20px 0;
+	}
+}
+
 .design-studio-page__container .image-carousel__container .image-carousel__images-container {
 	padding-top: 30px;;
     box-sizing: border-box;
@@ -167,6 +197,12 @@
 .design-studio-page__container .design-studio-page__wall-types-description .image-banner__content {
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+	.design-studio-page__container .design-studio-page__wall-types-description .image-banner__content {
+		padding-top: calc(var(--section-padding) / 2);
+	}
 }
 
 .design-studio-page__container .wall-types-arrow.icon_container {

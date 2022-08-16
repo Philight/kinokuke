@@ -3,7 +3,7 @@
 	max-height: 100vh;
 	--grid-gap: 4px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
     .social-grid__container {
         --grid-gap: 10px;
     }
@@ -24,14 +24,11 @@
 }
 
 .social-grid__container .nav-arrow {
-	width: 70px; height: 70px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%) scaleY(1.5);
     z-index: 1;
-    background-color: var(--main-color);
-    cursor: pointer;
+}
+
+.social-grid__container .nav-arrow .icon {
+
 }
 
 .social-grid__container .social-grid__post {
@@ -41,24 +38,39 @@
     margin-left: var(--grid-gap);
     margin-right: var(--grid-gap);
     margin-bottom: var(--grid-gap);
+    box-sizing: border-box;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
+    .social-grid__container .nav-arrow {
+        transform: translateY(-50%) scaleY(2);
+    }
+
+    .social-grid__container .social-grid__posts-container.col-3 .social-grid__post {
+        width: calc((100% - 3*var(--grid-gap)) / 2);
+    }
+    .social-grid__container .social-grid__post {
+        margin-left: 0;
+    }
+    .social-grid__container .social-grid__post:nth-of-type(4n+1),
+    .social-grid__container .social-grid__post:nth-of-type(4n+2) {
+        margin-left: var(--grid-gap);
+    }
+}
+
+@media screen and (min-width: 1024px) {
     .social-grid__container .social-grid__posts-container.col-3 .social-grid__post {
     	width: calc((100% - 4*var(--grid-gap)) / 3);
     }
 
-    .social-grid__container .social-grid__post {
+    .social-grid__container .social-grid__post:nth-of-type(4n+1),
+    .social-grid__container .social-grid__post:nth-of-type(4n+2) {
         margin-left: 0;
     }
 
     .social-grid__container .social-grid__post:nth-of-type(6n+1),
     .social-grid__container .social-grid__post:nth-of-type(6n+2) {
         margin-left: var(--grid-gap);
-    }
-
-    .social-grid__container .nav-arrow {
-        width: 90px; height: 90px;
     }
 }
 

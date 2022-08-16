@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import FullwidthHeading from "./FullwidthHeading.js";
+import Icon from "./Icon.js";
 import "./../assets/css/components/socialgrid.css";
 
 import chevronRight from "./../assets/icons/chevron-right.svg";
@@ -11,12 +12,18 @@ const SocialGrid = (props) => {
 
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [isMobile, setIsMobile] = useState(false);
+	const [isTablet, setIsTablet] = useState(false);
+	
 	const [contentShown, setContentShown] = useState(false);
 
 	const timeoutRef = useRef(null);
 
 	useEffect(() => {
-		if (window.innerWidth < 768) { setIsMobile(true); }
+		if (window.innerWidth < 600) { 
+			setIsMobile(true); 
+		} else if (600 < window.innerWidth && window.innerWidth < 1024) { 
+			setIsTablet(true); 
+		}
 	}, [])
 
 	const updateIndex = (newIndex) => {
@@ -24,8 +31,9 @@ const SocialGrid = (props) => {
 console.log(newIndex);
 console.log(Object.keys(posts).length);
 		isMobile ? columns=1 : '';
+	    isTablet ? columns=2 : '';
 
-		if (newIndex > (Object.keys(posts).length/columns/rows)) {
+		if (newIndex > Math.ceil((Object.keys(posts).length/columns/rows)-1)) {
 			newIndex = 0;
 		}
 		setActiveIndex(newIndex);
@@ -33,7 +41,7 @@ console.log(Object.keys(posts).length);
 
 	const resetTimeout = () => {
 		if (timeoutRef.current) {
-		  clearTimeout(timeoutRef.current);
+			clearTimeout(timeoutRef.current);
 		}
 	}
 
@@ -60,10 +68,16 @@ console.log('autoplay');
 		<div className="social-grid__container">
 			<FullwidthHeading heading1="kinokuke" heading2="social" />
 			<div className={`social-grid__posts-carousel`}>
+{/*
 				<img className="nav-arrow" 
 					style={{webkitMask: `url(${chevronRight}) no-repeat center`, mask: `url(${chevronRight}) no-repeat center`}} 
 					onClick={() => {updateIndex(activeIndex + 1)}}
 				/>
+*/}				
+				<Icon icon="chevron-right" className="nav-arrow highlight flying right" 
+					onClick={() => {updateIndex(activeIndex + 1)}}
+				/>
+
 				<div className={`social-grid__posts-container col-${columns} rows-${rows}`} style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
 				{ posts.map((post, index) => (
 					<div className="social-grid__post">

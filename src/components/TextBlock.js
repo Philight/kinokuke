@@ -5,10 +5,10 @@ import SectionSubheading from "./SectionSubheading.js";
 import "./../assets/css/components/textblock.css";
 
 const TextBlock = (props) => {
-	let { className, heading, text, isHTML } = props;
+	let { className, children, heading, text, isHTML } = props;
 
 	const replaceNewline = (textWithoutBreaks) => {
-		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n');
+		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n').split('<br />').join('\n');
 
 		//textWithBreaks = textWithoutBreaks.split('<br/>').join('');
 //console.log(textWithBreaks);
@@ -21,6 +21,7 @@ const TextBlock = (props) => {
 				{heading && <SectionSubheading subheading={replaceNewline(heading)} />}
 				{!isHTML && <p className="newline-text">{replaceNewline(text)}</p>}
 				{isHTML && <div dangerouslySetInnerHTML={{ __html: text }} />}
+				{children}
 			</div>
 		</div>
 	)

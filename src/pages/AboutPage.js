@@ -10,6 +10,7 @@ import FullwidthHeading from "../components/FullwidthHeading.js";
 import "./../assets/css/pages/aboutpage.css";
 
 import tymkinokuke from "./../assets/images/tym-kinokuke.png";
+import pageBkg from "./../assets/images/page-bkg/about-page-bkg.png";
 //import kinokukelogo from "./../assets/images/kinokuke-logo.png";
 
 const AboutPage = (props) => {
@@ -21,28 +22,30 @@ const AboutPage = (props) => {
 		{
 			//src: 'https://thumbs.dreamstime.com/z/successful-architects-team-top-view-four-architect-checking-project-looking-camera-92877774.jpg'
 			//src: 'https://i0.wp.com/bostonrealestatetimes.com/wp-content/uploads/2021/10/Colliers-Italy.jpg?fit=2160%2C1200&ssl=1',
-			src: tymkinokuke
+			src: pageBkg,
+//			src: tymkinokuke
+//			src: 'https://vietnamconstruction.vn/wp-content/uploads/2016/01/Project-management-for-construction.jpg'
 		}
 	];
 
 	const [companyValues, setCompanyValues] = useState([
 		{
-			title: 'Lepší Zážitok',
-			text: 'We live intentionally; actively nurturing a balanced mind, body, and spirit.',
+			title: 'Lepší Začiatok',
+			text: 'Rozumieme aky náročný je proces vybrať si ten správný domov.<br/>Dbáme na to ako vyzerá, akú energiu vyžaruje, ako sa v ňom cítite.<br/>U nás stojíme vždy pri Vás.',
 			icon: 'v1',
 			imageSrc: 'https://dsqqu7oxq6o1v.cloudfront.net/preview-562653-9Knu8vNR8PdSgTuM-large.JPG',
 			isFixed: false
 		},
 		{
 			title: 'Lepší domov',
-			text: 'We live intentionally; actively nurturing a balanced mind, body, and spirit.',
+			text: 'Budovanie každého domu nám dáva hlboký pocit naplnenia, každý deň sa usilujeme prispieť k lepšiemu prostrediu, podporovať komunity a to všetko <br/>s vedomím pre spoločenskú integritu',
 			icon: 'v2',
 			imageSrc: 'https://i.pinimg.com/originals/c5/4b/f3/c54bf387f6fd7e8563e2c42d7ee93f17.jpg',
 			isFixed: false
 		},
 		{
 			title: 'Lepší život',
-			text: 'We live intentionally; actively nurturing a balanced mind, body, and spirit.',
+			text: 'Každý z nás v KinoKuke zdieľame rovnaký názor, že každý nový domov je nová príležitosť vybudovať niečo lepšie.<br/> Na nové a lepšie začiatky',
 			icon: 'v3',
 			imageSrc: 'https://www.nerdwallet.com/assets/blog/wp-content/uploads/2021/05/GettyImages-905902144-2400x1440.jpg',
 			isFixed: false
@@ -50,7 +53,7 @@ const AboutPage = (props) => {
 	])
 
 	useEffect(() => {
-		window.scrollTo(0, 0)
+//		window.scrollTo(0, 0)
 	}, [])
 
 /*
@@ -70,8 +73,8 @@ const AboutPage = (props) => {
 			/>
 			<TextBlock 
 				heading="Naše hodnoty"
-				text="[*TO TRANSLATE*] All of us are looking to build a better life. A life filled with everything and everyone that matters most. And a place to call home that brings it all together in the best possible ways. We understand how important your home is to you. It means a lot to us too. Our homes are an expression of the knowledge we have about how people want to live. For us they are individual works of art for the world to see and enjoy.
-<br/>[*TO TRANSLATE*] Each of us here share in a strongly held belief that every new home is a new opportunity to build something better.
+				text="Všetci z nás si chceme vybudovať lepší život. Život naplnený všetkým a všetkými na ktorých záleží najviac. A miesto, ktoré môžeme nazývať domov, ktoré bude všetko spájať tými najlepšími možnými spôsobmi. Rozumieme ako dôležitý je domov pre Vás. Pre nás znamená tiež veľa. Naše domovy sú vyjadrením vedomostí, ktoré máme o tom ako ľudia chcú žiť. Pre nás to sú individuálné umelecké diela vystavené vo svete, aby ich mohli všetci vidieť a tešiť sa z nich.
+<br/>Každy z nás zdieľame silný názor, že každý nový domov je nová príležitosť vybudovať niečo lepšie.
 "
 			/>			
 			{ companyValues.map((value, index) => (
@@ -101,7 +104,6 @@ const AboutPage = (props) => {
 				imageSrc="https://dsqqu7oxq6o1v.cloudfront.net/preview-562653-9Knu8vNR8PdSgTuM-large.JPG"
 			/>
 */}
-			<FullwidthHeading heading1={`tým`} heading2={`kinokuke`}/>
 
 
 		</div>

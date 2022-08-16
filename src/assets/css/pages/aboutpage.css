@@ -5,7 +5,7 @@
 }
 
 .about-page__container .image-banner__container {
-    height: calc(100vh - var(--navigation-height) - 80px);
+    /height: calc(100vh - var(--navigation-height) - 80px);
 }
 
 .about-page__container .image-banner__container .image-wrapper {
@@ -13,5 +13,11 @@
 }
 
 .about-page__container .image-banner__container img {
-    object-position: top;
+    object-position: 10% top;
+}
+
+@media screen and (min-width: 600px) {
+	.about-page__container .image-banner__container img {
+	    object-position: top;
+	}
 }

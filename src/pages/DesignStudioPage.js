@@ -6,7 +6,6 @@ import ImageBanner from "../components/ImageBanner.js";
 import ImageCarousel from "../components/ImageCarousel.js";
 import TextBlock from "../components/TextBlock.js";
 import FullwidthHeading from "../components/FullwidthHeading.js";
-import ProcessPhases from "../components/ProcessPhases.js";
 import DesignAndArchitectureTiles from "../components/DesignAndArchitectureTiles.js";
 
 import "./../assets/css/pages/designstudiopage.css";
@@ -19,7 +18,11 @@ const DesignStudioPage = (props) => {
 	
 	const images = [
 		{
-			src: 'https://previews.123rf.com/images/rawpixel/rawpixel1603/rawpixel160302225/53028356-people-meeting-teamwork-architect-engineer-blueprint-concept.jpg'
+//			src: 'https://previews.123rf.com/images/rawpixel/rawpixel1603/rawpixel160302225/53028356-people-meeting-teamwork-architect-engineer-blueprint-concept.jpg'
+//			src: 'https://cmicglobal.com/wp-content/uploads/2020/01/iStock-613235226-1200x800.jpg',
+//			src: 'https://www.webershandwick.com/wp-content/uploads/2018/04/DI_newsroom_photo-1920x1280.jpg',
+//			src: 'https://www.hilti.com.qa/content/hilti/META/QA/en/business/business/engineering/profis-engineering-suite/jcr:content/mainSection/mainColumn/three_image_text_col_643971635/image_text_column_326579221/image.img.1920.medium.jpg/1620747065883.jpg'
+			src: 'https://images.adsttc.com/media/images/60be/6d86/e1fe/0f01/6557/740f/newsletter/architects-analyzing-projects-pkn5p77.jpg?1623092666',
 		}
 	];
 
@@ -30,13 +33,22 @@ const DesignStudioPage = (props) => {
 	//const wallTypesImg = 'https://cdn.vox-cdn.com/thumbor/XZDin0MkaOZxbzGwV_Km5OXpB3A=/0x0:3600x2400/1200x800/filters:focal(1032x940:1608x1516)/cdn.vox-cdn.com/uploads/chorus_image/image/70129201/Framing_iStock_1142903080.0.jpg';
 
 	const carouselImages = [
+
 		{
 			src: wallTypesImg,
 			columns: 3
 		},
 /*
 		{
-			src: wallTypesBkg,
+			src: 'https://www.montaznekucedomtera.rs/images/tehnicki-opis/zid1.png',
+			columns: 1
+		},
+		{
+			src: 'https://www.montaznekucedomtera.rs/images/tehnicki-opis/zid2.png',
+			columns: 1
+		},
+		{
+			src: 'https://www.montaznekucedomtera.rs/images/tehnicki-opis/zid3.png',
 			columns: 1
 		}
 */
@@ -68,7 +80,7 @@ const DesignStudioPage = (props) => {
 	};
 
 	useEffect(() => {
-		window.scrollTo(0, 0)
+//		window.scrollTo(0, 0)
 	}, [])
 
 	return (
@@ -80,17 +92,12 @@ const DesignStudioPage = (props) => {
 				showOverlay
 			/>
 			<TextBlock 
-				heading="[*TO TRANSLATE*] We partner with you every step of the way"
-				text="[*TO TRANSLATE*] 
-The New Home Company believes the power of personal expression and design customization is at the forefront of its purchase experience. That is why we integrate a Design Studio into nearly all of our neighborhoods and provide our homeowners the tools to bring their new residence to life. Based on its years of experience creating residences that express the tastes and desires of buyers, NEW HOME has established a high-tech yet very friendly studio environment at its neighborhoods.
-<br/><br/>[*TO TRANSLATE*] Whether you are choosing the exact cabinet style and knobs for your kitchen or the flooring that will run throughout the entire first floor, personalizing your new home is the key to feeling “at home.” Through each neighborhood’s Design Studio, our design experts will guide you as you transform a house into your unique new home, one that defines your style, your passion and your life.
-				"
+				heading="Urobte si domov podľa seba"
+				text='V Kino Kuke veríme, že sila v osobnom vyjadrení a prispôsobenie dizajnu sú základom pri skúsenosti s kúpou. Preto sme zaintegrovali Dizajn Štúdio, ktoré poskytuje naším majiteľom domov nástroje, aby mohli svoj nový domov priniesť k životu. Na základe rokov skúseností s vytváraním rezidencií, ktoré sú vyjadrením osobného vkusu a želaní kupcov, Kino Kuke zaviedlo high-tech, pritom user-friendly štúdio dostupné práve našim klientom.
+<br/><br/>Či už si vyberáte konkrétny štýl kabinetu a kľuky do Vašej kuchyne alebo podlahy, ktoré budu obložené po celom prvom poschodí, personalizovať si Váš dom podľa Vaších predstáv je kľúč aby ste sa cítili "ako doma". V Dizajnovom štúdiu Vás budú naši experti sprevádzať popri tom ako premeníte budovu na unikátny nový domov, ktorý definuje Váš štýl a Váš život.  
+				'
 			/>
 			<FullwidthHeading heading1={`dizajn štúdio`} heading2={`proces`}/>
-			<ProcessPhases 
-				phases={phases}
-				columns="4"
-			/>
 
 			<FullwidthHeading heading1={`udržateľný`} heading2={`dizajn`}/>
 			<div className="design-and-architecture__tiles-wrapper">
@@ -98,7 +105,7 @@ The New Home Company believes the power of personal expression and design custom
 					<DesignAndArchitectureTiles tile={tile} index="0" />
 				</div>
 			</div>
-
+{/*
 			<FullwidthHeading heading1={`výber`} heading2={`stien`}/>
 			<ImageBanner 
 				className="design-studio-page__wall-types-description"
@@ -119,7 +126,8 @@ The New Home Company believes the power of personal expression and design custom
 				heading=""
 				text="Majte na vedomí, že výber 'najtenšieho' typu stenu - Type B, spĺňa všetky požiadavky energetickej výkonnosti.
 <br/>V tomto prípade prefab domy spadajú do kategórie B energetickej výkonnosti."
-			/>	
+			/>
+*/}
 		</div>
 	)
 }

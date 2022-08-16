@@ -1,19 +1,31 @@
 
 .design-and-architecture__container {
 	display: flex;
-    overflow: hidden;
-
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
 }
 
 .design-and-architecture__container .fullheight-heading {
 	flex: 0 0 12%;
 }
 
+.design-and-architecture__container .nav-arrow .icon {
+/*    width: 40px;
+    height: 40px;
+    transform: translateX(5px);
+    background-color: var(--main-color);
+*/
+}
+
+.design-and-architecture__container .design-and-architecture__slider {
+    overflow: hidden;
+}
+
 .design-and-architecture__container .design-and-architecture__tiles-wrapper {
 	flex: 1 1 90%;
     display: flex;
-    overflow: hidden;
+    transition: transform .3s ease-in-out;
 }
 
 .design-and-architecture__container .design-and-architecture__tiles-group {
@@ -29,9 +41,9 @@ justify-content: stretch;
     grid-template-rows: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 	.design-and-architecture__container {
-    	max-height: 100vh; 
+    	/max-height: 100vh; 
 	}
 
 	.design-and-architecture__container .design-and-architecture__tiles-group {
@@ -60,7 +72,7 @@ justify-content: stretch;
 .design-and-architecture__container .t-7 { order: 8 }
 .design-and-architecture__container .t-8 { order: 7 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 	.design-and-architecture__container .t-1 { order: 1 }
 	.design-and-architecture__container .t-2 { order: 2 }
 	.design-and-architecture__container .t-3 { order: 4 }
@@ -88,7 +100,7 @@ justify-content: stretch;
 	max-height: 30vh;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
 	.design-and-architecture__container .content-tile,
 	.design-and-architecture__container .image-tile {
 	    max-height: none;
@@ -139,17 +151,35 @@ justify-content: stretch;
     font-size: 13px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
+	.design-and-architecture__container .underline__container {
+		margin: 14px 0;
+		margin-top: 8px;
+	}
 	.design-and-architecture__container .show-desktop {
 		display: block;
 	}
-	
+
+	.design-and-architecture__container .design-and-architecture__cta {
+		padding: var(--btn-padding-lg);
+    	font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
 	.design-and-architecture__container .underline__container {
 		margin: 16px 0;
+		margin-top: 10px;
+    	height: 4px;
 	}
 
 	.design-and-architecture__container .section-subheading {
-		font-size: 20px;
+		/font-size: 22px;
+	}
+
+
+	.design-and-architecture__container p {
+		margin: 20px 0;
 	}
 
 	.design-and-architecture__container .btn-wrapper {
@@ -157,7 +187,7 @@ justify-content: stretch;
 	}
 
 	.design-and-architecture__container .design-and-architecture__cta {
-		padding: 10px 24px;
+		padding: var(--btn-padding-lg);
 	    margin-top: 8px;
 	}
 }

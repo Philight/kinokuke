@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import SectionHeading from "./SectionHeading.js";
-import Icon from "./Icon.js";
-//import HeadingUnderline from "./HeadingUnderline.js";
-//import SectionSubheading from "./SectionSubheading.js";
+import SectionHeading from "../text/SectionHeading.js";
+import Icon from "../utility/Icon.js";
 
-import "./../assets/css/components/gallerycarousel.css";
+import "../../assets/css/components/gallerycarousel.css";
 
 const GalleryCarousel = (props) => {
 	let { gallery, columns, rows } = props;
@@ -22,11 +20,6 @@ const GalleryCarousel = (props) => {
 	}, [])
 
 	const updateIndex = (newIndex) => {
-		console.log('click');
-//		if (newIndex > React.Children.count(posts)) {
-console.log(newIndex);
-console.log(gallery.length);
-
 		if (newIndex > (gallery.length)/columns/rows-1) {
 			newIndex = Math.ceil((gallery.length)/columns/rows-1);
 		

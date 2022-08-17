@@ -4,12 +4,11 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 //import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/utility/ScrollToTop";
 
 import AboutPage from "./pages/AboutPage.js";
 import ContactPage from "./pages/ContactPage.js";
 import DesignPage from "./pages/DesignPage.js";
-import DesignStudioPage from "./pages/DesignStudioPage.js";
 import ProcessPage from "./pages/ProcessPage.js";
 import ModelsPage from "./pages/ModelsPage.js";
 import LandingPage from "./pages/LandingPage.js";
@@ -38,9 +37,7 @@ const App = () => {
                   <Route path="/contact" element={<LandingLayout><ContactPage /></LandingLayout>} />
                   <Route path="/design/features" element={<LandingLayout><DesignPage /></LandingLayout>} />
                   <Route path="/design/models" element={<LandingLayout><ModelsPage /></LandingLayout>} />
-   {/*
-                  <Route path="/design/studio" element={<LandingLayout><DesignStudioPage /></LandingLayout>} />
-   */}
+ 
                   <Route path="/process" element={<LandingLayout><ProcessPage /></LandingLayout>} />
                   <Route path="/findyourhome" element={<LandingLayout><ModelsPage /></LandingLayout>} />
                   <Route path="/model" element={<LandingLayout><ModelPage /></LandingLayout>} />

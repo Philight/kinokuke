@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import Icon from "../components/Icon.js";
-//import "./../assets/css/components/googlemap.css";
+import Icon from "./utility/Icon.js";
 
 const ProcessStep = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;

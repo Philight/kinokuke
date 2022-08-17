@@ -1,15 +1,14 @@
-import React, { useState, useEffect, useLayoutEffect, useRef, createRef } from "react";
+import React, { useState, useLayoutEffect, useRef, createRef } from "react";
 
 import DescriptionWithImage from "../components/DescriptionWithImage.js";
 import CompanyValues from "../components/CompanyValues.js";
-import HeadingBlock from "../components/HeadingBlock.js";
-import ImageBanner from "../components/ImageBanner.js";
-import TextBlock from "../components/TextBlock.js";
-import FullwidthHeading from "../components/FullwidthHeading.js";
+import HeadingBlock from "../components/text/HeadingBlock.js";
+import ImageBanner from "../components/media/ImageBanner.js";
+import TextBlock from "../components/text/TextBlock.js";
+import FullwidthHeading from "../components/text/FullwidthHeading.js";
 
 import "./../assets/css/pages/aboutpage.css";
 
-import tymkinokuke from "./../assets/images/tym-kinokuke.png";
 import pageBkg from "./../assets/images/page-bkg/about-page-bkg.png";
 //import kinokukelogo from "./../assets/images/kinokuke-logo.png";
 
@@ -20,10 +19,9 @@ const AboutPage = (props) => {
 
 	const images = [
 		{
-			//src: 'https://thumbs.dreamstime.com/z/successful-architects-team-top-view-four-architect-checking-project-looking-camera-92877774.jpg'
-			//src: 'https://i0.wp.com/bostonrealestatetimes.com/wp-content/uploads/2021/10/Colliers-Italy.jpg?fit=2160%2C1200&ssl=1',
+//			src: 'https://thumbs.dreamstime.com/z/successful-architects-team-top-view-four-architect-checking-project-looking-camera-92877774.jpg'
+//			src: 'https://i0.wp.com/bostonrealestatetimes.com/wp-content/uploads/2021/10/Colliers-Italy.jpg?fit=2160%2C1200&ssl=1',
 			src: pageBkg,
-//			src: tymkinokuke
 //			src: 'https://vietnamconstruction.vn/wp-content/uploads/2016/01/Project-management-for-construction.jpg'
 		}
 	];
@@ -51,10 +49,6 @@ const AboutPage = (props) => {
 			isFixed: false
 		}
 	])
-
-	useEffect(() => {
-//		window.scrollTo(0, 0)
-	}, [])
 
 /*
 	const getOrCreateRef = (el, id) => {
@@ -89,23 +83,6 @@ const AboutPage = (props) => {
 					imageSrc={value.imageSrc}
 				/>
 			)) }
-
-{/*
-			<CompanyValues 
-				title="Lepšia skúsenosť."
-				text="We live intentionally; actively nurturing a balanced mind, body, and spirit."
-				icon="v1"
-				imageSrc="https://dsqqu7oxq6o1v.cloudfront.net/preview-562653-9Knu8vNR8PdSgTuM-large.JPG"
-			/>
-			<CompanyValues 
-				title="Lepší domov."
-				text="We live intentionally; actively nurturing a balanced mind, body, and spirit."
-				icon="v2"
-				imageSrc="https://dsqqu7oxq6o1v.cloudfront.net/preview-562653-9Knu8vNR8PdSgTuM-large.JPG"
-			/>
-*/}
-
-
 		</div>
 	)
 }

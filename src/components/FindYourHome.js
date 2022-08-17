@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import FullwidthHeading from "./FullwidthHeading.js";
+import FullwidthHeading from "./text/FullwidthHeading.js";
 import "./../assets/css/components/findyourhome.css";
 
 import houses from "../data/houses.js";
@@ -20,10 +20,6 @@ const FindYourHome = (props) => {
     isTablet ? columns=2 : '';
 
 	const updateIndex = (newIndex) => {
-	//		if (newIndex > React.Children.count(posts)) {
-console.log(newIndex);
-console.log(Object.keys(posts).length);
-
 		if (newIndex > (Object.keys(posts).length/columns)) {
 			newIndex = 0;
 		}
@@ -50,8 +46,6 @@ console.log(Object.keys(posts).length);
 			reducedHouses.push(shownHouses[i]);
 		}
 		setShownHouses(reducedHouses);
-
-
 	}, [])
 
 	useEffect(() => {
@@ -77,26 +71,21 @@ console.log(columns);
 	}, [activeIndex]);
 
 	let arraySize = Math.ceil(shownHouses.length/columns); 
-	const navDotIndexes = [...Array(arraySize).keys()];//.slice(0, -1);
-console.log('navDotIndexes');
-console.log(navDotIndexes);
+	const navDotIndexes = [...Array(arraySize).keys()];
 
 	return (
 		<div className={`find-your-home__container col-${columns}`}>
-			{/*<FullwidthHeading heading1="najdi" heading2="svoj domov" />*/}
 			<div 
 				className="find-your-home__houses-container" 
 				style={{ transform: `translateX(-${activeIndex * 100}%)` }}
 			>
 			{ shownHouses.map((house, index) => (
-				//index < columns ? (
-					<div className="find-your-home__item">
-						<Link to={'/model/' + house.title}>
-			        		<h2>{house.title}</h2>
-			        		<div className="find-your-home__image-wrapper"><img src={house.imageSrc} /></div>
-						</Link>
-		    		</div>
-		    	//) : null
+				<div className="find-your-home__item">
+					<Link to={'/model/' + house.title}>
+		        		<h2>{house.title}</h2>
+		        		<div className="find-your-home__image-wrapper"><img src={house.imageSrc} /></div>
+					</Link>
+	    		</div>
 		    )) }
 			</div>
 			{ enableNavigation && 

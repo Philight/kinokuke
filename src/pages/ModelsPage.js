@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
-import HeadingBlock from "../components/HeadingBlock.js";
-import ImageBanner from "../components/ImageBanner.js";
-import TextBlock from "../components/TextBlock.js";
-import FullwidthHeading from "../components/FullwidthHeading.js";
+import HeadingBlock from "../components/text/HeadingBlock.js";
+import ImageBanner from "../components/media/ImageBanner.js";
+import TextBlock from "../components/text/TextBlock.js";
+import FullwidthHeading from "../components/text/FullwidthHeading.js";
 import ModelsHouses from "../components/ModelsHouses.js";
 import ContactUsModal from "../components/ContactUsModal.js";
 
@@ -21,10 +21,6 @@ const ModelsPage = (props) => {
 			src: 'https://cdn.vox-cdn.com/thumbor/fII7oFYbKBfkfZQ8hV0WVq23CQs=/0x0:3200x2133/1200x675/filters:focal(1688x734:2200x1246)/cdn.vox-cdn.com/uploads/chorus_image/image/66417434/154.0.jpg',
 		}
 	];
-
-	useEffect(() => {
-		//window.scrollTo(0, 0)
-	}, [])
 
 	return (
 		<div className="models-page__container">

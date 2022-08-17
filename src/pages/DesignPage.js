@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import HeadingBlock from "../components/HeadingBlock.js";
-import ImageBanner from "../components/ImageBanner.js";
-import TextBlock from "../components/TextBlock.js";
-import FullwidthHeading from "../components/FullwidthHeading.js";
+import HeadingBlock from "../components/text/HeadingBlock.js";
+import ImageBanner from "../components/media/ImageBanner.js";
+import TextBlock from "../components/text/TextBlock.js";
+import FullwidthHeading from "../components/text/FullwidthHeading.js";
 import DesignValues from "../components/DesignValues.js";
 import DesignAndArchitectureTiles from "../components/DesignAndArchitectureTiles.js";
-import ImageCarousel from "../components/ImageCarousel.js";
+import ImageCarousel from "../components/media/ImageCarousel.js";
 
 import "./../assets/css/pages/designpage.css";
 
 import introBkg from "./../assets/images/page-bkg/design-features-page-bkg.png";
-
 
 import processStep1 from "./../assets/images/process-steps/process-step-1.png";
 import processStep2 from "./../assets/images/process-steps/process-step-2.png";
@@ -89,8 +88,6 @@ const DesignPage = (props) => {
 		title: 'GREEN LIFE', 
 		slogan: 'Udržateľnosť. Energetická úspornosť. Zeleň.', 
 		text: 'Program, ktorý sa zaväzuje realizovať udržateľné stavebné prvky - od energeticky úsporných spotrebičov až po solárne vylepšenia, ktoré v konečnom dôsledku majú pozitívny efekt na životné prostredie.', 
-		//ctaText: 'Prečítajte si viac' , 
-		//ctaSrc: '/design/features',
 		imageSrc: 'https://www.impressiveinteriordesign.com/wp-content/uploads/2014/09/Eco-Friendly-House-With-A-Contemporary-Design-1.jpg',
 		backgroundColor: '#a8b53a' 
 	};
@@ -149,10 +146,6 @@ const DesignPage = (props) => {
 	const [contentShown, setContentShown] = useState(false);
 	const timeoutRef = useRef(null);
 
-	useEffect(() => {
-//		window.scrollTo(0, 0)
-	}, [])
-
 	const resetTimeout = () => {
 		if (timeoutRef.current) {
 		  clearTimeout(timeoutRef.current);
@@ -160,11 +153,8 @@ const DesignPage = (props) => {
 	}
 
 	useEffect(() => {
-console.log('autoplay');
 		if (enableAutoplay) {
 		    resetTimeout();
-		    //isMobile ? columns=1 : '';
-//console.log(columns);
 
 		    timeoutRef.current = setTimeout(
 				() =>
@@ -214,7 +204,6 @@ console.log('autoplay');
 				enableAutoplay
 				interval="3000"
 			/>
-
 		</div>
 	)
 }

@@ -1,19 +1,19 @@
 import React, { useEffect, useState, useRef } from "react";
 
-import Icon from "./Icon.js";
-import ImageBanner from "./ImageBanner.js";
-import SectionHeading from "./SectionHeading.js";
-import FullwidthHeading from "./FullwidthHeading.js";
+import Icon from "./utility/Icon.js";
+import ImageBanner from "./media/ImageBanner.js";
+import SectionHeading from "./text/SectionHeading.js";
+import FullwidthHeading from "./text/FullwidthHeading.js";
 
 import "./../assets/css/components/contactusmodal.css";
 
 const ContactUsModal = (props) => {
-		let { houseModel } = props;
+	let { houseModel } = props;
 
     const [modalVisible, setModalVisible] = useState(false);
     const [noticesVisible, setNoticesVisible] = useState(false);
     const [activeNotice, setActiveNotice] = useState("");
-		const noticesTimerRef = useRef(null);
+	const noticesTimerRef = useRef(null);
 
     const [fieldValidity, setFieldValidity] = useState({
     	firstName: true,
@@ -71,10 +71,6 @@ const ContactUsModal = (props) => {
 		}, 8000)
 	}
 
-	const hightlightFields = (fields) => {
-
-	}
-
 	const validateFields = (fields) => {
 	    let validity = {
 			firstName: true,
@@ -88,7 +84,6 @@ const ContactUsModal = (props) => {
 
 		for (const field in fields) {
 			if (!fields[field]) {
-console.log('Field('+field+') is empty/notvalid');
 				validity[field] = false;
 				addNotices(field, 'EMPTY_FIELD');
 				allValid = false;
@@ -96,39 +91,33 @@ console.log('Field('+field+') is empty/notvalid');
 
 			if (field == 'email') {
 				if (!fields[field].includes('@')) {
-console.log(`Field(`+field+`) ${fields[field]} is not valid`);
 					validity[field] = false;
 					addNotices(field, 'EMAIL_INVALID');
 					allValid = false;
 				};
-
 			}
 		}
 
-console.log(validity);
 		setFieldValidity(validity);
 
 		return allValid;
 	}
 
   	const handleSubmit = async (e) => {
-    	alert('Submit');
     	event.preventDefault();
 
     	const { firstName, lastName, email, mobilePhone, subject, message } = e.target.elements;
 	    let details = {
-	      firstName: firstName.value,
-	      lastName: lastName.value,
-	      email: email.value,
-	      mobilePhone: mobilePhone.value,
-	      subject: subject.value,
-	      message: message.value,
+			firstName: firstName.value,
+			lastName: lastName.value,
+			email: email.value,
+			mobilePhone: mobilePhone.value,
+			subject: subject.value,
+			message: message.value,
 	    };
 
     	var isValid = validateFields(details);
     	if (!isValid) return;
-
-console.log(details);	    
 
         let response = await fetch("https://www.kinokuke.sk/api/send-email", {
 	      method: "POST",
@@ -156,10 +145,8 @@ console.log(details);
 				<SectionHeading heading="Napíšte nám" className="contact-us-modal__heading">
 					<Icon icon="x-mark-oval" className="contact-us-modal__close" onClick={toggleModal}/>
 				</SectionHeading>
-{/*				
-				<FullwidthHeading heading1="napiste" heading2="nam" />
-*/}
-				<form className={`contact-us-modal__form `}
+
+				<form className={`contact-us-modal__form`}
 					onSubmit={handleSubmit}
 				>
 					<fieldset className="contact-us-modal__form-personal-info">

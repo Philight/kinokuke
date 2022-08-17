@@ -3,8 +3,8 @@ import GoogleMapReact from 'google-map-react';
 
 const GOOGLE_API_KEY = 'AIzaSyAlFi842tZ5Wl0aikbm77AWmKKuKuu5TcA';
 
-import Icon from "../components/Icon.js";
-import "./../assets/css/components/googlemap.css";
+import Icon from "../utility/Icon.js";
+import "../../assets/css/components/googlemap.css";
 
 const LocationPin = ({ text }) => {
 	return (
@@ -16,15 +16,12 @@ const LocationPin = ({ text }) => {
 }
 
 const GoogleMap = (props) => {
-//	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
 	let { className, title, location, zoom } = props;
 	
 	const [textArray, setTextArray] = useState([]);
 
 	useEffect(() => {
-console.log(location.address);
 		replaceNewline(location.address);
-
 	}, [location])
 
 	const replaceNewline = (textWithoutBreaks) => {
@@ -32,13 +29,10 @@ console.log(location.address);
 
 		if (textWithoutBreaks.indexOf('<br/>') !== -1) {
 			textWithBreaks = textWithoutBreaks.split('<br/>');
-console.log(textWithBreaks);
 		}
 
-		//textWithBreaks = textWithBreaks.split('<br/>');
 		if (textWithoutBreaks.indexOf('\n') !== -1) {
 			textWithBreaks = textWithoutBreaks.split('\n');
-console.log(textWithBreaks);
 		}
 		setTextArray(textWithBreaks);
 	}

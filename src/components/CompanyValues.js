@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, createRef } from "react";
 
-import Icon from "./Icon.js";
-import SectionHeading from "./SectionHeading.js";
-import SectionSubheading from "./SectionSubheading.js";
+import Icon from "./utility/Icon.js";
+import SectionHeading from "./text/SectionHeading.js";
+import SectionSubheading from "./text/SectionSubheading.js";
 
 import "./../assets/css/components/companyvalues.css";
-
-//import kinokukelogo from "./../assets/images/kinokuke-logo.png";
 /*
 class CompanyValues extends React.Component {
 
@@ -91,96 +89,74 @@ class CompanyValues extends React.Component {
 const CompanyValues = ((props) => {
 	let { className, title, text, icon, imageSrc, id } = props;
 
-    const [scrollOffset, setScrollOffset] = useState(0);
+	const [scrollOffset, setScrollOffset] = useState(0);
 	const [scrollDown, setScrollDown] = useState(null);
-    const [windowInnerHeight, setWindowInnerHeight] = useState(0);
+	const [windowInnerHeight, setWindowInnerHeight] = useState(0);
 
-    const [isFixed, setIsFixed] = useState(false);
-    const [isRevealed, setIsRevealed] = useState(false);
-    const [showContent, setShowContent] = useState(false);
+	const [isFixed, setIsFixed] = useState(false);
+	const [isRevealed, setIsRevealed] = useState(false);
+	const [showContent, setShowContent] = useState(false);
 
-    const [moveContainer, setMoveContainer] = useState(false); 
+	const [moveContainer, setMoveContainer] = useState(false); 
 
-    const [revealing, setRevealing] = useState(false); 
-    const [covering, setCovering] = useState(false); 
+	const [revealing, setRevealing] = useState(false); 
+	const [covering, setCovering] = useState(false); 
 
 	const containerRef = useRef(null);
 	const iconRef = useRef(null);
 	const overlayRef = useRef(null);
 
-    useEffect(() => {
-    	const posTop = containerRef.current.getBoundingClientRect().top;
-//console.log(id+': bounding top:' + posTop);
-//console.log(id+': bounding bot:' + containerRef.current.getBoundingClientRect().bottom);
-		//console.log('window.pageYOffset:' + window.pageYOffset);
-		//console.log('screen.height:' + screen.height);
-		//console.log('window.innerHeight:' + window.innerHeight);
+  useEffect(() => {
+  	const posTop = containerRef.current.getBoundingClientRect().top;
 
-		if (covering && posTop >= (windowInnerHeight*2/3)) {
-//console.log('NEW IF 3');
-			setCovering(false);
-			setIsRevealed(false);
-			setMoveContainer(false);
-			setIsFixed(false);
+	if (covering && posTop >= (windowInnerHeight*2/3)) {
+		setCovering(false);
+		setIsRevealed(false);
+		setMoveContainer(false);
+		setIsFixed(false);
 
 
-		} else if (covering && posTop >= (windowInnerHeight/3) && posTop < (windowInnerHeight*2/3)) {
-//console.log('NEW IF 2');
+	} else if (covering && posTop >= (windowInnerHeight/3) && posTop < (windowInnerHeight*2/3)) {
+		const ratio = posTop / (windowInnerHeight*2/3);
+		iconRef.current.style.top = 25+25*ratio+'%'; // 50% - 25%
+		iconRef.current.style.transform = "translate(-50%, -50%) scale("+(0.5+0.5*ratio)+")" // scale 1 - 0.5
+		overlayRef.current.style.opacity = 0.35+0.55*ratio+''; // 0.9 - 0.35
 
-			const ratio = posTop / (windowInnerHeight*2/3);
-//console.log('ratio: '+ratio);
-			iconRef.current.style.top = 25+25*ratio+'%'; // 50% - 25%
-			iconRef.current.style.transform = "translate(-50%, -50%) scale("+(0.5+0.5*ratio)+")" // scale 1 - 0.5
-			//overlayRef.current.style.opacity = 0.15+0.75*ratio+''; // 0.9 - 0.15
-			overlayRef.current.style.opacity = 0.35+0.55*ratio+''; // 0.9 - 0.35
+	} else if ((covering || showContent) && posTop > 0 && posTop < (windowInnerHeight/3)) {
+		setIsFixed(true);
+		setCovering(true);
+		setShowContent(false);
 
+	} else if (posTop > 0 ) {
+		setIsFixed(false);
 
-		} else if ((covering || showContent) && posTop > 0 && posTop < (windowInnerHeight/3)) {
-//console.log('NEW IF 1');
-			setIsFixed(true);
-			setCovering(true);
-			setShowContent(false);
+		setIsRevealed(false);
+		setShowContent(false);
 
+	} else if (!showContent && posTop < 0 && posTop > (-windowInnerHeight/3)) {
+		setMoveContainer(false);
+		setIsFixed(true);
 
-		} else if (posTop > 0 ) {
-			setIsFixed(false);
+		setIsRevealed(true);
+		setShowContent(false);
 
-			setIsRevealed(false);
-			setShowContent(false);
+		// TOP position: 0 - windowInnerHeight / 2
+		const ratio = -(posTop / (windowInnerHeight/3));
 
-		} else if (!showContent && posTop < 0 && posTop > (-windowInnerHeight/3)) {
+		iconRef.current.style.top = 50-25*ratio+'%'; // 50% - 25%
+		iconRef.current.style.transform = "translate(-50%, -50%) scale("+(1-0.5*ratio)+")" // scale 1 - 0.5
+		overlayRef.current.style.opacity = 0.9-0.55*ratio+''; // 0.9 - 0.35
 
-			//containerRef.current.classList.add("scroll-fixed");
-			//containerRef.current.style.position = 'fixed';
-			//containerRef.current.style.top = '0';
-			//containerRef.current.style.left = '0';
-			setMoveContainer(false);
-			setIsFixed(true);
+	} else if (posTop <= (-windowInnerHeight/3)
+			&& posTop > (-windowInnerHeight*2/3)) {
+		setShowContent(true);
 
-			setIsRevealed(true);
-			setShowContent(false);
+	} else {
+		setMoveContainer(true);
+		setIsFixed(false);
+	}
 
-			// TOP position: 0 - windowInnerHeight / 2
-			const ratio = -(posTop / (windowInnerHeight/3));
-
-//console.log('ratio: '+ratio);
-			iconRef.current.style.top = 50-25*ratio+'%'; // 50% - 25%
-			iconRef.current.style.transform = "translate(-50%, -50%) scale("+(1-0.5*ratio)+")" // scale 1 - 0.5
-			//overlayRef.current.style.opacity = 0.9-0.75*ratio+''; // 0.9 - 0.15
-			overlayRef.current.style.opacity = 0.9-0.55*ratio+''; // 0.9 - 0.35
-
-		} else if (posTop <= (-windowInnerHeight/3)
-				&& posTop > (-windowInnerHeight*2/3)) {
-			setShowContent(true);
-			//containerRef.current.classList.add("show-content");
-
-		} else {
-			setMoveContainer(true);
-			setIsFixed(false);
-			//setShowContent(false);
-		}
-
-    }, [scrollOffset])
+  }, [scrollOffset])
 
 	useEffect(() => {
 		setIsFixed(false);
@@ -224,16 +200,12 @@ const CompanyValues = ((props) => {
         // clean up code
         window.removeEventListener('scroll', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
-//console.log(scrollDown);
 
         return () => window.removeEventListener('scroll', onScroll);
     }, [scrollDown]);
 
 	return (
 		<div className={`company-values__container nav-visible ${moveContainer ? 'move-container' :''}`} ref={containerRef} data-id={id}>
-			{/*<div style={{color: '#fff', position: 'fixed', zIndex: '100', top: 0, background: '#000'}}>
-				{scrollOffset}, Height|{windowInnerHeight}, {scrollDown ? 'DOWN' : 'UP'}
-			</div>*/}
 			<div 
 				className={`company-values__inner-container 
 					${isFixed ? 'scroll-fixed' : ''} 
@@ -252,7 +224,6 @@ const CompanyValues = ((props) => {
 	)
 	
 })
-
 
 
 /*

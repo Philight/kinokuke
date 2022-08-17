@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import SectionHeading from "./SectionHeading.js";
-import Icon from "./Icon.js";
-//import HeadingUnderline from "./HeadingUnderline.js";
-//import SectionSubheading from "./SectionSubheading.js";
+import SectionHeading from "../text/SectionHeading.js";
+import Icon from "../utility/Icon.js";
 
-import "./../assets/css/components/gallerymasonry.css";
+import "../../assets/css/components/gallerymasonry.css";
 
 const GalleryMasonry = (props) => {
 	let { gallery, columns, showLimit, loadBtnText } = props;
@@ -36,22 +34,10 @@ const GalleryMasonry = (props) => {
 	}, [])
 
 	useLayoutEffect(() => {
-console.log('height');
-console.log(gridRef.current.clientHeight);
 		let nodeStyle = window.getComputedStyle(gridRef.current);
-/*
-console.log(nodeStyle.maxHeight);
-console.log(nodeStyle.getPropertyValue('max-height'));
-		setGridMaxHeight(nodeStyle.getPropertyValue('max-height'));
-*/
-console.log(nodeStyle.paddingTop);
-console.log(nodeStyle.paddingBottom);
-console.log(nodeStyle.getPropertyValue('padding-top'));
 		let totalPadding = parseInt(nodeStyle.paddingTop.replace('px', '')) + parseInt(nodeStyle.paddingBottom.replace('px', ''));
 		setGridVPadding(totalPadding);
 
-console.log(nodeStyle.height);
-console.log(nodeStyle.getPropertyValue('height'));
 		setGridMaxHeight(nodeStyle.getPropertyValue('height'));
 	}, [])
 
@@ -87,12 +73,9 @@ console.log(nodeStyle.getPropertyValue('height'));
 		if (gallery.length > showLimit * timesLoaded) {
 			let addTimesLoaded = timesLoaded + 1;
 
-//console.log(gridMaxHeight);
-//			gridRef.current.style.maxHeight = gridMaxHeight.replace('px', '') * addTimesLoaded + 'px';
 			gridRef.current.style.height = (parseInt(gridMaxHeight.replace('px', ''))-gridVPadding) * addTimesLoaded + 'px';
 			setTimesLoaded(addTimesLoaded);
 		}
-
 	}
 
 	return (

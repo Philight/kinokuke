@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 
-import Icon from "../components/Icon.js";
-import HeadingBlock from "../components/HeadingBlock.js";
-import ImageBanner from "../components/ImageBanner.js";
-import TextBlock from "../components/TextBlock.js";
-import FullwidthHeading from "../components/FullwidthHeading.js";
+import Icon from "../components/utility/Icon.js";
+import HeadingBlock from "../components/text/HeadingBlock.js";
+import ImageBanner from "../components/media/ImageBanner.js";
+import TextBlock from "../components/text/TextBlock.js";
+import FullwidthHeading from "../components/text/FullwidthHeading.js";
 import ProcessSteps from "../components/ProcessSteps.js";
 import DesignAndArchitectureTiles from "../components/DesignAndArchitectureTiles.js";
-import ImageCarousel from "../components/ImageCarousel.js";
+import ImageCarousel from "../components/media/ImageCarousel.js";
 
 import "./../assets/css/pages/processpage.css";
 import "./../assets/css/components/designandarchitecture.css";
@@ -28,60 +28,6 @@ const ProcessPage = (props) => {
 		}
 	];
 
-/*
-	const steps = [
-		{
-			title: 'Vyberte si svoj Kino Kuke Domov',
-			text: 'Či vlastníte pozemok na dedine alebo v meste, nájde sa Kinokuke Domov ušitý na mieru práve pre Vás. Pozrieme sa na Váš pozemok a spoločnými silami vyberieme ten správny Kinokuke Domov, ktorý bude vhodný pre Váš životný štýl a rozpočet.',
-			imageSrc: 'https://www.unicomcorp.com/wp-content/uploads/2018/04/real-estate-customer-service.jpg',
-			color: 'var(--hermes-orange-1)',
-			icon: 'choice'
-		},
-		{
-			title: 'Nadizajnujte si svoj priestor',
-			text: 'Teraz začína zábava. Vyberte si zo špičkových, štandardných povrchových úprav, vybavenia a spotrebičov Vašich snov — všetko individuálne vyberané na základe dizajnu, výkonu, dostupnosti a udržatelnosti. Vylepši si svoj priestor pomocou naších balíčkov na personalizovanie svojho Kinokuke Domova. Potrebujete garáž? Hotovo. Snívate o záhrade? Hotovo a hotovo.',
-			imageSrc: 'https://boomtownroi.com/wp-content/uploads/2021/02/AdobeStock_292580462-scaled.jpeg',
-			color: 'var(--hermes-green-2)',
-			icon: 'design'
-		},
-		{
-			title: 'Získať povolenia a súhlasy',
-			text: 'S Vašimi Kino Kuke Domov náčrtmi na papieri, zašleme návrhy pre mestské povolenia. Zatiaľ čo schvaľovací proces môže trvať rozne závisiac od lokality, my sa pokusíme čo najrýchlejšie posunúť od návrhov do prefab továrňe, rýchlejšie než si dokážete vybrať svoj Kino Kuke Domov.',
-			imageSrc: 'https://shactee.net/wp-content/uploads/2018/07/Home-Permitting.jpg',
-			color: '#778587',
-			icon: 'approval'
-		},
-		{
-			title: 'Vybudujte svoj domov',
-			text: 'Vybudujeme tvoj Kino Kuke Domov v prefab továrňi vo Viedňi — pomocou montážnej linky, ktorá skráti čas, odpad a bolehlavy spojené s budovaním alebo remodelingom domu. Vítajte, nižšie náklady.',
-			//imageSrc: 'https://www.thoughtco.com/thmb/7wijXPfom2G2pUi_gIGR1m5THDI=/3000x2000/filters:fill(auto,1)/prefab-55759560-573635485f9b58723d282e9c.jpg',
-			imageSrc: 'https://i.ytimg.com/vi/fp-ZMrzLrgU/maxresdefault.jpg',
-			color: '#0499a9',
-			icon: 'build'
-		},
-		{
-			title: 'Doručte svoj domov',
-			text: 'Toto je moment, ktorý ste očakávali. Váš Kino Kuke Domov dorazí z našej fabriky skoro kompletný — steny, okná, kanalizácia a spotrebiče. Vidieť to celé je zážitok, keď Vy a Vaša rodina budete svedkami transformácie prázdneho úseku krajiny v osobný ráj. Moderné bývanie.',
-			imageSrc: 'https://media1.fdncms.com/inlander/imager/u/original/21784940/home7-2-17823d3014553cd6.jpg',
-			color: 'var(--hermes-blue-2)',
-			icon: 'delivery'
-		},
-		{
-			title: 'Nainštalujte svoj domov',
-			text: 'Keď je Váš Kino Kuke Domov z našej fabriky doručený a má svoje základy, je treba ešte niečo spraviť. Dokončíme zbytok — nainštalujeme spotrebiče, pridáme posledné úpravy aby sme sa uistili, že tvoj Kino Kuke Domov je pripravený na nasťahovanie.',
-			imageSrc: 'https://www.ooba.co.za/app/uploads/2015/04/home-renovation.jpg',
-			color: 'var(--hermes-green-1)',
-			icon: 'install'
-		},		
-		{
-			title: 'Nasťahujte sa do svojho Kino Kuke Domova',
-			text: 'Vítajte doma. Kľúče su Vaše a ostatné už necháme na Vás.',
-			imageSrc: 'https://d.newsweek.com/en/full/1688023/move-new-home-thumbtack.png',
-			color: 'var(--hermes-orange-2)',
-			icon: 'home'
-		},
-	];
-*/
 	const steps = [
 		{
 			title: 'Vyberte si svoj typ steny',
@@ -209,10 +155,6 @@ const ProcessPage = (props) => {
 		}
 	]	
 
-	useEffect(() => {
-//		window.scrollTo(0, 0)
-	}, [])
-
 	return (
 		<div className="process-page__container">
 			<HeadingBlock heading1="PROCES" heading2="Dizajn, výroba, inštalácia" />
@@ -225,10 +167,12 @@ const ProcessPage = (props) => {
 				text="Prerobili sme celý proces ako dizajnujeme, staviame a kupujeme domy. Bez omeškaní. Bez bolehlavov. Od dizajnu až po inštaláciu, my spravíme všetko.
 				"
 			/>
+			
 			<FullwidthHeading heading1={`fáza`} heading2={`A`}/>
 			<ProcessSteps 
 				steps={steps}
 			/>
+
 			<FullwidthHeading heading1={`fáza`} heading2={`turnkey`}/>
 			<TextBlock 
 				heading="Ihneď pripravené na bývanie"
@@ -262,7 +206,6 @@ const ProcessPage = (props) => {
 			>
 				<Icon icon="info-circle" />
 			</TextBlock>
-
 		</div>
 	)
 }

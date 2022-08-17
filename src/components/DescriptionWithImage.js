@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import {Link} from "react-router-dom";
 
-import SectionHeading from "./SectionHeading.js";
-import HeadingUnderline from "./HeadingUnderline.js";
+import SectionHeading from "./text/SectionHeading.js";
+import HeadingUnderline from "./text/HeadingUnderline.js";
 
 import "./../assets/css/components/descriptionwithimage.css";
 

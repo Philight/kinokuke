@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef }  from "react";
 import { Link } from "react-router-dom";
 
-import KinoKukeLogo from "./KinoKukeLogo.js";
-import Icon from "./Icon.js";
+import KinoKukeLogo from "../utility/KinoKukeLogo.js";
+import Icon from "../utility/Icon.js";
 
-import "./../assets/css/components/footer.css";
+import "../../assets/css/components/footer.css";
 
 const Footer = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
@@ -47,7 +47,7 @@ const Footer = (props) => {
 				<div className="footer__navigation-container-section bottom">
 					<ul className="footer__navigation-container bottom" data-level="1">
 						<li className="footer__navigation-item" data-level="1">
-							<Link to="/gdpr">Ochrana osobných údajov</Link>
+							<Link to="/gdpr">*Ochrana osobných údajov</Link>
 						</li>	
 					</ul>
 				</div>

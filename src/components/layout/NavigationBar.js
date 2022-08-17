@@ -1,11 +1,11 @@
 import React, { useLayoutEffect, useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import KinoKukeLogo from "./KinoKukeLogo.js";
-import Icon from "./Icon.js";
-import SectionHeading from "./SectionHeading.js";
-import HeadingUnderline from "./HeadingUnderline.js";
-import SectionSubheading from "./SectionSubheading.js";
+import KinoKukeLogo from "../utility/KinoKukeLogo.js";
+import Icon from "../utility/Icon.js";
+import SectionHeading from "../text/SectionHeading.js";
+import HeadingUnderline from "../text/HeadingUnderline.js";
+import SectionSubheading from "../text/SectionSubheading.js";
 
 const NavigationBar = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
@@ -23,7 +23,6 @@ const NavigationBar = (props) => {
     const [menuShown, setMenuShown] = useState(false);
     const [submenuShown, setSubmenuShown] = useState(false);
 
-
 	function usePrevious(value) {
 	  const ref = useRef();
 	  useEffect(() => {
@@ -33,13 +32,11 @@ const NavigationBar = (props) => {
 	}
 
 	useEffect(() => {
-		if(window.innerWidth < 768) {
+		if (window.innerWidth < 768) {
 			setIsMobile(true);
 		}
 
 		const closeNav = (e) => {
-console.log('click');
-console.log(e.target);
 			if (!e.target.closest('.navigation-bar__wrapper ') || e.target.closest('.navigation-bar__link')) {
 				setMenuShown(false);
 				setSubmenuShown(false);
@@ -47,14 +44,12 @@ console.log(e.target);
 		}
 
         window.addEventListener('click', closeNav, { passive: true });
-		//document
 
         return () => window.removeEventListener('click', closeNav);
 	}, [])
 
 	useEffect(() => {
 		window.addEventListener('hidenavigation', (e) => {
-			console.log(e.detail);
 			setHideNavigation(e.detail);
 		});
 
@@ -62,19 +57,13 @@ console.log(e.target);
 	}, [])
 
     useEffect(() => {
-        //if (prevScrollOffset < scrollOffset && scrollOffset > 100) { 
         if (scrollOffset > 100) { 
         	setScrollDown(true);
         } else { 
         	setScrollDown(false);
         }
-        //if(prevScrollOffset.setScrollOffset !== setScrollOffset) {
-
-         // process here
-        //}
     }, [scrollOffset])
 
-    //useEffect(() => {
     useLayoutEffect(() => {
         const onScroll = () => {
         	setScrollOffset(window.pageYOffset);
@@ -94,7 +83,6 @@ console.log(e.target);
    			setSubmenuShown(false);
 
    		}  else { setMenuShown(true); }
-   		//setMenuShown(prevValue => !prevValue);
    	}
 
    	const navSubmenuLabel = (
@@ -188,11 +176,6 @@ console.log(e.target);
 							<span className="navigation-bar__navigation-item-label">proces</span>
 							</Link>
 						</li>
-{/*						
-						<li className="navigation-bar__navigation-item" data-level="1">
-							<span className="navigation-bar__navigation-item-label">novinky</span>
-						</li>
-*/}
 						<li className="navigation-bar__navigation-item findyourhome show-desktop" data-level="1">
 							<Link to="/findyourhome" className="navigation-bar__link">
 							<span className="navigation-bar__navigation-item-label">NÁJDI SVOJ DOMOV</span>

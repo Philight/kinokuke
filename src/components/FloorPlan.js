@@ -1,6 +1,6 @@
 import React from "react";
 
-import ImageBanner from "./ImageBanner.js";
+import ImageBanner from "./media/ImageBanner.js";
 
 import "./../assets/css/components/textblock.css";
 
@@ -9,9 +9,6 @@ const FloorPlan = (props) => {
 
 	const replaceNewline = (textWithoutBreaks) => {
 		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n');
-
-		//textWithBreaks = textWithoutBreaks.split('<br/>').join('');
-console.log(textWithBreaks);
 		return textWithBreaks;
 	}
 

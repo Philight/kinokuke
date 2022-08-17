@@ -1,13 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-//import "./../assets/css/components/headingblock.css";
-
 const NewsletterForm = (props) => {
 	let { heading, className } = props;
 
   	const handleSubmit = (event) => {
-    	alert('Submit');
     	event.preventDefault();
   	}
 
@@ -31,7 +28,6 @@ const NewsletterForm = (props) => {
 			<span className="newsletter-form__disclaimer">
 				* <Link to="/gdpr">Ochrana osobných údajov</Link>
 			</span>
-
       	</form>
 	)
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef }  from "react";
 
-import HeadingUnderline from "./HeadingUnderline.js";
+import HeadingUnderline from "./text/HeadingUnderline.js";
 
 import "./../assets/css/components/headingblock.css";
 
@@ -17,11 +17,8 @@ const DesignValues = (props) => {
 	}
 
 	useEffect(() => {
-console.log('autoplay');
 		if (enableAutoplay) {
 		    resetTimeout();
-		    //isMobile ? columns=1 : '';
-//console.log(columns);
 
 		    timeoutRef.current = setTimeout(
 				() =>

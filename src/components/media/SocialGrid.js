@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import FullwidthHeading from "./FullwidthHeading.js";
-import Icon from "./Icon.js";
-import "./../assets/css/components/socialgrid.css";
+import FullwidthHeading from "../text/FullwidthHeading.js";
+import Icon from "../utility/Icon.js";
+import "../../assets/css/components/socialgrid.css";
 
-import chevronRight from "./../assets/icons/chevron-right.svg";
-import instagramIcon from "./../assets/icons/instagram-outline.svg";
+import chevronRight from "../../assets/icons/chevron-right.svg";
+import instagramIcon from "../../assets/icons/instagram-outline.svg";
 
 const SocialGrid = (props) => {
 	let { columns, rows, posts, enableAutoplay, interval } = props;
@@ -27,9 +27,6 @@ const SocialGrid = (props) => {
 	}, [])
 
 	const updateIndex = (newIndex) => {
-//		if (newIndex > React.Children.count(posts)) {
-console.log(newIndex);
-console.log(Object.keys(posts).length);
 		isMobile ? columns=1 : '';
 	    isTablet ? columns=2 : '';
 
@@ -46,11 +43,8 @@ console.log(Object.keys(posts).length);
 	}
 
 	useEffect(() => {
-console.log('autoplay');
 		if (enableAutoplay) {
 		    resetTimeout();
-		    //isMobile ? columns=1 : '';
-//console.log(columns);
 
 		    timeoutRef.current = setTimeout(
 				() =>
@@ -68,12 +62,7 @@ console.log('autoplay');
 		<div className="social-grid__container">
 			<FullwidthHeading heading1="kinokuke" heading2="social" />
 			<div className={`social-grid__posts-carousel`}>
-{/*
-				<img className="nav-arrow" 
-					style={{webkitMask: `url(${chevronRight}) no-repeat center`, mask: `url(${chevronRight}) no-repeat center`}} 
-					onClick={() => {updateIndex(activeIndex + 1)}}
-				/>
-*/}				
+
 				<Icon icon="chevron-right" className="nav-arrow highlight flying right" 
 					onClick={() => {updateIndex(activeIndex + 1)}}
 				/>

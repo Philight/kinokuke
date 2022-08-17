@@ -7,7 +7,6 @@ const SectionSubheading = (props) => {
 
 	const replaceNewline = (textWithoutBreaks) => {
 		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n').split('<br />').join('\n');
-
 		return textWithBreaks;
 	}
 

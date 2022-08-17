@@ -1,8 +1,8 @@
 import React from "react";
 
-import SectionHeading from "./SectionHeading.js";
-import HeadingUnderline from "./HeadingUnderline.js";
-import SectionSubheading from "./SectionSubheading.js";
+import SectionHeading from "./text/SectionHeading.js";
+import HeadingUnderline from "./text/HeadingUnderline.js";
+import SectionSubheading from "./text/SectionSubheading.js";
 import NewsletterForm from "./NewsletterForm.js";
 
 import "./../assets/css/components/newslettersection.css";

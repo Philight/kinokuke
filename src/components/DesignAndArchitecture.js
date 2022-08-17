@@ -1,9 +1,8 @@
 import React, {useState} from "react";
 
 import DesignAndArchitectureTiles from "./DesignAndArchitectureTiles.js";
-import FullwidthHeading from "./FullwidthHeading.js";
-import FullheightHeading from "./FullheightHeading.js";
-import Icon from "./Icon.js";
+import FullwidthHeading from "./text/FullwidthHeading.js";
+import Icon from "./utility/Icon.js";
 
 import "./../assets/css/components/designandarchitecture.css";
 
@@ -14,19 +13,11 @@ const DesignAndArchitecture = (props) => {
 	var groupSize = 2;
 
 	const updateIndex = (newIndex) => {
-//		if (newIndex > React.Children.count(posts)) {
-console.log('newIndex: ' + newIndex);
-//console.log(Object.keys(tiles).length);
-
 		if (newIndex >= (tiles.length / groupSize)) {
 			newIndex = 0;
-		
-		} else {
-			console.log('allgoodindex: '+newIndex);
-		}
+		} 
 		setActiveIndex(newIndex);
 	}
-
 	
 	var tileGroups = tiles.map((tile, i) => {
         // map content to html elements
@@ -47,7 +38,6 @@ console.log('newIndex: ' + newIndex);
     return (
 		<div className="design-and-architecture__container">
 			<FullwidthHeading heading1={`dizajn`} heading2={`a architektúra`}/>
-			{/*<FullheightHeading heading1={`dizajn`} heading2={`a architektúra`} />*/}
 
 			<div className="design-and-architecture__slider">
 				<div className="design-and-architecture__tiles-wrapper"
@@ -62,21 +52,6 @@ console.log('newIndex: ' + newIndex);
 			/>
 		</div>
 	)
-/*
-	return (
-		<div className="design-and-architecture__container">
-			{ tiles.map((tile, index) => {
-
-					<div className="design-and-architecture__tiles-wrapper">
-						<DesignAndArchitectureTiles tile={tile} index={index} />
-						<DesignAndArchitectureTiles tile={tile} index={index} />
-					</div>
-
-		    }) }
-
-		</div>
-	)
-	*/
 }
 
 export default DesignAndArchitecture;

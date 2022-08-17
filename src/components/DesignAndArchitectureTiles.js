@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import SectionHeading from "./SectionHeading.js";
-import HeadingUnderline from "./HeadingUnderline.js";
-import SectionSubheading from "./SectionSubheading.js";
-
-//import "./../assets/css/components/designandarchitecture.css";
+import SectionHeading from "./text/SectionHeading.js";
+import HeadingUnderline from "./text/HeadingUnderline.js";
+import SectionSubheading from "./text/SectionSubheading.js";
 
 const DesignAndArchitectureTiles = (props) => {
 	let { tile, index, reverse } = props;

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, createRef } from "react";
 
-import GoogleMap from "../components/GoogleMap.js";
+import GoogleMap from "../components/app/GoogleMap.js";
 //import CompanyValues from "../components/CompanyValues.js";
 //import HeadingBlock from "../components/HeadingBlock.js";
-import ImageBanner from "../components/ImageBanner.js";
-import GalleryMasonry from "../components/GalleryMasonry.js";
-import TextBlock from "../components/TextBlock.js";
+import ImageBanner from "../components/media/ImageBanner.js";
+import GalleryMasonry from "../components/media/GalleryMasonry.js";
+import TextBlock from "../components/text/TextBlock.js";
 import HeadingWithBackground from "../components/text/HeadingWithBackground.js";
 
 import "./../assets/css/pages/gallerypage.css";

@@ -1,20 +1,14 @@
 import React from "react";
 
-import ImageBanner from "./ImageBanner.js";
-
-//import "./../assets/css/components/modeldescription.css";
+import ImageBanner from "./media/ImageBanner.js";
 
 const ModelDescription = (props) => {
 	let { className, model } = props;
 
 	const replaceNewline = (textWithoutBreaks) => {
 		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n');
-
-		//textWithBreaks = textWithoutBreaks.split('<br/>').join('');
-console.log(textWithBreaks);
 		return textWithBreaks;
 	}
-
 
 	return (
 		<div className="model-description__container">
@@ -30,13 +24,6 @@ console.log(textWithBreaks);
 						<li className="model-description__detail price"><span className="model-description__detail-title">Cena</span> <span className="model-description__detail-data">{model.price}</span></li> 
 					</div>
 				</ul>
-{/*				
-				<ul className="model-description__characteristics">
-					{ model.characteristics.map((char, index) => (
-						<li>{char}</li>
-					))}
-				</ul>
-*/}
 			</div>
 		</div>
 	)

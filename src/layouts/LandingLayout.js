@@ -1,8 +1,7 @@
 import React from "react";
 
-import NavigationBar from "../components/NavigationBar.js";
-import WhatsAppModal from "../components/WhatsAppModal.js";
-import Footer from "../components/Footer.js";
+import NavigationBar from "../components/layout/NavigationBar.js";
+import Footer from "../components/layout/Footer.js";
 
 import WhatsAppWidget from "react-whatsapp-chat-widget";
 import "react-whatsapp-chat-widget/index.css";

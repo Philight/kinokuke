@@ -1,12 +1,10 @@
 import React from "react";
 
-//const LOGO_URL = './../assets/images/kinokuke-logo.png';
 //import LOGO from './../assets/images/kinokuke-logo.png';
-import LOGO_BLACK from './../assets/images/kinokuke-logo-black-transparent-v2.png';
-import LOGO_WHITE from './../assets/images/kinokuke-logo-white-transparent-v2.png';
+import LOGO_BLACK from '../../assets/images/kinokuke-logo-black-transparent-v2.png';
+import LOGO_WHITE from '../../assets/images/kinokuke-logo-white-transparent-v2.png';
 
 const KinoKukeLogo = (props) => {
-//	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
 	let { className, isWhite } = props;
 
 	return (

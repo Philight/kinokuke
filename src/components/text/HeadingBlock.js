@@ -2,7 +2,7 @@ import React from "react";
 
 import HeadingUnderline from "./HeadingUnderline.js";
 
-import "./../assets/css/components/headingblock.css";
+import "../../assets/css/components/headingblock.css";
 
 const HeadingBlock = (props) => {
 	let { className, heading1, heading2, isHTML } = props;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 
-import ImageBanner from "../components/ImageBanner.js";
+import ImageBanner from "../components/media/ImageBanner.js";
 import HeadingWithBackground from "../components/text/HeadingWithBackground.js";
 
 import "./../assets/css/pages/gdprpage.css";

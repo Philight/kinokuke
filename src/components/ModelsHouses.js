@@ -2,14 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import DescriptionWithImage from "./DescriptionWithImage.js";
-//import "./../assets/css/components/landingpage.css";
 
 const ModelsHouses = (props) => {
 	let { className, houses, columns } = props;
 
-	const getRooms = (number) => {
-console.log('getRooms');		
-console.log(number);		
+	const getRooms = (number) => {	
 	    switch(number) {
 		    case '1':
 		    	return 'izba';
@@ -17,7 +14,6 @@ console.log(number);
 		    case '3':
 		    case '4':
 		    	return 'izby';
-
 		    default:
 		    	return 'izieb';
 	    }
@@ -40,13 +36,6 @@ console.log(number);
 									<h4 className="models-houses__item-size">{house.size}</h4>
 									<h4 className="models-houses__item-price">{house.price}</h4>
 								</div>
-{/*								
-								<ul className="models-houses__item-characteristics">
-									{ house.characteristics.map((characteristic, index) => (
-										<li>{characteristic}</li>
-									)) }
-								</ul>
-*/}
 							</div>
 						</div>
 					</Link>

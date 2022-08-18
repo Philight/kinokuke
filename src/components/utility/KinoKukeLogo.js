@@ -9,11 +9,11 @@ const KinoKukeLogo = (props) => {
 
 	return (
 		<div className={`kinokuke-logo__container ${isWhite ? 'white' : 'black'}`}>
-			<div className="logo-wrapper">
+			<figure className="logo-wrapper">
 			{/*<img src={require('./../assets/images/kinokuke-logo.png').default} />*/}
 				{ !isWhite && <img src={LOGO_BLACK} /> }
 				{ isWhite && <img src={LOGO_WHITE} /> }
-			</div>
+			</figure>
 		</div>
 	)
 }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Icon from "../utility/Icon.js";
 import SectionHeading from "../text/SectionHeading.js";
 import HeadingUnderline from "../text/HeadingUnderline.js";
+import Functions from "../utility/Functions.js";
 
 import "../../assets/css/components/imagecarousel.css";
 
@@ -42,11 +43,6 @@ const ImageCarousel = (props) => {
 		setImageDimensions(oldArray);
 	}
 
-	const replaceNewline = (textWithoutBreaks) => {
-		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n');
-		return textWithBreaks;
-	}
-
 	const startSlide = () => {
 		if (isInitial) {
 			setSlide(0);
@@ -63,7 +59,7 @@ const ImageCarousel = (props) => {
 	}
 
 	return (
-		<div className={`image-carousel__container ${className}`}>
+		<section className={`image-carousel__container ${className}`}>
 			{ showStartBtn && <a className={`image-carousel__start-btn ${!isInitial ? 'disabled' :''}`} onClick={startSlide}>{startBtnText}
 			</a> }
 
@@ -101,7 +97,7 @@ const ImageCarousel = (props) => {
 				</div>
 			</div>
 			<div className="image-carousel__content">
-				{!isHTML && heading && <h1 className="description-with-image__title">{replaceNewline(heading)}</h1>}
+				{!isHTML && heading && <h1 className="description-with-image__title">{Functions.strReplaceNewline(heading)}</h1>}
 				{isHTML && heading && <h1 className="description-with-image__title" dangerouslySetInnerHTML={{ __html: heading }} />}			
 
 				{text && <p className="image-carousel__text">{text}</p>}
@@ -116,7 +112,7 @@ const ImageCarousel = (props) => {
 				icon="chevron-right" className="nav-arrow right flying highlight" 
 				onClick={handleSlide}
 			/>
-		</div>
+		</section>
 	)
 }
 

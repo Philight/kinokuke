@@ -59,7 +59,7 @@ const SocialGrid = (props) => {
 	}, [contentShown]);
 
 	return (
-		<div className="social-grid__container">
+		<section className="social-grid__container">
 			<FullwidthHeading heading1="kinokuke" heading2="social" />
 			<div className={`social-grid__posts-carousel`}>
 
@@ -84,7 +84,7 @@ const SocialGrid = (props) => {
 			    )) }
 		    	</div>
     		</div>
-		</div>
+		</section>
 	)
 }
 

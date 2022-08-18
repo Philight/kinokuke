@@ -15,9 +15,7 @@ const LandingLayout = ({children}) => {
 		<div>
 			<NavigationBar />
 			{children}
-{/*
-			<WhatsAppModal />
-*/}
+
 			<WhatsAppWidget
 /*				
 				phoneNo="919 884 098 840"
@@ -37,9 +35,6 @@ const LandingLayout = ({children}) => {
 				headerIcon={kinokukeLogo}
 				headerIconColor="pink"
 				headerTxtColor="#FFF"
-/*				
-				headerBgColor="var(--main-color)"
-*/
 				headerBgColor="#128C7E"
 				headerTitle="Kino Kuke"
 				headerCaption="Online"

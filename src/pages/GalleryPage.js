@@ -14,7 +14,6 @@ import social from "../data/social.js";
 
 const GalleryPage = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
-    
 	const valueRefs = useRef([]);
 
 	const images = [
@@ -23,28 +22,6 @@ const GalleryPage = (props) => {
 		}
 	];
 
-	const location = {
-//		address: '1600 Amphitheatre Parkway, Mountain View, california.',
-		address: 'KK KINO KUKE\nVeithgasse 6, 1030 Wien, Austria\nFN 327348',
-		//lat: 37.42216,
-		lat: 48.1984812,
-		//lng: -122.08427,
-		lng: 16.3793685,
-	}
-
-	useEffect(() => {
-//		window.scrollTo(0, 0)
-	}, [])
-
-/*
-	const getOrCreateRef = (el, id) => {
-	    //if (!valueRefs.current.includes(id)) {
-
-	        valueRefs.current[id] = el;
-	    //}
-	    return valueRefs.current[id];
-	}
-*/
 	return (
 		<div className="gallery-page__container">		
 			<ImageBanner 

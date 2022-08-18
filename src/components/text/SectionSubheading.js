@@ -1,17 +1,13 @@
 import React from "react";
 
+import Functions from "../utility/Functions.js";
 //import "./../assets/css/components/headingblock.css";
 
 const SectionSubheading = (props) => {
 	let { subheading, className } = props;
 
-	const replaceNewline = (textWithoutBreaks) => {
-		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n').split('<br />').join('\n');
-		return textWithBreaks;
-	}
-
 	return (
-		<h2 className={`section-subheading newline-text ${className}`}>{replaceNewline(subheading)}</h2>
+		<h2 className={`section-subheading newline-text ${className}`}>{Functions.strReplaceNewline(subheading)}</h2>
 	)
 }
 

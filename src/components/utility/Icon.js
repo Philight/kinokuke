@@ -102,11 +102,11 @@ const Icon = forwardRef((props, ref) => {
 
 
 	return (
-		<div className={`icon_container ${className} icon-${icon}`} ref={ref} onClick={onClick}>
+		<figure className={`icon_container ${className} icon-${icon}`} ref={ref} onClick={onClick}>
 			<img className="icon"
 				style={{WebkitMask: `url(${getIcon()}) no-repeat center`, mask: `url(${getIcon()}) no-repeat center`}} 
 			/>
-		</div>
+		</figure>
 	)
 })
 

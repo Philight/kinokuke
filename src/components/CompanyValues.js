@@ -205,7 +205,7 @@ const CompanyValues = ((props) => {
     }, [scrollDown]);
 
 	return (
-		<div className={`company-values__container nav-visible ${moveContainer ? 'move-container' :''}`} ref={containerRef} data-id={id}>
+		<section className={`company-values__container nav-visible ${moveContainer ? 'move-container' :''}`} ref={containerRef} data-id={id}>
 			<div 
 				className={`company-values__inner-container 
 					${isFixed ? 'scroll-fixed' : ''} 
@@ -220,7 +220,7 @@ const CompanyValues = ((props) => {
 					<SectionSubheading subheading={text} className="company-values__text" />
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 	
 })

@@ -5,11 +5,6 @@ import ImageBanner from "./media/ImageBanner.js";
 const ModelDescription = (props) => {
 	let { className, model } = props;
 
-	const replaceNewline = (textWithoutBreaks) => {
-		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n');
-		return textWithBreaks;
-	}
-
 	return (
 		<div className="model-description__container">
 			<div className="model-description__inner-content">

@@ -3,6 +3,7 @@
 	position: relative;
 	/height: calc(100vh - var(--navigation-height) - var(--page-p-top));
 	height: calc(100vh - var(--navigation-height));
+	width: 100%;
 }
 
 .image-banner__container .image-banner__images-container {
@@ -54,9 +55,10 @@
     opacity: 0.4;
 }
 
+.image-banner__container .image-background,
 .image-banner__container .image-wrapper {
 	display: flex;
-height: 100%;
+	height: 100%;
     width: 100%;
 }
 

@@ -131,7 +131,7 @@ const ContactUsModal = (props) => {
   	}
 
 	return (
-		<div className="contact-us-modal__container section">
+		<dialog className="contact-us-modal__container section">
 			<Icon icon="email-circle" onClick={toggleModal} className="contact-us-modal__open" />
 
 			<div className={`contact-us-modal__form-wrapper ${modalVisible ? 'visible' :''}`}>
@@ -172,7 +172,7 @@ const ContactUsModal = (props) => {
 					</fieldset>
 		      	</form>
 			</div>
-		</div>
+		</dialog>
 	)
 }
 

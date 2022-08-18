@@ -30,7 +30,7 @@ const GalleryCarousel = (props) => {
 	}
 
 	return (
-		<div className={`gallery-carousel__container row-${rows} col-${columns}`}>
+		<section className={`gallery-carousel__container row-${rows} col-${columns}`}>
 			<Icon 
 				icon="chevron-left" 
 				className={`nav-arrow left ${activeIndex==0 ? 'disabled' :'' }`}
@@ -53,7 +53,7 @@ const GalleryCarousel = (props) => {
 				className={`nav-arrow right ${activeIndex==Math.ceil((gallery.length)/columns/rows-1) ? 'disabled' :'' }`}
 				onClick={() => { updateIndex(activeIndex + 1) }}
 			/>
-		</div>
+		</section>
 
 	)
 }

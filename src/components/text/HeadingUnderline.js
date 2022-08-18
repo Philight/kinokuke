@@ -3,7 +3,7 @@ import React from "react";
 const HeadingUnderline = (props) => {
 	let { color } = props;
 	return (
-		<div className="underline__container" style={{backgroundColor: color}}></div>
+		<canvas className="underline__container" style={{backgroundColor: color}}></canvas>
 	)
 }
 

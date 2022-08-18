@@ -7,11 +7,6 @@ import "./../assets/css/components/textblock.css";
 const FloorPlan = (props) => {
 	let { plan, technicalCharacteristics, roomDetails } = props;
 
-	const replaceNewline = (textWithoutBreaks) => {
-		let textWithBreaks = textWithoutBreaks.split('<br/>').join('\n');
-		return textWithBreaks;
-	}
-
 	return (
 		<div className="floor-plan__container section">
 			<ImageBanner 

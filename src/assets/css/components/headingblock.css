@@ -1,13 +1,17 @@
 
 .heading-block__container {
 	position: absolute;
-    background: #FFF;
-    padding: 8px 20px;
-    padding: var(--btn-padding-md);
+    display: flex;
+    flex-direction: column;
+    
     left: 50%;
     transform: translateX(-50%);
     /top: calc(var(--navigation-height) + 80px);
     top: calc(var(--navigation-height) + 50vh);
+
+    background: #FFF;
+    padding: 8px 20px;
+    padding: var(--btn-padding-md);
 
     z-index: 10;
     min-width: 60%;    

@@ -74,6 +74,8 @@ img {
 	object-fit: cover;
 }
 
+figure { margin: 0; }
+
 .loader {
 	/*background: url("./../../images/Dual Ring-1s-200px.png") no-repeat center;*/
 	/*background: url("./../images/kinokuke-logo.png") no-repeat center;*/
@@ -681,6 +683,7 @@ img {
 
 .icon_container {
 	display: inline-flex;
+	margin: 0;
 }
 
 .icon {

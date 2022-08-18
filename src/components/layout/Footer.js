@@ -16,7 +16,7 @@ const Footer = (props) => {
 	}, [])
 
 	return (
-		<div className="footer__container section">
+		<section className="footer__container section">
 			<nav className="footer__navigation">
 				<div className="footer__navigation-container-section top">
 					<ul className="footer__navigation-container left" data-level="1">				
@@ -68,7 +68,7 @@ const Footer = (props) => {
 			<div className="footer-copyright">
 				Copyright © {new Date().getFullYear()} KK KINO KUKE. All rights reserved.
 			</div>
-		</div>
+		</section>
 	)
 }
 

@@ -8,6 +8,7 @@
     "start-dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf public && webpack --mode development",
+    "build-win": "rd /s /q public && webpack --mode development",
     "build-dev": "npx webpack serve --mode development --progress --port 7000"
   },
   "author": "Filip Lai",

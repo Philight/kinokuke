@@ -6,10 +6,10 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
+    path: path.resolve(__dirname, "public"),
+    publicPath: "/",
+//    publicPath: "public/",
     filename: "bundle.js",
-    path: path.resolve("public"),
-    publicPath: "/"
-    
   },
   module: {
     rules:[

@@ -13,12 +13,10 @@ import LandingImage from "./../components/LandingImage.js";
 
 import "./../assets/css/pages/landingpage.css";
 
-//import kinokukelogo from "./../assets/images/kinokuke-logo.png";
-//import newsletterImage from "./../assets/images/newsletter-image.jpg";
+import model1 from "./../assets/images/landing_models/home-model1.png";
+import model2 from "./../assets/images/landing_models/home-model2.png";
+import model3 from "./../assets/images/landing_models/home-model3.png";
 
-//import milanoURL from "./../assets/images/housemodels/Milano.png";
-//import venecijaURL from "./../assets/images/housemodels/Venecija.png";
-//import veronaURL from "./../assets/images/housemodels/Verona.png";
 
 const LandingPage = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
@@ -54,44 +52,6 @@ const [touchEnd, setTouchEnd] = useState(null)
 	const [swipeT, setSwipeT] = useState(null);
 	const [ts, setTs] = useState(performance.now());
 	const [changingStage, setChangingStage] = useState(false);
-
-	const designAndArchitectureData = [
-		{ 
-			title: 'LIFE SPACE', 
-			slogan: '', 
-			text: 'Life Space offers flexible home designs to meet the needs of today’s families based on how they really use the space', 
-			ctaText: 'Prečítajte si viac', 
-			ctaSrc: '/design/features',
-			imageSrc: 'https://delightfull.eu/inspirations/wp-content/uploads/2020/01/5-9-1024x683.jpg',
-			backgroundColor: '#c327a8' 
-		},
-		{ 
-			title: 'GREEN LIFE', 
-			slogan: 'Sustainability. Energy efficiency. Green.', 
-			text: 'Is a program to committed to implementing ustenable building features from energy efficient appliances to solar upgrades that will ultimately a positive effect on our enviroment', 
-			ctaText: 'Čítaj viac' , 
-			ctaSrc: '/design/features',
-			imageSrc: 'https://www.impressiveinteriordesign.com/wp-content/uploads/2014/09/Eco-Friendly-House-With-A-Contemporary-Design-1.jpg',
-			backgroundColor: '#a8b53a' 
-		},
-		{ 
-			title: 'LIVING CANVAS', 
-			slogan: '', 
-			text: 'The New Home Company offers you the unique opportunity to design and install custom landscape exteriors including patios, pools, spas and outdoor kitchens while your home is still under construction.', 
-			ctaText: 'Viac' , 
-			ctaSrc: '/design/features',
-			imageSrc: '' 
-		},
-		{ 
-			title: 'BALANCED LIVING', 
-			slogan: '', 
-			text: 'Balanced Living applies principles of Feng Shui to ensure good fortune for all homeowners', 
-			ctaText: 'Viac' , 
-			ctaSrc: '/design/features',
-			imageSrc: '' 
-		}
-	
-	];
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -238,7 +198,7 @@ console.log('mobStage ueffect')	;
 		document.querySelector(".v2.landing-layout__container").scrollTo(0, scrollBy);
 
 	}, [mobStage])
-
+/*
 	const handleScroll = (e) => {
 console.log('handleScroll');
 		const currentScrollY = e.target.scrollTop;
@@ -251,7 +211,7 @@ console.log('handleScroll');
 		prevScrollY.current = currentScrollY;
 		console.log(goingUp, currentScrollY);
 	};
-
+*/
 	const testScroll = e => {
 		//window.scroll(0,0);
 		//window.scrollTo(0,0);
@@ -271,22 +231,24 @@ console.log('handleScroll');
 	return (
 		<div 
 			className={`landing-page__container ${isMobile ? 'is-mobile' :''} mobile-stage-${mobStage}`} 
-			//onWheel={(e) => handleWheel(e)} 
+			onWheel={(e) => handleWheel(e)} 
 			ref={pageRef}
 			onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}
-			onScroll={handleScroll}
+//			onScroll={handleScroll}
 		>
+{/*
 
 			<div style={{color: '#fff', position: 'fixed', zIndex: '100', top: 0, background: '#000'}}>
 				S:{stage},MS:{mobStage}, {wheelDown ? 'DOWN' : 'UP'}, H:{windowHeight}, isMob:{isMobile ? 'Y' : 'N'}, MoveTop:{movePageYOffset}, EndTop:{endPageYOffset} 
 				<button onClick={testScroll}>SCROLL</button>
 			</div>
-		
+*/}
 			<section className={`intro-section section-1 ${stage>=2 ? 'stage-2' :''}`}>			
 				<div className="flex-row-2">
 					<LandingImage
 						className="model model-1"
-						imageSrc="https://connect-homes.com/wp-content/themes/default/library/img/home-model1-0x0-c-center.jpg" 
+//						imageSrc="https://connect-homes.com/wp-content/themes/default/library/img/home-model1-0x0-c-center.jpg" 
+						imageSrc={model1} 
 					/>
 					<LandingCount number="1" max="3" />
 				</div>
@@ -304,10 +266,12 @@ console.log('handleScroll');
 			<section className={`intro-section section-2 ${stage>=2 ? 'stage-2' :''} ${stage>=3 ? 'stage-3' :''}`}>
 				<LandingImage
 					className="model model-2"
-					imageSrc="https://connect-homes.com/wp-content/themes/default/library/img/home-model2-0x0-c-center.jpg" 
+//					showOverlay
+//					imageSrc="https://connect-homes.com/wp-content/themes/default/library/img/home-model2-0x0-c-center.jpg" 
+					imageSrc={model2} 
 					heading1="My ho postavíme"
 					heading2="Vybudujeme Váš Kino Kuke Domov v našej prefab továrňi v Rakúsku. Myslíme, že všetky domy by mali byť takto budované."
-					btnText="Pozri ako to funguje"
+					btnText="Pozri si ako to funguje"
 					btnSrc="/v2/process"
 				/>
 				<div className="flex-row-2">
@@ -328,7 +292,8 @@ console.log('handleScroll');
 				<div className="flex-row-2">
 					<LandingImage 
 						className="model model-3"
-						imageSrc="https://connect-homes.com/wp-content/themes/default/library/img/home-model3-0x0-c-center.jpg" 
+//						imageSrc="https://connect-homes.com/wp-content/themes/default/library/img/home-model3-0x0-c-center.jpg" 
+						imageSrc={model3}
 					/>
 					<LandingCount number="3" max="3" />
 				</div>
@@ -338,7 +303,7 @@ console.log('handleScroll');
 					showOverlay
 					heading1="My ho doručíme a nainštalujeme"
 					heading2="Náš tým sa postará o kompletnú donášku a inštaláciu. Vy nemusíte pohnúť ani prstom."
-					btnText="Prečo Kino Kuke Domov?"
+					btnText="Prečo Kino Kuke?"
 					btnSrc="/v2/process"
 				/>
 			</section>
@@ -346,8 +311,8 @@ console.log('handleScroll');
 				<LandingVideo
 					videoSrc="https://connect-homes.com/wp-content/themes/default/library/video/movein.mp4"
 					heading1="Vy sa iba nasťahujete"
-					heading2="Nové susedctvo, nie je treba."
-					btnText="Prezeraj Kino Kuke Domovy"
+					heading2="Nové susedctvo - nie je treba."
+					btnText="Prezri si Kino Kuke Domovy"
 					btnSrc="/v2/models"
 				/>
 			</section>

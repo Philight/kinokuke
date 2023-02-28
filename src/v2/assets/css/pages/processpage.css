@@ -16,11 +16,23 @@
         --section-padding-vertical: 140px;
     }
 }
+@media screen and (min-width: 1024px) {
+    .v2 .process-page__container {
+        --section-padding-vertical: 90px;
+    }
+}
 
 .v2 .process-page__container .section {
 	padding-top: var(--section-padding-vertical);
     padding-bottom: var(--section-padding-vertical);
     box-sizing: border-box;;
+}
+@media screen and (min-width: 1024px) {
+    .v2 .process-page__container .section {
+        padding-left: 300px;
+        padding-right: 200px;
+        padding-bottom: 50px
+    }
 }
 
 
@@ -31,11 +43,6 @@
     top: 0;
     left: 0;
 }
-
-.v2 .landing-page__container .section-1 { z-index: 4; }
-.v2 .landing-page__container .section-2 { z-index: 3; }
-.v2 .landing-page__container .section-3 { z-index: 2; }
-.v2 .landing-page__container .section-4 { z-index: 1; }
 
 .v2 .process-page__container .image-overlay {
     z-index: 0;
@@ -138,6 +145,14 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .v2 .process-page__container .process-intro__content h1 {
+        font-size: 200px;
+    }
+    .v2 .process-page__container .process-intro__content h2 {
+        font-size: 22px;
+    }
+}
 
 
 .v2 .process-page__container .parallax-section__container {
@@ -199,6 +214,20 @@
     }
 }
 
+@media screen and (min-width: 1024px) {    
+    .v2 .process-page__container .parallax-section__content {
+        width: 65%;
+        padding: 50px 70px;
+    } 
+    .v2 .process-page__container .parallax-section__content h2 {
+        font-size: 32px;
+    }
+    .v2 .process-page__container .parallax-section__content  p {
+        font-size: 17px;
+        margin-top: 40px;
+    }
+}
+
 .v2 .process-page__container .process-steps__container {
     position: fixed;
     top: var(--nav-bar-padding-v);
@@ -207,6 +236,7 @@
     transition: right .7s cubic-bezier(.01,.97,.07,.43);
     pointer-events: none;
 
+    padding: 0;
     /max-width: 30%;
 }
 @media screen and (min-width: 768px) {    
@@ -260,6 +290,13 @@
         margin-right: 20px;
     }
 }
+
+@media screen and (min-width: 768px) {    
+    .v2 .process-page__container .process-steps__container .step-description {
+        margin-right: 6px;
+    }
+}
+
 
 .v2 .process-page__container .process-steps__container .step-visual {
 	display: flex;
@@ -334,5 +371,12 @@
     .v2 .process-page__container h4 {
         white-space: nowrap;
         font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {    
+    .v2 .process-page__container h4 {
+        font-size: 11px;
+        letter-spacing: 1px;
     }
 }

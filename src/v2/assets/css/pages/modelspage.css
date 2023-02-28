@@ -17,7 +17,11 @@
         --models-filter-padding-h: 80px;
     }
 }
-
+@media screen and (min-width: 1024px) {
+    .v2 .models-page__container {
+        --models-filter-padding-v: 110px;
+    }
+}
 .models-page__container .landing-image__container {
     height: 100vh;
     position: relative;
@@ -79,7 +83,19 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .models-page__container .landing-image__content {
+        padding-right: 0;
+    }
+    .models-page__container .landing-image__content h1 {
+        font-size: 200px;
+    }
 
+    .models-page__container .landing-image__content h2 {
+        font-size: 22px;
+    }
+
+}
 
 
 .absolute-overlay {
@@ -311,6 +327,12 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .models-page__container .models-filter__filter-container {
+        margin-left: 60px;
+    }
+}
+
 .models-page__container .models-filter__filter-container fieldset {
     display: flex;
     flex-direction: column;
@@ -354,6 +376,13 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .models-page__container .models-filter__filter-container select {
+        padding-top: 24px;
+        font-size: 26px;
+    }
+}
+
 .models-page__container .models-filter__filter-container select:focus {
     border: none;
     outline: none;
@@ -392,11 +421,12 @@
 @media screen and (min-width: 768px) {
     .models-page__container .models-filter__filter-container .models-filter__btn-container {
         display: block;
+        margin-top: 20px;
     }
 
     .models-page__container .models-filter__filter-container button {
         font-size: 14px;
-        padding: 24px 58px;
+        padding: 24px 97px;
         background: #fff;
         color: #000;
         border-color: #fff;
@@ -443,6 +473,10 @@
     .models-page__container .models-container__container .models-container__model.layout-4 {
         flex: 0 0 35%;
     }
+}
+
+.models-page__container .models-container__container .models-container__model.layout-1 {
+    margin-bottom: var(--section-padding-vertical);
 }
 
 .models-page__container .models-container__container .models-container__model.layout-1,

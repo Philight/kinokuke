@@ -101,8 +101,8 @@ const ModelsFilter = (props) => {
 						</select>						
 					</fieldset>
 					<div className="models-filter__btn-container">
-						<div className="btn-wrapper filter"><button>Filtrovať výsledky</button></div>
-						<div className="btn-wrapper reset"><button>reset</button></div>
+						<div className="btn-wrapper filter"><button>Filtrovať</button></div>
+						<div className="btn-wrapper reset"><button>Reset</button></div>
 					</div>
 				</form>
 

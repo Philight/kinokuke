@@ -16,6 +16,10 @@ import ModelPage from "./pages/ModelPage.js";
 import GalleryPage from "./pages/GalleryPage.js";
 import GDPRPage from "./pages/GDPRPage.js";
 
+import "./assets/css/app.css";
+
+// V2
+
 import V2LandingPage from "./v2/pages/LandingPage.js";
 import V2ProcessPage from "./v2/pages/ProcessPage.js";
 import V2ModelsPage from "./v2/pages/ModelsPage.js";
@@ -23,7 +27,6 @@ import V2ModelsPage from "./v2/pages/ModelsPage.js";
 import LandingLayout from "./layouts/LandingLayout.js";
 import V2LandingLayout from "./v2/layouts/LandingLayout.js";
 
-import "./assets/css/app.css";
 import "./v2/assets/css/V2app.css";
 
 const App = () => {

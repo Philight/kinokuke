@@ -9,9 +9,6 @@ import ModelsContainer from "./../components/ModelsContainer.js";
 
 import "./../assets/css/pages/modelspage.css";
 
-//import kinokukelogo from "./../assets/images/kinokuke-logo.png";
-//import newsletterImage from "./../assets/images/newsletter-image.jpg";
-
 import miamiFront from "./../assets/images/house_models/miami.png";
 import miamiBack from "./../assets/images/house_models/miami_back.png";
 import monacoFront from "./../assets/images/house_models/monaco.png";
@@ -126,9 +123,11 @@ const ModelsPage = (props) => {
 
 	return (
 		<div className="models-page__container" onWheel={(e) => handleWheel(e)}>
+{/*
 			<div style={{color: '#fff', position: 'fixed', zIndex: '100', top: 0, background: '#000'}}>
 				{stage}, {wheelDown ? 'DOWN' : 'UP'}, {changingStage ? 'changing' : 'not'}
 			</div>
+*/}
 			<LandingImage 
 				imageSrc="https://connect-homes.com/wp-content/uploads/2020/01/models-scaled-1440x1223-c-center.jpg"
 				heading1="Models"
@@ -148,7 +147,7 @@ const ModelsPage = (props) => {
 				imageSrc="https://connect-homes.com/wp-content/uploads/2020/01/C02-1-scaled-1800x1350-c-center.jpg"
 				heading1="Proces"
 				heading2="Ako každa konfigurácia bere v úvahu rôzne typy pozemkov a životné štýly, atď. "
-				btnText="Dočítaj sa viac"
+				btnText="Prečítaj si viac"
 				btnSrc="/v2/process"
 			/>
 		</div>

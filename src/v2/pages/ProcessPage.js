@@ -194,7 +194,7 @@ console.log('onTouchEnd');
 				heading2="Prerobili sme celý proces ako dizajnujeme, staviame a kupujeme domy. Bez omeškaní. Bez bolehlavov. Od dizajnu až po inštaláciu, my spravíme všetko."
 				btnText="štart"
 				btnClick={e => handleStart(e)}
-				showOverlay
+//				showOverlay
 				imageSrc="https://connect-homes.com/wp-content/uploads/2020/01/C6T-10-scaled-866x1108-c-center.jpg"
 				ref={e => sectionRefs.current[0] = e} 
 			/>

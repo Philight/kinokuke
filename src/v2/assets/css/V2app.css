@@ -23,16 +23,17 @@
 	}
 }
 
+
 .v2::-webkit-scrollbar  {
     display: none;  /* Safari and Chrome */
-        width: 0;
+    width: 0;
     height: 0;
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 /* Optional: show position indicator in red */
 .v2::-webkit-scrollbar-thumb {
-    background: #FF0000;
+    /background: #FF0000;
 }
 
 

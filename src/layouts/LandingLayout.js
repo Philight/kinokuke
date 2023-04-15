@@ -6,7 +6,7 @@ import Footer from "../components/layout/Footer.js";
 import WhatsAppWidget from "react-whatsapp-chat-widget";
 import "react-whatsapp-chat-widget/index.css";
 
-import kinokukeLogo from "../assets/images/kinokuke-logo.png";
+import kinokukeLogo from "../assets/images/logo/kinokuke-logo.png";
 
 const LandingLayout = ({children}) => {
 //	let { className, description } = props;

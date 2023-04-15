@@ -11,7 +11,6 @@ import NewsletterSection from "../components/NewsletterSection.js";
 
 import "./../assets/css/pages/landingpage.css";
 
-import kinokukelogo from "./../assets/images/kinokuke-logo.png";
 import newsletterImage from "./../assets/images/newsletter-image.jpg";
 import landingPageBkg from "./../assets/images/landing-page-background.png";
 import findYourHomeBkg from "./../assets/images/find-your-home-background.png";
@@ -74,7 +73,6 @@ const LandingPage = (props) => {
 	
 	return (
 		<div className="landing-page__container">
-			{/*<div className="loader" style={{ background: `url(${kinokukelogo}) no-repeat center`, backgroundSize: "contain" }}></div>*/}
 			{/*<div className="loader"></div>*/}
 {/*
 			<HeadingBlock className="show-mobile" heading1="KINOKUKE" heading2="Lepšia skúsenosť.<br/>Lepší domov.<br/>Lepší život." isHTML />

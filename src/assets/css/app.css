@@ -8,7 +8,7 @@
 
 :root {
 	--section-padding: 26px;
-	--navigation-height:  96.07px;
+	--navigation-height:  65.94px;
 	--page-p-top: 80px;
 
 	--btn-padding-x-lg: 13px 32px;
@@ -39,14 +39,14 @@
 @media screen and (min-width: 600px) {
 	:root {
 		--section-padding: 40px;
-		--navigation-height: 99.48px;
+		--navigation-height: 73.35px;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	:root {
 		--section-padding: 80px;
-		--navigation-height: 107.47px;
+		--navigation-height: 83px;
 	}
 }
 
@@ -190,12 +190,20 @@ figure { margin: 0; }
 }
 
 .kinokuke-logo__container .logo-wrapper {
-		width: 66px;
-		display: flex;
+	/width: 66px;
+	width: 28px;
+	display: flex;
 }
+.kinokuke-logo__container .logo-wrapper .icon {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+
 @media screen and (min-width: 600px) {
 	.kinokuke-logo__container .logo-wrapper {
-		width: 70px;
+		/width: 70px;
+		width: 36px;
 	}
 }
 

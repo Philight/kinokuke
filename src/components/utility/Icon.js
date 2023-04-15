@@ -10,6 +10,7 @@ import emailCircleIcon from "../../assets/icons/email-circle.svg";
 import facebookIcon from "../../assets/icons/facebook-outline.svg";
 import infoCircleIcon from "../../assets/icons/info-circle.svg";
 import instagramIcon from "../../assets/icons/instagram-outline.svg";
+import kkPrimeTech from "../../assets/icons/kk-primetech.svg";
 import linkedInIcon from "../../assets/icons/linkedin-outline.svg";
 import locationIcon from "../../assets/icons/location-fill.svg";
 import menuMediumIcon from "../../assets/icons/menu-medium.svg";
@@ -26,10 +27,14 @@ import xMarkOvalIcon from "../../assets/icons/x-mark-oval.svg";
 import youtubeIcon from "../../assets/icons/youtube-outline.svg";
 
 const Icon = forwardRef((props, ref) => {
-	let { icon, className, onClick } = props;
+	let { icon, width, height, color,
+		className, style, onClick 
+	} = props;
+
+	const iconName = icon.toLowerCase();
 
 	const getIcon = () => {
-		switch(icon.toLowerCase()) {
+		switch(iconName) {
 		    case 'approval':
 		      return 'https://ik.imagekit.io/0ovzivqyfai/kinokuke/icon/process/approval.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1655761348610';		    
 		    case 'build':
@@ -66,6 +71,8 @@ const Icon = forwardRef((props, ref) => {
 		      return instagramIcon;
 		    case 'install':
 		      return 'https://ik.imagekit.io/0ovzivqyfai/kinokuke/icon/process/install.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1655761845404';		      
+		    case 'kk-primetech':
+		      return kkPrimeTech;
 		    case 'linkedin':
 		      return linkedInIcon;
 		    case 'location':
@@ -100,13 +107,39 @@ const Icon = forwardRef((props, ref) => {
 	  	}
 	}
 
+	const isMultiColor = () => {
+		switch(iconName) {
+			case 'kk-primetech': 
+			case 'coffee-2': 
+				return true;
+
+			default: 
+				return false;
+		}
+	}
+
+	const renderingStyle = isMultiColor() 
+		? { src: getIcon(), }
+		: {
+			style: {
+				WebkitMask: `url(${getIcon()}) no-repeat center`, 
+				mask: `url(${getIcon()}) no-repeat center`,
+				backgroundColor: color,
+			}
+		};
 
 	return (
-		<figure className={`icon_container ${className} icon-${icon}`} ref={ref} onClick={onClick}>
-			<img className="icon"
-				style={{WebkitMask: `url(${getIcon()}) no-repeat center`, mask: `url(${getIcon()}) no-repeat center`}} 
+
+		<figure className={`icon_container icon-${iconName} icon-wrapper flex-center ${className}`} 
+			style={{ width: width, height: height, ...style }}
+			ref={ref} onClick={onClick}
+		>	
+			<img className={`icon`} loading={"lazy"}
+				{...renderingStyle}
 			/>
 		</figure>
+
+
 	)
 })
 

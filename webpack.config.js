@@ -54,7 +54,27 @@ module.exports = {
 */
     ], 
   },  
-  
+
+  resolve: {
+    alias: {
+     '@': path.resolve(__dirname, 'src'),
+     
+     "@assets": path.resolve(__dirname, "src", "assets"),
+     "@css": path.resolve(__dirname, "src", "assets", "css"),
+     '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
+     "@icons": path.resolve(__dirname, "src", "assets", "icons"),
+     "@images": path.resolve(__dirname, "src", "assets", "images"),
+
+     "@components": path.resolve(__dirname, "src", "components"),
+     "@contexts": path.resolve(__dirname, "src", "contexts"),
+     "@data": path.resolve(__dirname, "src", "data"),
+     "@layouts": path.resolve(__dirname, "src", "layouts"),
+     "@pages": path.resolve(__dirname, "src", "pages"),
+     "@plugins": path.resolve(__dirname, "src", "plugins"),
+     "@utils": path.resolve(__dirname, "src", "utils"),
+    }
+  },
+
   devServer: {
     //compress: true,
     historyApiFallback: true,

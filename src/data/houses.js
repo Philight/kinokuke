@@ -1,52 +1,291 @@
 import React from "react";
 
-import miami from "./../assets/images/housemodels/miami.png";
-import miamiBack from "./../assets/images/housemodels/miami_back.png";
-import milano from "./../assets/images/housemodels/milano.png";
-import monaco from "./../assets/images/housemodels/monaco.png";
-import monacoInterior from "./../assets/images/housemodels/monaco_interior.png";
-import monacoBathroom from "./../assets/images/housemodels/monaco_bathroom.png";
-import nizza from "./../assets/images/housemodels/nizza.png";
-import nizzaInterior from "./../assets/images/housemodels/nizza_interior.png";
-import nizzaBack from "./../assets/images/housemodels/nizza_back.png";
-import torino from "./../assets/images/housemodels/torino.png";
-import torinoBack from "./../assets/images/housemodels/torino_back.png";
-import venezia from "./../assets/images/housemodels/venezia.png";
-import veneziaInterior from "./../assets/images/housemodels/venezia_interior.png";
-import veneziaBathroom from "./../assets/images/housemodels/venezia_bathroom.png";
-import verona from "./../assets/images/housemodels/verona.png";
-import veronaInterior from "./../assets/images/housemodels/verona_interior.png";
-import veronaBathroom from "./../assets/images/housemodels/verona_bathroom.png";
-import zurigo from "./../assets/images/housemodels/zurigo.png";
-import zurigoBack from "./../assets/images/housemodels/zurigo_back.png";
+import cataniaF from "@images/houses/models/catania--front.png";
+import cataniaB from "@images/houses/models/catania--back.png";
+import florenceF from "@images/houses/models/florence--front.png";
+import florenceB from "@images/houses/models/florence--back.png";
+import miamiF from "@images/houses/models/miami--front.png";
+import miamiB from "@images/houses/models/miami--back.png";
+import odesaF from "@images/houses/models/odesa--front.png";
+import odesaB from "@images/houses/models/odesa--back.png";
+import riminiF from "@images/houses/models/rimini--front.png";
+import riminiB from "@images/houses/models/rimini--back.png";
+import veniceF from "@images/houses/models/venice--front.png";
+import veniceB from "@images/houses/models/venice--back.png";
 
-import miamiPlan from "./../assets/images/houseplans/miami-plan.png";
-import milanoPlan from "./../assets/images/houseplans/milano-plan.png";
-import monacoPlan from "./../assets/images/houseplans/monaco-plan.png";
-import nizzaPlan from "./../assets/images/houseplans/nizza-plan.png";
-import torinoPlan from "./../assets/images/houseplans/torino-plan.png";
-import veneziaPlan from "./../assets/images/houseplans/venezia-plan.png";
-import veronaPlan from "./../assets/images/houseplans/verona-plan.png";
-import zurigoPlan from "./../assets/images/houseplans/zurigo-plan.png";
+import cataniaPlan from "@images/houses/plans/catania--plan.png";
+import florencePlan from "@images/houses/plans/florence--plan.png";
+import miamiPlan from "@images/houses/plans/miami--plan.png";
+import odesaPlan from "@images/houses/plans/odesa--plan.png";
+import riminiPlan from "@images/houses/plans/rimini--plan.png";
+import venicePlan from "@images/houses/plans/venice--plan.png";
+
+const ROOM_TYPES = [
+	'balkón',
+	'chodba',
+	'jedáleň',
+	'komora',
+	'kuchyňa',
+	'kuchyňa s jedálňou',
+	'kúpeľňa',
+	'obývačka',
+	'pracovňa',
+	'práčovňa',
+	'predsieň',
+	'schodisko',
+	'spálňa',
+	'technická miestnosť',
+	'terasa',
+	'vchod',
+	'šatník',
+	'šatňa',
+	'WC'
+]
 
 /***  DATA  ***/
 
 const houses = [
 	{
-		title: 'Miami',
-		rooms: '7',
-		size: '121.30 m²',
-		price: '31.200 €',
-		status: 'PREORDER IN 2024',
-		imageSrc: miami,
+		title: 'Florence', // TIP 127
+		rooms: '8',
+		size: '139.31 m²',
+		price: '44.900 €',
+		status: 'AVAILABLE NOW',
+		imageSrc: florenceF,
 		gallery: [
 			{
 				title: 'Vchod',
-				imageSrc: miami
+				imageSrc: florenceF
 			},
 			{
 				title: 'Nádvorie',
-				imageSrc: miamiBack
+				imageSrc: florenceB
+			},		
+		],
+		plan: florencePlan,
+		characteristics: [ 
+			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
+			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
+			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
+		],
+		technicalCharacteristics: {
+			surfaceGross: '139.31 m²',
+			surfaceNet: '126.84 m²'
+		},
+		roomDetails: {
+			'terasa 1': '7.20',
+			'predsieň': '3.74',
+			'chodba 1': '5.27',
+			'obývačka': '21.78',
+			'jedáleň': '12.72',
+			'kuchyňa': '8.28',
+			'komora': '2.88',
+			'WC': '2.40',
+			'kúpeľňa': '5.22',
+			'chodba 2': '5.40',
+			'spálňa 1': '13.63',
+			'spálňa 2': '10.44',
+			'spálňa 3': '10.50',
+			'terasa 2': '6.66',
+			'terasa 3': '10.72',
+		}
+	},
+
+	{
+		title: 'Venice', // TIP 90
+		rooms: '7',
+		size: '102.55 m²',
+		price: '34.000 €',
+		status: 'AVAILABLE NOW',
+		imageSrc: veniceF,
+		gallery: [
+			{
+				title: 'Vchod',
+				imageSrc: veniceF
+			},
+			{
+				title: 'Nádvorie',
+				imageSrc: veniceB
+			},		
+		],
+		plan: venicePlan,
+		characteristics: [ 
+			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
+			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
+			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
+		],
+		technicalCharacteristics: {
+			surfaceGross: '102.55 m²',
+			surfaceNet: '92.93 m²'
+		},
+		roomDetails: {
+			'vchod': '3.59',
+			'predsieň 1': '2.89',
+			'predsieň 2': '2.11',
+			'schodisko': '1.90',
+			'chodba': '2.83',
+			'spálňa 1': '6.54',
+			'spálňa 2': '9.46',
+			'spálňa 3': '4.08',
+			'kúpeľňa': '4.08',
+			'komora': '1.32',
+			'kuchyňa': '7.37',
+			'jedáleň': '12.95',
+			'obývačka': '14.35',
+			'terasa': '8.93',
+			'balkón': '5.28',
+		}
+	},
+	
+	{
+		title: 'Catania', // TIP 135
+		rooms: '8',
+		size: '147.32 m²',
+		price: '46.800 €',
+		status: 'AVAILABLE NOW',
+		imageSrc: cataniaF,
+		gallery: [
+			{
+				title: 'Vchod',
+				imageSrc: cataniaF
+			},
+			{
+				title: 'Nádvorie',
+				imageSrc: cataniaB
+			},		
+		],
+		plan: cataniaPlan,
+		characteristics: [ 
+			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
+			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
+			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
+		],
+		technicalCharacteristics: {
+			surfaceGross: '147.32 m²',
+			surfaceNet: '130.87 m²'
+		},
+		roomDetails: {
+			'vchod': '4.89',
+			'predsieň': '7.78',
+			'WC': '3.04',
+			'chodba 1': '4.07',
+			'spálňa 1': '10.12',
+			'kúpeľňa 1': '3.72',
+			'spálňa 2': '12.60',
+			'komora': '2.16',
+			'kuchyňa': '5.00',
+			'jedáleň': '12.00',
+			'obývačka': '21.16',
+			'chodba 2': '2.48',
+			'spálňa 3': '10.08',
+			'spálňa 4': '12.60',
+			'kúpeľňa 2': '3.46',
+			'terasa': '15.71',
+		}
+	},	
+
+	{
+		title: 'Rimini',
+		rooms: '4',
+		size: '167.14 m²',
+		price: '51.700 €',
+		status: 'AVAILABLE NOW',
+		imageSrc: riminiF,
+		gallery: [
+			{
+				title: 'Vchod',
+				imageSrc: riminiF
+			},
+			{
+				title: 'Nádvorie',
+				imageSrc: riminiB
+			},		
+		],
+		plan: riminiPlan,
+		characteristics: [ 
+			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
+			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
+			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
+		],
+		technicalCharacteristics: {
+			surfaceGross: '167.14 m²',
+			surfaceNet: '149.42 m²'
+		},
+		roomDetails: {
+			'vchod': '4.80',
+			'chodba': '16.12',
+			'obývačka': '27.12',
+			'kuchyňa': '16.86',
+			'jedáleň': '18.36',
+			'kúpeľňa': '8.17',
+			'práčovňa': '2.59',
+			'spálňa 1': '12.60',
+			'spálňa 2': '12.43',
+			'WC': '3.94',
+			'technická miestnosť': '3.84',
+			'spálňa 3': '14.01',
+			'terasa': '8.59',
+		}
+	},	
+
+	{
+		title: 'Odesa',
+		rooms: '7',
+		size: '132.24 m²',
+		price: '44.000 €',
+		status: 'PREORDER IN 2024',
+		imageSrc: odesaF,
+		gallery: [
+			{
+				title: 'Vchod',
+				imageSrc: odesaF
+			},
+			{
+				title: 'Nádvorie',
+				imageSrc: odesaB
+			},		
+		],
+		plan: odesaPlan,
+		characteristics: [ 
+			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
+			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
+			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
+		],
+		technicalCharacteristics: {
+			surfaceGross: '132.24 m²',
+			surfaceNet: '117.48 m²'
+		},
+		roomDetails: {
+			'vchod': '2.79',
+			'chodba': '11.32',
+			'kuchyňa s jedálňou': '29.45',
+			'obývačka': '18.26',
+			'spálňa 1': '8.83',
+			'kúpeľňa': '5.41',
+			'spálňa 2': '9.00',
+			'spálňa 3': '9.88',
+			'WC': '2.95',
+			'technická miestnosť': '4.26',
+			'komora': '3.22',
+			'terasa': '12.11',
+		}
+	},		
+
+	{
+		title: 'Miami',
+		rooms: '7',
+		size: '121.97 m²',
+		price: '39.300 €',
+		status: 'PREORDER IN 2025',
+		imageSrc: miamiF,
+		gallery: [
+			{
+				title: 'Vchod',
+				imageSrc: miamiF
+			},
+			{
+				title: 'Nádvorie',
+				imageSrc: miamiB
 			},		
 		],
 		plan: miamiPlan,
@@ -56,317 +295,27 @@ const houses = [
 			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
 		],
 		technicalCharacteristics: {
-			surfaceGross: '121.30 m²',
+			surfaceGross: '121.97 m²',
 			surfaceNet: '111.57 m²'
 		},
 		roomDetails: {
-			vchod: '25.35',
-			chodba: '3.91',
-			schody: '3.06',
-			chodba: '3.06',
-			'spálňa 1': '2.53',
-			obývačka: '35.42',
-			kuchyňa: '10.89',
-			chodba: '7.05',
-			šatňa: '5.19',
-			'spálňa 1': '14.27',
-			'spálňa 2':'19.51',
-			'spálňa 3':'19.87',
-		}
-	},
-	{
-		title: 'Milano',
-		rooms: '7',
-		size: '158.62 m²',
-		price: '31.200 €',
-		status: 'PREORDER IN 2024',
-		imageSrc: milano,
-		gallery: [
-			{
-				title: 'Vchod',
-				imageSrc: milano
-			},
-		],
-		plan: milanoPlan,
-		characteristics: [ 
-			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-		],
-		technicalCharacteristics: {
-			surfaceGross: '164 m²',
-			surfaceNet: '148.9 m²'
-		},
-		roomDetails: {
-			vchod: '3.22',
-			chodba: '15.02',
-			šatník: '6.15',
-			'obývačka a kuchyňa': '45.95',
-			'spálňa 1': '12.95',
-			terasa: '11.94',
-			'spálňa 2': '17.50',
-			'spálňa 3' : '16.80',
-			'kúpeľňa 1': '12.25',
-			'kúpeľňa 1': '3.68',
-		}
-	},	
-	{
-		title: 'Monaco',
-		rooms: '4',
-		size: '89.12 m²',
-		price: '31.200 €',
-		status: 'NOW SELLING',
-		imageSrc: monaco,
-		gallery: [
-			{
-				title: 'Vchod',
-				imageSrc: monaco
-			},
-			{
-				title: 'Interiér',
-				imageSrc: monacoInterior
-			},
-			{
-				title: 'Kúpeľňa',
-				imageSrc: monacoBathroom
-			},			
-		],
-		plan: monacoPlan,
-		characteristics: [ 
-			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-		],
-		technicalCharacteristics: {
-			surfaceGross: '89.12 m²',
-			surfaceNet: '78.16 m²'
-		},
-		roomDetails: {
-			vchod: '3.39',
-			chodba:	'10.59',
-			'obývačka 1':	'23.09',
-			kuchyňa:	'5.31',
-			'hosťovské wc':	'2.19',
-			'obývačka 2':	'17.34',
-			'spálňa 2':	'8.93',
-			kúpeľňa:	'5.17',
-			'spálňa 1':	'10.84',
-		}
-	},
-	{
-		title: 'Nizza',
-		rooms: '4',
-		size: '110 m²',
-		price: '31.200 €',
-		status: 'NOW SELLING',
-		imageSrc: nizza,
-		gallery: [
-			{
-				title: 'Vchod',
-				imageSrc: nizza
-			},
-			{
-				title: 'Nádvorie',
-				imageSrc: nizzaBack
-			},
-			{
-				title: 'Interiér',
-				imageSrc: nizzaInterior
-			},		
-		],		
-		plan: nizzaPlan,		
-		characteristics: [ 
-			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-		],
-		technicalCharacteristics: {
-			surfaceGross: '110 m²',
-			surfaceNet: '96.34 m²'
-		},
-		roomDetails: {
-			balkón: '4.41',
-			vchod: '1.84',
-			kuchyňa: '10.95',
-			šatník: '1.89',
-			jedáleň: '10.32',
-			obývačka: '17.34',
-			chodba: '9.02',
-			'spálňa 1' : '7.93',
-			'spálňa 2' : '6.10',
-			kúpeľňa: '4.77',
-			terasa: '9.58',
-			'hosťovské wc': '1.89',
+			'predsieň': '3.91',
+			'chodba 1': '3.06',
+			'schodisko': '3.06',
+			'chodba 2': '2.53',
+			'spálňa 1': '10.65',
+			'spálňa 2': '10.65',
+			'pracovňa': '5.95',
+			'kúpeľňa': '3.84',
+			'WC': '1.10',
+			'komora': '1.21',
+			'kuchyňa': '7.20',
+			'jedáleň': '14.76',
+			'obývačka': '14.76',
+			'terasa': '25.35',
+			'balkón': '3.54',
 		}
 	},			
-	{
-		title: 'Torino',
-		rooms: '4',
-		size: '75.26 m²',
-		price: '20.400 €',
-		status: 'NOW SELLING',
-		imageSrc: torino,
-		gallery: [
-			{
-				title: 'Vchod',
-				imageSrc: torino
-			},
-			{
-				title: 'Nádvorie',
-				imageSrc: torinoBack
-			},		
-		],		
-		plan: torinoPlan,
-		characteristics: [ 
-			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-		],
-		technicalCharacteristics: {
-			surfaceGross: '75.26 m²',
-			surfaceNet: '68.32 m²'
-		},
-		roomDetails: {
-			balkón: '3.95',
-			vchod: '3.06',
-			predsieň: '3.85',
-			obývačka: '19.32',
-			kuchyňa: '8.4',
-			kúpeľňa: '4.08',
-			'spálňa 1' : '9',
-			'spálňa 2' : '10.5',
-			terasa: '6.16',
-		}
-	},		
-	{
-		title: 'Venezia',
-		rooms: '5',
-		size: '163.78 m²',
-		price: '20.400 €',
-		status: 'NOW SELLING',
-		imageSrc: venezia,
-		gallery: [
-			{
-				title: 'Vchod',
-				imageSrc: venezia
-			},
-			{
-				title: 'Interiér',
-				imageSrc: veneziaInterior
-			},
-			{
-				title: 'Kúpeľňa',
-				imageSrc: veneziaBathroom
-			},			
-		],
-		plan: veneziaPlan,
-		characteristics: [ 
-			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-		],
-		technicalCharacteristics: {
-			surfaceGross: '164 m²',
-			surfaceNet: '148.9 m²'
-		},
-		roomDetails: {
-			vchod: '3.22',
-			chodba: '15.02',
-			šatník: '6.15',
-			'obývačka a kuchyňa': '43.23',
-			'spálňa 1': '13.65',
-			terasa: '9.28',
-			'spálňa 2': '26.40',
-			'spálňa 3': '16.02',
-			'kúpeľňa 1': '12.25',
-			'kúpeľňa 2': '3.68',
-		}
-	},
-	{
-		title: 'Verona',
-		rooms: '4',
-		size: '76.69 m²',
-		price: '20.400 €',
-		status: 'NOW SELLING',
-		imageSrc: verona,
-//		imageSrc: 'https://admin.domtera.rs/server//storage/homes/montazna-kuca-verona.jpg',
-		gallery: [
-			{
-				title: 'Vchod',
-				imageSrc: verona
-			},
-			{
-				title: 'Interiér',
-				imageSrc: veronaInterior
-			},
-			{
-				title: 'Kúpeľňa',
-				imageSrc: veronaBathroom
-			},	
-		],
-		plan: veronaPlan,
-		characteristics: [ 
-			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-		],
-		technicalCharacteristics: {
-			surfaceGross: '76.69 m²',
-			surfaceNet: '65.47 m²'
-		},
-		roomDetails: {
-			balkón: '8.52',
-			vchod: '4.29',
-			obývačka: '25.59',
-			kuchyňa: '4.6',
-			kúpeľňa: '5.6',
-			'spálňa 1' : '10.02',
-			'spálňa 2' : '6.85',
-		}
-	},
-	{
-		title: 'Zurigo',
-		rooms: '4',
-		size: '199.11 m²',
-		price: '63.700 €',
-		status: 'PREORDER IN 2023',
-		imageSrc: zurigo,
-		gallery: [
-			{
-				title: 'Vchod',
-				imageSrc: zurigo
-			},
-			{
-				title: 'Nádvorie',
-				imageSrc: zurigoBack
-			},
-		],		
-		plan: zurigoPlan,
-		characteristics: [ 
-			'3 NEIGHBORHOODS', 'COTTAGES, COURTS AND TOWNS AT MARIPOSA', 
-			'FROM THE HIGH $400,000S', '1,276 TO 2,554 SQUARE FEET OF LIVING SPACE',
-			'VARIETY OF COMMUNITY AMENITIES', 'NOW SELLING!'
-		],
-		technicalCharacteristics: {
-			surfaceGross: '199.11 m²',
-			surfaceNet: '158.5 m²'
-		},
-		roomDetails: {
-			vchod:	'5.67',
-			'chodba 1':	'17.76',
-			'technická skriňa':	'5.7',
-			'WC':	'2.86',
-			'schody':	'5.28',
-			obývačka:	'35.42',
-			kuchyňa: '10.89',
-			'chodba 2':	'7.05',
-			šatňa:	'5.19',
-			'spálňa 1':	'14.27',
-			'spálňa 2':	'19.51',
-			'spálňa 3':	'19.87',
-		}
-	},		
-	
 ];
 
 export default houses;

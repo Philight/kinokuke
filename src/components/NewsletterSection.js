@@ -21,9 +21,11 @@ const NewsletterSection = (props) => {
 				<NewsletterForm />
 			</div>
 			<div className="newsletter-section__section right">
+{/*
 				<div className="newsletter-section__image-wrapper">
 					<img src={imageSrc} />
 				</div>
+*/}
 			</div>
 		</div>
 	)

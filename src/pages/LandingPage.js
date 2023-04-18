@@ -96,8 +96,8 @@ const LandingPage = (props) => {
 				className="landing-page__find-your-home-image"
 				images={[{src: findYourHomeBkg}]}  
 				showOverlay
-				heading="kino kuke domov"
-				text="Kino Kuke ponúka 8 modelov aby boli vhodné pre rôzne pozemky, životné štýly a rozpočty. Vymeniť starý dom za nový domov svojich snov? My Vám pomôžeme. Staviate si druhý domov v krajine? S tým Vám tiež pomôžeme."
+				heading="primetech domov"
+				text="KK Primetech ponúka 8 modelov aby boli vhodné pre rôzne pozemky, životné štýly a rozpočty. Vymeniť starý dom za nový domov svojich snov? My Vám pomôžeme. Staviate si druhý domov v krajine? S tým Vám tiež pomôžeme."
 				btnText="Nájdi svoj domov"
 				btnSrc="/findyourhome"
 			/>			
@@ -117,7 +117,7 @@ const LandingPage = (props) => {
 			<NewsletterSection 
 				heading="zostaňte"
 				subheading="v obraze"
-				text="a dostanete pravidelne novinky o dostupnosti, cenniku a špeciálnych akciách"
+				text="dostávajte pravidelné novinky o dostupnosti, cenníku a špeciálnych akciách"
 				imageSrc={newsletterImage}
 			/>
 	</div>

@@ -66,7 +66,7 @@ const Footer = (props) => {
 				</div>
 			</div>
 			<div className="footer-copyright">
-				Copyright © {new Date().getFullYear()} KK KINO KUKE. All rights reserved.
+				Copyright © {new Date().getFullYear()} KK PrimeTech. All rights reserved.
 			</div>
 		</section>
 	)

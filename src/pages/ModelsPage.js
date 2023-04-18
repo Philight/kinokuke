@@ -31,8 +31,8 @@ const ModelsPage = (props) => {
 			<ContactUsModal />
 
 			<TextBlock 
-				heading="kino kuke domov"
-				text="Kino Kuke ponúka 8 iných modelov aby boli vhodné pre rôzne pozemky, životné štýly a rozpočty. 
+				heading="primetech domov"
+				text="KK PrimeTech ponúka 8 iných modelov aby boli vhodné pre rôzne pozemky, životné štýly a rozpočty. 
 				<br/><br/>Vymeniť starý dom za nový domov svojich snov? My Vám pomôžeme. 
 				<br/>Staviate si druhý domov v krajine? S tým Vám tiež pomôžeme."
 			/>

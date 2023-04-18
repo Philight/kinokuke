@@ -61,7 +61,7 @@ const AboutPage = (props) => {
 */
 	return (
 		<div className="about-page__container">		
-			<HeadingBlock heading1="O NÁS" heading2="Život v Kino Kuke" />
+			<HeadingBlock heading1="O NÁS" heading2="Život v Primetech" />
 			<ImageBanner 
 				images={images}
 			/>

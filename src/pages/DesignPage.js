@@ -120,13 +120,13 @@ const DesignPage = (props) => {
 		{
 			heading: 'Home HO',
 			title: 'Funkčné príležitosti pre Home Office vašich snov',
-			text: 'CAT 5/6 Elektrické vedenie pre Hi-Speed Internet, TV zásuvky v celom dome, Surround Sound naprieč celým domom, domáca automatizácia, HDMI Pre-Wire, Vstavané technické stoly s ukladaním súborov',
+			text: 'CAT 5/6 Elektrické vedenie pre Hi-Speed Internet, TV zásuvky v celom dome, Surround Sound naprieč celým domom, domáca automatizácia, HDMI Pre-Wire',
 			imageSrc: HOImage
 		},
 		{
 			heading: 'Live Well',
 			title: 'Navrhnuté pre Vaše zdravie',
-			text: 'Relaxačné Outdoor priestory, Prenájom solárnych panelov, Systémy na filtráciu a čistenie vzduchu, Systémy na filtráciu a čistenie vody, Systém reverznej osmózy',
+			text: 'Relaxačné Outdoor priestory, solárne panely, Systémy na filtráciu a čistenie vzduchu, Systémy na filtráciu a čistenie vody, Systém reverznej osmózy',
 			imageSrc: LWImage
 		},
 		{
@@ -170,7 +170,7 @@ const DesignPage = (props) => {
 
 	return (
 		<div className="design-page__container">
-			<HeadingBlock heading1="DIZAJN" heading2="Dizajn v Kinokuke" />
+			<HeadingBlock heading1="DIZAJN" heading2="Dizajn v PrimeTech" />
 			<ImageBanner 
 				images={images}
 			/>

@@ -25,7 +25,7 @@ const AboutPage = (props) => {
 	];
 
 	const location = {
-		address: 'KK KINO KUKE\nVeithgasse 6, 1030 Wien, Austria\nFN 327348',
+		address: 'KK PrimeTech\nVeithgasse 6, 1030 Wien, Austria\nFN 327348',
 		lat: 48.1984812,
 		lng: 16.3793685,
 	}

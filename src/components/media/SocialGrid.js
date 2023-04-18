@@ -60,7 +60,7 @@ const SocialGrid = (props) => {
 
 	return (
 		<section className="social-grid__container">
-			<FullwidthHeading heading1="kinokuke" heading2="social" />
+			<FullwidthHeading heading1="primetech" heading2="social" />
 			<div className={`social-grid__posts-carousel`}>
 
 				<Icon icon="chevron-right" className="nav-arrow highlight flying right" 

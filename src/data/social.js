@@ -13,14 +13,10 @@ import social7 from "../assets/images/social/social-7.png";
 import social8 from "../assets/images/social/social-8.png";
 import social9 from "../assets/images/social/social-9.png";
 import social10 from "../assets/images/social/social-10.png";
-import social11 from "../assets/images/social/social-11.png";
 import social12 from "../assets/images/social/social-12.png";
 import social13 from "../assets/images/social/social-13.png";
-import social14 from "../assets/images/social/social-14.png";
-import social15 from "../assets/images/social/social-15.png";
 import social16 from "../assets/images/social/social-16.png";
 import social17 from "../assets/images/social/social-17.png";
-import social18 from "../assets/images/social/social-18.png";
 import social19 from "../assets/images/social/social-19.png";
 import social20 from "../assets/images/social/social-10.png";
 import social21 from "../assets/images/social/social-21.png";
@@ -89,12 +85,6 @@ const social = [
 		//imageSrc: 'https://momsla.com/wp-content/uploads/2021/02/Claire-and-Phils-house-from-Modern-Family.jpg.webp'
 	},
 	{
-//		text: '11 We pride ourselves on being the most recognized builder in customer experience! Read our Homeowner Reviews. 💬',
-//		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
-		imageSrc: social11 
-		//imageSrc: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F09%2F23%2Fconjuring-6.jpg&q=60'
-	},
-	{
 //		text: '12 We pride ourselves on being the most recognized builder in customer experience! Read our Homeowner Reviews. 💬',
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
 		imageSrc: social12 
@@ -108,27 +98,12 @@ const social = [
 	{
 //		text: '',
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
-		imageSrc: social14 
-	},
-	{
-//		text: '',
-//		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
-		imageSrc: social15 
-	},
-	{
-//		text: '',
-//		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
 		imageSrc: social16 
 	},
 	{
 //		text: '',
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
 		imageSrc: social17 
-	},
-	{
-//		text: '',
-//		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
-		imageSrc: social18 
 	},
 	{
 //		text: '',

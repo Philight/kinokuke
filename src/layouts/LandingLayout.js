@@ -6,7 +6,7 @@ import Footer from "../components/layout/Footer.js";
 import WhatsAppWidget from "react-whatsapp-chat-widget";
 import "react-whatsapp-chat-widget/index.css";
 
-import kinokukeLogo from "../assets/images/logo/kinokuke-logo.png";
+import kinokukeLogo from "../assets/images/logo/kk-primetech.png";
 
 const LandingLayout = ({children}) => {
 //	let { className, description } = props;
@@ -36,7 +36,7 @@ const LandingLayout = ({children}) => {
 				headerIconColor="pink"
 				headerTxtColor="#FFF"
 				headerBgColor="#128C7E"
-				headerTitle="Kino Kuke"
+				headerTitle="KK PrimeTech"
 				headerCaption="Online"
 
 				bodyBgColor="#fff4e7"
@@ -44,7 +44,7 @@ const LandingLayout = ({children}) => {
 				btnBgColor="#128C7E"
 				btnTxtColor="#FFF"
 				btnTxt="Start Chat"
-				chatPersonName="Kino Kuke"
+				chatPersonName="KK PrimeTech"
 				chatMessage={<>Dobrý deň 👋<br />Ako Vám vieme pomôcť?<br /><br />Hello 👋<br />How can we help you?</>}
 			/>
 			<Footer />

@@ -28,7 +28,7 @@ const ModelPage = (props) => {
 
 	return (
 		<div className="model-page__container">
-			<HeadingBlock heading1="KINO KUKE DOMOV" heading2={id} />
+			<HeadingBlock heading1="PrimeTech DOMOV" heading2={id} />
 			<ImageBanner 
 				images={[{ src: thisHouse.imageSrc }]}
 			/>

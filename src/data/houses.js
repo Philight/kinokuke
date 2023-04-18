@@ -49,7 +49,7 @@ const houses = [
 		title: 'Florence', // TIP 127
 		rooms: '8',
 		size: '139.31 m²',
-		price: '44.900 €',
+		price: '97.300 €',
 		status: 'AVAILABLE NOW',
 		imageSrc: florenceF,
 		gallery: [
@@ -95,7 +95,7 @@ const houses = [
 		title: 'Venice', // TIP 90
 		rooms: '7',
 		size: '102.55 m²',
-		price: '34.000 €',
+		price: '72.100 €',
 		status: 'AVAILABLE NOW',
 		imageSrc: veniceF,
 		gallery: [
@@ -141,7 +141,7 @@ const houses = [
 		title: 'Catania', // TIP 135
 		rooms: '8',
 		size: '147.32 m²',
-		price: '46.800 €',
+		price: '94.500 €',
 		status: 'AVAILABLE NOW',
 		imageSrc: cataniaF,
 		gallery: [
@@ -188,7 +188,7 @@ const houses = [
 		title: 'Rimini',
 		rooms: '4',
 		size: '167.14 m²',
-		price: '51.700 €',
+		price: '116.900 €',
 		status: 'AVAILABLE NOW',
 		imageSrc: riminiF,
 		gallery: [
@@ -232,7 +232,7 @@ const houses = [
 		title: 'Odesa',
 		rooms: '7',
 		size: '132.24 m²',
-		price: '44.000 €',
+		price: '92.400 €',
 		status: 'PREORDER IN 2024',
 		imageSrc: odesaF,
 		gallery: [
@@ -275,7 +275,7 @@ const houses = [
 		title: 'Miami',
 		rooms: '7',
 		size: '121.97 m²',
-		price: '39.300 €',
+		price: '85.379 €',
 		status: 'PREORDER IN 2025',
 		imageSrc: miamiF,
 		gallery: [

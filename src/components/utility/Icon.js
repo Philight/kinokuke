@@ -16,6 +16,7 @@ import locationIcon from "../../assets/icons/location-fill.svg";
 import menuMediumIcon from "../../assets/icons/menu-medium.svg";
 import menuThinIcon from "../../assets/icons/menu-thin.svg";
 import menuThickIcon from "../../assets/icons/menu-thick.svg";
+import salesforce from "../../assets/icons/salesforce.svg";
 
 import processStep1 from "../../assets/images/process-steps/process-step-1.svg";
 
@@ -86,7 +87,9 @@ const Icon = forwardRef((props, ref) => {
   		    case 'paint':
 		      return 'https://ik.imagekit.io/0ovzivqyfai/kinokuke/icon/process/paint.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1658241513462';		      
   		    case 'process-step-1':
-		      return ;		      
+		      return ;	
+  		    case 'salesforce':
+		      return salesforce;		      	      
   		    case 'tap-finger':
 		      return 'https://ik.imagekit.io/0ovzivqyfai/kinokuke/icon/process/tap_finger.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1655767002557';  		    
   		    case 'v1':
@@ -129,17 +132,16 @@ const Icon = forwardRef((props, ref) => {
 		};
 
 	return (
-
-		<figure className={`icon_container icon-${iconName} icon-wrapper flex-center ${className}`} 
-			style={{ width: width, height: height, ...style }}
-			ref={ref} onClick={onClick}
-		>	
-			<img className={`icon`} loading={"lazy"}
-				{...renderingStyle}
-			/>
-		</figure>
-
-
+		<>
+			<figure className={`icon_container icon-${iconName} icon-wrapper flex-center ${className}`} 
+				style={{ width: width, height: height, ...style }}
+				ref={ref} onClick={onClick}
+			>	
+				<img className={`icon`} loading={"lazy"} src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+					{...renderingStyle}
+				/>
+			</figure>
+		</>
 	)
 })
 

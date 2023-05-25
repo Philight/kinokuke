@@ -7,6 +7,8 @@ import "../../assets/css/components/socialgrid.css";
 import chevronRight from "../../assets/icons/chevron-right.svg";
 import instagramIcon from "../../assets/icons/instagram-outline.svg";
 
+const INSTAGRAM_URL = 'https://www.instagram.com/kkprimetech/';
+
 const SocialGrid = (props) => {
 	let { columns, rows, posts, enableAutoplay, interval } = props;
 
@@ -71,7 +73,7 @@ const SocialGrid = (props) => {
 				{ posts.map((post, index) => (
 					<div className="social-grid__post">
 		        		<div className="social-grid__image-wrapper"><img src={post.imageSrc} /></div>
-		        		<a href="https://instagram.com" target="_blank">
+		        		<a href={INSTAGRAM_URL} target="_blank">
 		        			<div className={`social-grid__content ${index%2 && contentShown ? 'shown' :''}`}>
 		        				<div className="icon-wrapper">
 			        				<img style={{webkitMask: `url(${instagramIcon}) no-repeat center`, mask: `url(${instagramIcon}) no-repeat center`}} />

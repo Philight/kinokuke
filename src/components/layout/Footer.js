@@ -6,6 +6,8 @@ import Icon from "../utility/Icon.js";
 
 import "../../assets/css/components/footer.css";
 
+const INSTAGRAM_URL = 'https://www.instagram.com/kkprimetech/';
+
 const Footer = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;
 	
@@ -60,7 +62,9 @@ const Footer = (props) => {
 				</div>
 				<div className="footer__social">
 					<Icon icon="facebook" className="facebook" />
-					<Icon icon="instagram" className="instagram" />
+		        	<a className="footer__social--instagram" href={INSTAGRAM_URL} target="_blank">
+						<Icon icon="instagram" className="instagram" />
+					</a>
 					<Icon icon="youtube" className="youtube" />
 					<Icon icon="linkedin" className="linkedin" />
 				</div>

@@ -14,9 +14,12 @@ import "./../assets/css/components/designandarchitecture.css";
 
 import backgroundImg from "./../assets/images/process-page-background.png";
 import bathroomInstallation from "./../assets/images/process/bathroom-installation-bkg.jpg";
-import wallA from "./../assets/images/wall-types/tip-a.png";
-import wallB from "./../assets/images/wall-types/tip-b.png";
-import wallPasiv from "./../assets/images/wall-types/tip-pasiv.png";
+//import wallA from "./../assets/images/wall-types/tip-a.png";
+import wallA from "./../assets/images/wall-types/tip-a-cut.png";
+//import wallB from "./../assets/images/wall-types/tip-b.png";
+import wallB from "./../assets/images/wall-types/tip-b-cut.png";
+//import wallPasiv from "./../assets/images/wall-types/tip-pasiv.png";
+import wallPasiv from "./../assets/images/wall-types/tip-pasiv-cut.png";
 
 const ProcessPage = (props) => {
 //	let { className, redirectUrl, socialFacebookUrl, socialInstagramUrl, title, subtitle, description, subdescription } = props;

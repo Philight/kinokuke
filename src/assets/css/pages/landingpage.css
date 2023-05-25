@@ -11,7 +11,7 @@
 }
 
 .landing-page__container .landing-page__intro-image img {
-	object-position: center;
+	object-position: top;
 }
 
 .landing-page__container .landing-page__intro-image .image-banner__content {

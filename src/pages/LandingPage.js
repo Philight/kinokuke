@@ -12,8 +12,8 @@ import NewsletterSection from "../components/NewsletterSection.js";
 import "./../assets/css/pages/landingpage.css";
 
 import newsletterImage from "./../assets/images/newsletter-image.jpg";
-//import landingPageBkg from "./../assets/images/landing-page-background.png";
-import landingPageBkg from "./../assets/images/social/social-1.png";
+import landingPageBkg from "./../assets/images/landing-page-background.png";
+//import landingPageBkg from "./../assets/images/social/social-1.png";
 //import landingPageBkg from "./../assets/images/landing-page-background-3.png";
 import findYourHomeBkg from "./../assets/images/find-your-home-background.png";
 

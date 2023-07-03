@@ -8,8 +8,10 @@
   },
   "scripts": {
     "start": "ver && npx webpack serve --mode development --progress --port %npm_package_config_port% || npx webpack serve --mode development --progress --port $npm_package_config_port",
-    "build": "rm -rf public && webpack --mode development",
-    "build-win": "rd /s /q public && webpack --mode development"
+    "build:linux": "rm -rf public && webpack --mode development",
+    "build:win": "rd /s /q public && webpack --mode development",
+    "build": "npm run build:linux || npm run build:win",
+    "update": "git pull https://github.com/Philight/kkprimetech --verbose"
   },
   "author": "Filip Lai",
   "license": "ISC",

@@ -1,0 +1,100 @@
+@import '@css/theme';
+
+.design-and-architecture__c {
+	--f-grid-gap: 0px !important;
+	@apply relative;
+
+    .design-and-architecture__tiles-group {
+    	@apply grid justify-stretch grid-cols-1;
+    	@media (desk-sm) {
+    		@apply grid-cols-2 auto-rows-fr;
+    	}
+	}
+
+	img {
+		@apply flex;
+	}
+
+	.btn-wrapper {
+		@apply flex justify-end;
+    	@apply desk-sm:justify-start;
+	}
+
+	.design-and-architecture__cta {
+		@apply btn btn--outline btn--sm;
+		@apply mt-4;
+		@media (desk-sm) {
+			padding: var(--btn-padding-lg);
+		}		
+	}
+}
+
+
+
+
+/*
+.design-and-architecture__c img {
+	display: flex;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-position: center;
+}
+.design-and-architecture__c .btn-wrapper {
+	display: flex;
+    justify-content: flex-end;
+}
+
+.design-and-architecture__c .underline__container {
+	margin: 10px 0;
+	margin-top: 2px;
+    height: 3px;
+    opacity: 0.85;
+}
+
+.design-and-architecture__c .design-and-architecture__cta {
+	text-decoration: none;
+    color: #FFF;
+    border: 1px solid #ffffff57;
+    border-radius: 100px;
+	padding: 8px 20px;
+	padding: var(--btn-padding-md);
+    line-height: 1;
+    margin-top: 8px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+@media screen and (min-width: 600px) {
+	.design-and-architecture__c .underline__container {
+		margin: 14px 0;
+		margin-top: 8px;
+	}
+
+	.design-and-architecture__c .design-and-architecture__cta {
+		padding: var(--btn-padding-lg);
+    	font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.design-and-architecture__c .underline__container {
+		margin: 16px 0;
+		margin-top: 10px;
+    	height: 4px;
+	}
+
+	.design-and-architecture__c p {
+		margin: 20px 0;
+	}
+
+	.design-and-architecture__c .btn-wrapper {
+    	justify-content: flex-start;
+	}
+
+	.design-and-architecture__c .design-and-architecture__cta {
+		padding: var(--btn-padding-lg);
+	    margin-top: 8px;
+	}
+}
+*/

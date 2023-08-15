@@ -1,0 +1,198 @@
+@import '@css/theme';
+
+.image-carousel__c {
+	--f-grid-gap: 0px;
+	@apply relative h-screen;
+
+	.image-carousel__start-btn {
+		@apply btn btn--primary btn--sm;
+		@apply absolute -top-9 right-[var(--space-outer)];
+		&.disabled {
+			@apply opacity-40 cursor-default;
+		}
+	}
+
+	.image-carousel__view-box {
+		@apply flex z-10;
+
+		.image-carousel__view-box-left,
+		.image-carousel__view-box-right {
+			@apply static h-full w-1/5 ;
+
+			background: rgb(0,0,0, 0.5);
+		}
+		.image-carousel__view-box-center {
+			@apply static h-full w-1/5 flex-1;
+
+			background: rgb(0,0,0, 0.5);
+			background: radial-gradient(circle, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.5) 60%);
+		}
+
+		.image-carousel__view-box-left {
+			background: linear-gradient(-90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.65) 30%, rgba(0,0,0,0.9) 65%)
+		}
+		.image-carousel__view-box-right {
+			background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.65) 30%, rgba(0,0,0,0.9) 65%)
+		}		
+	}
+
+	.image-carousel__images-view {
+		@apply h-full;
+	}
+
+	.image-carousel__images-container {
+		@apply h-full;
+
+		.image-carousel__image-wrapper {
+			@apply relative h-full;
+		    width: auto;
+
+			.image-carousel__image-overlay {
+				@apply bg-black-primary opacity-30;
+			}
+
+		    a {
+		    	@apply flex justify-center items-end;
+
+			    .tooltip {
+			    	@apply rounded-full bg-hermes-blue-dark w-11 h-11 p-2 -translate-y-2;
+			    	.icon {
+			    		@apply bg-hermes-green;
+					}
+				}
+			}
+		}		
+	}
+
+	.image-banner__content {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    padding-left: var(--space-outer);
+	    padding-top: var(--space-outer);
+	    color: #fff;
+
+	    .image-carousel__content-title {
+		    font-family: var(--font-heading-1);
+		    letter-spacing: 2px;
+		    font-weight: 600;
+		    line-height: 1.1;
+		    margin-top: 0;
+		}
+
+		.image-carousel__content-text {
+			margin: 0;
+			margin-top: 30px;
+			width: 75%;
+		    font-family: var(--font-heading-2);
+		    letter-spacing: 1px;	
+			font-size: 17px;
+		}
+
+		.image-carousel__content-btn {
+		    margin-top: 24px;
+			font-size: 16px;
+			font-family: var(--font-heading-2);
+		    letter-spacing: 4px;
+		    padding: 4px 20px;
+			background-color: var(--btn-color-2);
+			background-color: transparent;
+		    border: 1px solid #fff;
+		    padding: 10px 26px;	
+		    padding: var(--btn-padding-sm);
+		    text-transform: uppercase;
+		}
+	}
+}
+
+
+@media screen and (min-width: 600px) {
+	.image-carousel__c .image-carousel__start-btn {
+		padding: var(--btn-padding-lg);
+	    padding-top: 11px;
+		font-size: 14px;
+    	top: -41px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.image-carousel__c .image-carousel__start-btn {
+		font-size: 20px;
+	    top: -48px;
+	    letter-spacing: 4px;
+	}
+}
+
+
+@media screen and (min-width: 600px) {
+	.image-carousel__c .image-carousel__view-box-center {
+		background: radial-gradient(circle, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.2) 45%, rgba(0,0,0,0.5) 70%);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.image-carousel__c .image-carousel__view-box-center {
+		background: radial-gradient(circle, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.5) 70%);
+	}
+	.image-carousel__c .image-carousel__view-box-left {
+		background: linear-gradient(-90deg, rgba(0,0,0,0.5) 5%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.9) 70%);
+	}
+	.image-carousel__c .image-carousel__view-box-right {
+		background: linear-gradient(90deg, rgba(0,0,0,0.5) 5%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.9) 70%);
+	}
+}
+
+/*
+.image-carousel__c img {
+	width: auto;
+	height: 100%;
+	object-position: left;
+}
+@media screen and (min-width: 600px) {
+	.image-carousel__c img {
+		object-position: right;
+	}
+}
+*/
+
+@media screen and (min-width: 600px) {
+	.image-carousel__c .image-carousel__image-wrapper a .tooltip {
+    	padding: 8px;
+	}
+
+	.image-carousel__c .image-carousel__image-wrapper a .tooltip .icon {
+	    width: 32px; height: 32px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.image-carousel__c .image-carousel__image-wrapper a .tooltip {
+    	padding: 6px;
+	}
+
+	.image-carousel__c .image-carousel__image-wrapper a .tooltip .icon {
+	    width: 26px; height: 26px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.image-carousel__c .image-carousel__image-wrapper a .tooltip {
+    	padding: 8px;
+    	transform: translateY(-5px);
+	}
+
+	.image-carousel__c .image-carousel__image-wrapper a .tooltip .icon {
+	    width: 30px; height: 30px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.image-carousel__c  .image-banner__text {
+		margin-top: 40px;
+		width: 50%;
+		font-size: 20px;
+	}
+
+	.image-carousel__c .cta-btn {
+    	margin-top: 40px;
+    	padding: 13px 32px;	
+	}
+}

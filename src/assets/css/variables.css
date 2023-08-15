@@ -1,0 +1,73 @@
+
+:root {
+  --btn-padding-md: 5px 20px;
+  --btn-padding-x-lg: 13px 32px;
+  --btn-padding-lg: 10px 24px;
+  --btn-padding-sm: 4px 16px;
+
+  --main-color: var(--hermes-orange-1);
+  --overlay-color: 243 112 33;
+  --hermes-orange-1: 243 112 33;
+  --hermes-orange-2: 253 94 15;
+  --hermes-red-1: 253 66 15;
+  --hermes-green-1: 0 177 142; /* 0,177,142) */
+  --hermes-green-2: 1 157 120; /* 1,157,120) */
+  --btn-color-1: 255 154 91;
+  --btn-color-2: 255 131 56;
+  --btn-color-3: 255 98 0;
+  --hermes-blue-1: 7 100 110;
+  --hermes-blue-2: 39 120 129;
+  
+
+  --color-hermes-orange: 243 112 33;
+  --color-hermes-orange-dark: 253 94 15;
+  --color-orange-3: 255 98 0;
+  --color-hermes-orange-light: 255 131 56;
+  --color-hermes-orange-lighter: 255 154 91;
+  --color-hermes-red: 253 66 15;
+  --color-hermes-green: 0 177 142; /* 0,177,142) */
+  --color-hermes-green-dark: 1 157 120; /* 1,157,120) */
+  --color-hermes-blue: 7 100 110;
+  --color-hermes-blue-light: 39 120 129;
+  --color-hermes-blue-lighter: 13 193 212;
+  --color-hermes-blue-dark: 5 83 92;
+
+  --color-white-primary: 255 255 255;
+  --color-black-primary: 0 0 0;
+  --color-gray: 197 197 197;
+  --color-gray-light: 241 241 241;
+  --color-gray-dark: 159 159 159;
+
+  --color-tertiary: var(--color-hermes-orange);
+
+  --font-heading-1: 'CS1', 'Century Schoolbook', serif;
+  --font-heading-2: 'Cervo Thin', 'Cervo', serif;
+
+  --font-family-heading: 'CS1', 'Century Schoolbook', serif;
+  --font-family-body: 'Cervo Thin', 'Cervo', serif;
+  --font-family-btn: 'Cervo Thin', 'Cervo', serif;
+  --font-family-tag: 'CS1', 'Century Schoolbook', serif;
+
+  --max-width: 1440px;
+  --space-outer: 24px;
+  @media screen(tab-sm) {
+    --space-outer: 36px;
+  }
+  @media screen(desk-sm) {
+    --space-outer: 64px;
+  }
+  @media screen(desk-lg) {
+    --space-outer: 80px;
+  }
+
+  --navigation-height: 57px;
+  @media screen(tab-sm) {
+    --navigation-height: 64px;
+  }
+  @media screen(desk-sm) {
+    --navigation-height: 80px;
+  }
+  @media screen(desk-lg) {
+    --navigation-height: 84px;
+  }
+}

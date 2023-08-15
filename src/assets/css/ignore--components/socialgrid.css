@@ -1,0 +1,34 @@
+@import '@css/include/utilities';
+
+.social-grid__c {
+    @apply max-h-screen;
+	--f-grid-gap: 0px;
+    @media (tab-sm) {
+        --f-grid-gap: 10px;
+    }
+
+    .social-grid__posts-container {
+        @apply h-[calc(100vh-85px)];
+        .social-grid__post {
+            @apply relative;
+
+            &:hover .social-grid__post-content {
+                @apply opacity-100;
+            }
+            .social-grid__post-content {
+                @apply cursor-pointer p-8 opacity-0 bg-hermes-orange/75;
+                transition: opacity .3s ease-in-out;
+                &.shown {
+                    @apply opacity-100;
+                }
+
+                .social-grid__post-icon {
+                    @apply w-6 h-6;
+                    .icon {
+                        @apply bg-white-primary;
+                    }
+                }
+            }
+        }
+    }
+

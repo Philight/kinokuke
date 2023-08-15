@@ -1,30 +1,29 @@
-import React from "react";
+import social1 from "@images/social/social-1.png";
+import social2 from "@images/social/social-2.png";
+import social3 from "@images/social/social-3.png";
+import social4 from "@images/social/social-4.png";
+import social5 from "@images/social/social-5.png";
+import social6 from "@images/social/social-6.png";
+import social7 from "@images/social/social-7.png";
+import social8 from "@images/social/social-8.png";
+import social9 from "@images/social/social-9.png";
+import social10 from "@images/social/social-10.png";
+import social11 from "@images/social/social-11.png";
+import social12 from "@images/social/social-12.png";
+import social13 from "@images/social/social-13.png";
+import social14 from "@images/social/social-14.png";
+import social15 from "@images/social/social-15.png";
+import social16 from "@images/social/social-16.png";
+import social17 from "@images/social/social-17.png";
+import social18 from "@images/social/social-18.png";
+import social19 from "@images/social/social-19.png";
+import social20 from "@images/social/social-10.png";
+import social21 from "@images/social/social-21.png";
+import social22 from "@images/social/social-22.png";
+import social23 from "@images/social/social-23.png";
+import social24 from "@images/social/social-24.png";
 
-import veronaInterior from "../assets/images/housemodels/verona_interior.png";
-import miamiBack from "../assets/images/housemodels/miami_back.png";
-
-import social1 from "../assets/images/social/social-1.png";
-import social2 from "../assets/images/social/social-2.png";
-import social3 from "../assets/images/social/social-3.png";
-import social4 from "../assets/images/social/social-4.png";
-import social5 from "../assets/images/social/social-5.png";
-import social6 from "../assets/images/social/social-6.png";
-import social7 from "../assets/images/social/social-7.png";
-import social8 from "../assets/images/social/social-8.png";
-import social9 from "../assets/images/social/social-9.png";
-import social10 from "../assets/images/social/social-10.png";
-import social12 from "../assets/images/social/social-12.png";
-import social13 from "../assets/images/social/social-13.png";
-import social16 from "../assets/images/social/social-16.png";
-import social17 from "../assets/images/social/social-17.png";
-import social19 from "../assets/images/social/social-19.png";
-import social20 from "../assets/images/social/social-10.png";
-import social21 from "../assets/images/social/social-21.png";
-import social22 from "../assets/images/social/social-22.png";
-import social23 from "../assets/images/social/social-23.png";
-import social24 from "../assets/images/social/social-24.png";
-
-const social = [
+export const SOCIAL = [
 	{
 //		text: '1 We pride ourselves on being the most recognized builder in customer experience! Read our Homeowner Reviews. 💬',
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
@@ -87,6 +86,12 @@ const social = [
 	{
 //		text: '12 We pride ourselves on being the most recognized builder in customer experience! Read our Homeowner Reviews. 💬',
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
+		imageSrc: social11 
+		//imageSrc: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F09%2F23%2Fconjuring-6.jpg&q=60'
+	},	
+	{
+//		text: '12 We pride ourselves on being the most recognized builder in customer experience! Read our Homeowner Reviews. 💬',
+//		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
 		imageSrc: social12 
 		//imageSrc: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F09%2F23%2Fconjuring-6.jpg&q=60'
 	},
@@ -98,6 +103,16 @@ const social = [
 	{
 //		text: '',
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
+		imageSrc: social14 
+	},
+	{
+//		text: '',
+//		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
+		imageSrc: social15 
+	},		
+	{
+//		text: '',
+//		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
 		imageSrc: social16 
 	},
 	{
@@ -105,6 +120,11 @@ const social = [
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
 		imageSrc: social17 
 	},
+	{
+//		text: '',
+//		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
+		imageSrc: social18 
+	},	
 	{
 //		text: '',
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
@@ -135,7 +155,4 @@ const social = [
 //		hashtags: '#NewHomeowner #TestimonialTuesday #NWHMReviews',
 		imageSrc: social24 
 	},		
-
 ];
-
-export default social;

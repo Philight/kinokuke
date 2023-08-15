@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--font-heading-1), 'Product Sans', 'Gilroy', 'Gotham', 'Avenir LT Std', sans-serif;
+  scroll-behavior: smooth;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+fieldset,
+dialog {
+  border: none;
+}
+
+dialog {
+  padding: 0;
+}
+
+ul, li {
+  @apply list-none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+figure { margin: 0; }
+
+button,
+body,
+input,
+a {
+  font-family: var(--font-primary);
+}
+
+a {
+  @apply no-underline;
+}
+
+/* Accessibility Styles */
+
+*:focus-visible {
+  outline: 3px solid var(--color-wai-focused);
+  padding: 8px 4px;
+}
+
+a[role='button'] {
+  text-decoration: none;
+}

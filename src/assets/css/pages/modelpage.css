@@ -1,30 +1,129 @@
+@import '@css/theme';
 
-.model-page__container {
-	position: relative;
+.model-page__c {
+	@apply relative pb-[calc(var(--space-outer)*2)];
     --page-top-padding: 80px;
     --details-grid-gap: 20px;
-    /padding-top: var(--navigation-height);
+
+    .image-banner__container {
+    	@apply overflow-hidden;
+	}
+
+	.model-page__details-container {
+		@apply page-max-w;
+		@apply mt-[var(--space-outer)];
+	}
+
+	.model-description__c {
+	   	@apply bg-[rgb(241,241,242)] ;
+	    @apply p-4;
+
+	    .col.left .model-description__detail:nth-child(1) {
+	    	@apply mt-0;
+		}
+
+	    .model-description__inner-content {
+		    padding: 20px 10px;
+	    	@apply p-4 border border-[#c1c1c1];
+		}
+
+		.model-description__detail {
+			@apply flex items-center mt-[4%] ;
+
+			&.size .model-description__detail-data {
+				text-transform: initial;
+			}
+
+			&.title .model-description__detail-title {
+				@apply bg-hermes-orange;
+			}
+			&.status .model-description__detail-title {
+				@apply bg-hermes-orange-light;
+			}
+			&.status.preorder .model-description__detail-title {
+				@apply bg-hermes-orange-dark;
+			}
+			&.rooms .model-description__detail-title {
+				@apply bg-hermes-green;
+			}
+			&.rooms.large .model-description__detail-title {
+				@apply bg-hermes-blue;
+			}
+			&.size .model-description__detail-title {
+				@apply bg-hermes-red;
+			}
+			&.price .model-description__detail-title {
+				@apply bg-hermes-green;
+			}
+
+		    .model-description__detail-title {
+		    	@apply tag tag--md;
+		    	@apply lowercase tracking-2;
+		    	@apply grow shrink basis-12;
+		    	@apply rounded-full bg-[var(--main-color)] text-white;
+			}
+
+			.model-description__detail-data {
+				@apply body body--md;
+				@apply text-[#484848] uppercase;
+				@apply flex-[1_1_40%] ml-6 pt-0.5;
+			}
+		}
+	}
+
+	.gallery-carousel__c {
+		@apply mt-[var(--space-outer)] h-screen-1/5;
+		.gallery-carousel__houses-container {
+			@apply flex-1 ;
+		}
+	}
+
+	.floor-plan__c {
+		@apply page-max-w;
+		.image-banner__c {
+			@apply h-auto;
+			img {
+				@apply object-contain;
+			}
+		}
+
+		.floor-plan__technical-details {
+		    h3 {
+				@apply mt-8 px-4 py-1 bg-hermes-orange-light text-white;
+				@apply heading heading--md;
+				@apply tracking-1;
+			}
+
+			.floor-plan__data {
+				@apply flex flex-wrap m-4; 
+
+				span {
+					@apply shrink-0 grow-0 basis-3/4 mt-2;
+					@apply body body--md;
+					@apply font-semibold;
+
+					&:nth-child(2n+2) {
+						@apply shrink-0 grow-0 basis-1/4;
+					}
+				}				
+			}
+		}		
+
+	}
 }
 
+
+
+
+
 @media screen and (min-width: 1024px) {
-	.model-page__container {
+	.model-page__c {
     	--details-grid-gap: 14px;
 	}
 }
 
-.model-page__container .image-banner__container {
-    /height: calc(100vh - var(--navigation-height) - var(--page-top-padding));
-    overflow: hidden;
-}
-
-.model-page__container .model-page__details-container {
-	display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-}
-
 @media screen and (min-width: 1024px) {
-	.model-page__container .model-page__details-container {
+	.model-page__c .model-page__details-container {
 	    display: grid;
 	    /grid-template-columns: repeat(3, 1fr);
 	    /grid-template-rows: repeat(2, 1fr);
@@ -33,125 +132,41 @@
 	}
 }
 
-.model-page__container .model-description__container {
-    background: rgb(241, 241, 242);
-    font-family: var(--font-heading-2);
-    padding: var(--section-padding);
-    padding: 10px;
-}
-
-.model-page__container .model-description__container .model-description__inner-content {
-    padding: 20px 10px;
-	border: 1px solid #c1c1c1;
-}
-
 @media screen and (min-width: 600px) {
-	.model-page__container .model-description__container .model-description__inner-content {
+	.model-page__c .model-description__c .model-description__inner-content {
 	    padding: 20px;
 	}
 }
-.model-page__container .model-description__container .model-description__details {
-	margin: 0;
-	padding: 0;
-}
-
-.model-page__container .model-description__container .model-description__detail {
-	display: flex;
-	align-items: center;
-    margin-top: 4%;
-}
-
-.model-page__container .model-description__container .col.left .model-description__detail:nth-child(1) {
-    margin-top: 0;
-}
-
-.model-page__container .model-description__container .model-description__detail .model-description__detail-title {
-	flex: 1 0 23%;
-	background-color: var(--main-color);
-	color: #FFF;
-	padding: var(--btn-padding-sm);
-	border-radius: 100px;
-	line-height: 1;
-    font-family: var(--font-heading-1);
-	font-size: 16px;
-    letter-spacing: 2px;
-    text-transform: lowercase;
-}
 
 @media screen and (min-width: 1024px) {
-	.model-page__container .model-description__container .model-description__details {
+	.model-page__c .model-description__c .model-description__details {
 		display: flex;
 	}
 
-	.model-page__container .model-description__container .model-description__details .col {
+	.model-page__c .model-description__c .model-description__details .col {
 		flex: 0 0 50%;
 	}
 
-	.model-page__container .model-description__container .col.right .model-description__detail:nth-child(1) {
+	.model-page__c .model-description__c .col.right .model-description__detail:nth-child(1) {
 	    margin-top: 0;
 	}
 
-	.model-page__container .model-description__container .model-description__detail .model-description__detail-title {
+	.model-page__c .model-description__c .model-description__detail .model-description__detail-title {
 		font-size: 18px;
 	}
 }
 
-.model-page__container .model-description__container .model-description__detail.rooms .model-description__detail-title {
-	background-color: var(--hermes-green-1);
-}
-.model-page__container .model-description__container .model-description__detail.rooms.large .model-description__detail-title {
-	background-color: var(--hermes-blue-2);
-}
-
-.model-page__container .model-description__container .model-description__detail.status .model-description__detail-title {
-	background-color: var(--hermes-orange-2);
-}
-.model-page__container .model-description__container .model-description__detail.status.preorder .model-description__detail-title {
-	background-color: var(--btn-color-1);
-}
-
-.model-page__container .model-description__container .model-description__detail .model-description__detail-data {
-	flex: 1 0 60%;
-	margin-left: 10%;
-	padding-top: 4px;
-	font-size: 20px;
-	line-height: 1;
-	color: #484848;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-}
 
 @media screen and (min-width: 1024px) {
-	.model-page__container .model-description__container .model-description__detail .model-description__detail-data {
+	.model-page__c .model-description__c .model-description__detail .model-description__detail-data {
 		font-size: 24px;
 	}
 }
 
-.model-page__container .model-description__container .model-description__detail.size .model-description__detail-data {
-	text-transform: initial;
-}
 
-.model-page__container .model-description__container .model-description__characteristics {
-	margin: 0;
-    font-family: var(--font-heading-2);
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    color: #707070;
-	border-top: 1px solid #c1c1c1;
-	padding-inline-start: 20px;
-	padding-top: 20px;
-}
-
-.model-page__container .model-description__container .model-description__characteristics li {
-	margin-top: 4%;
-}
-.model-page__container .model-description__container .model-description__characteristics li:nth-child(1) {
-	margin-top: 0;
-}
 
 @media screen and (min-width: 1024px) {
-	.model-page__container .model-description__container .model-description__characteristics {
+	.model-page__c .model-description__c .model-description__characteristics {
 		columns: 2;
 	  	-webkit-columns: 2;
 	  	-moz-columns: 2;
@@ -159,134 +174,38 @@
 }
 
 
-.model-page__container .gallery-carousel__container {
-    margin-top: var(--details-grid-gap);
-}
-
-.model-page__container .model-page__contacts-container {
-	padding: var(--section-padding);
-    background-color: var(--main-color);
-    color: #fff;
-    margin-top: var(--details-grid-gap);
-}
 
 @media screen and (min-width: 1024px) {
-	.model-page__container .model-description__container {
+	.model-page__c .model-description__c {
 		grid-area: 1 / 1 / 1 / 3;
 	}
 
-	.model-page__container .gallery-carousel__container {
+	.model-page__c .gallery-carousel__container {
 	    grid-area: 2 / 1 / 2 / 3;
     	margin-top: var(--details-grid-gap);
 	}
 
-	.model-page__container .model-page__contacts-container {
+	.model-page__c .model-page__contacts-container {
 		padding: 50px 70px;
 		grid-area: 1 / 3 / 3 / 3;
     	margin-top: 0;
 	}
 }
 
-.model-page__container .model-page__contacts-profiles {
-	display: inline-flex;
-	width: 100%;
-    justify-content: center;
-}
-
-.model-page__container .model-page__contacts-profiles .image-wrapper img {
-	border: 3px solid var(--hermes-green-1);
-	border-radius: 50%;
-	width: 100px;
-	height: 100px;
-	margin: 0 6px;
-}
-
-.model-page__container .model-page__contacts-text h3 {
-	margin-top: 30px;
-	margin-bottom: 10px;
-
-	font-size: 16px;
-}
-
-.model-page__container .model-page__contacts-text p {
-	font-size: 14px;
-	margin: 0;
-	line-height: 1.5;
-}
-
-.model-page__container .floor-plan__container {
-	display: flex;
-	flex-direction: column;
-    margin: 60px 0;
-    margin-top: 0;
-}
-
-.model-page__container .floor-plan__container .image-banner__container {
-	overflow: visible;
-	position: relative;
-    padding-top: 100%;
-    height: auto;
-}
-
-.model-page__container .floor-plan__container .image-wrapper {
-
-}
-
-.model-page__container .floor-plan__container img {
-    object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.model-page__container .floor-plan__container .floor-plan__technical-details {
-	grid-column: 3;
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 @media screen and (min-width: 1024px) {
-	.model-page__container .floor-plan__container {
+	.model-page__c .floor-plan__container {
 	    display: flex;
 	    flex-direction: row;
 	}
 
-	.model-page__container .floor-plan__container .image-banner__container{
+	.model-page__c .floor-plan__container .image-banner__container{
 	    flex: 0 0 61%;
 	    padding-top: 61%;
 	}
 
-	.model-page__container .floor-plan__container .floor-plan__technical-details {
+	.model-page__c .floor-plan__container .floor-plan__technical-details {
 	    flex: 0 0 35%;
 	    margin-left: 4%;
 	}
-}
-
-.model-page__container .floor-plan__container .floor-plan__technical-details h3 {
-    font-family: var(--font-heading-1);
-	background-color: var(--btn-color-1);
-	color: #fff;
-	padding: 6px 14px;
-	font-weight: 500;
-	font-size: 18px;
-	margin: 0;
-	margin-top: 10px;
-}
-
-.model-page__container .floor-plan__container .floor-plan__technical-details .floor-plan__data {
-	padding: 18px;
-}
-
-.model-page__container .floor-plan__container .floor-plan__technical-details span {
-	    font-family: var(--font-heading-2);
-	    letter-spacing: 1px;
-	display: inline-block;
-	width: calc(60% - 6px);
-	margin-bottom: 6px;
-	margin-right: 6px;
-}
-
-.model-page__container .floor-plan__container .floor-plan__technical-details span:nth-child(2n+2) {
-	width: calc(40% - 6px);
 }

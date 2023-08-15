@@ -1,5 +1,3 @@
-import React from "react";
-
 import cataniaF from "@images/houses/models/catania--front.png";
 import cataniaB from "@images/houses/models/catania--back.png";
 import florenceF from "@images/houses/models/florence--front.png";
@@ -44,22 +42,23 @@ const ROOM_TYPES = [
 
 /***  DATA  ***/
 
-const houses = [
+export const HOUSES = [
 	{
 		title: 'Florence', // TIP 127
 		rooms: '8',
 		size: '139.31 m²',
 		price: '97.300 €',
 		status: 'AVAILABLE NOW',
-		imageSrc: florenceF,
+		src: florenceF,
+		link: '/model/' + 'Florence',
 		gallery: [
 			{
 				title: 'Vchod',
-				imageSrc: florenceF
+				src: florenceF,
 			},
 			{
 				title: 'Nádvorie',
-				imageSrc: florenceB
+				src: florenceB
 			},		
 		],
 		plan: florencePlan,
@@ -97,15 +96,16 @@ const houses = [
 		size: '102.55 m²',
 		price: '72.100 €',
 		status: 'AVAILABLE NOW',
-		imageSrc: veniceF,
+		src: veniceF,
+		link: '/model/' + 'Venice',
 		gallery: [
 			{
 				title: 'Vchod',
-				imageSrc: veniceF
+				src: veniceF
 			},
 			{
 				title: 'Nádvorie',
-				imageSrc: veniceB
+				src: veniceB
 			},		
 		],
 		plan: venicePlan,
@@ -136,22 +136,22 @@ const houses = [
 			'balkón': '5.28',
 		}
 	},
-	
 	{
 		title: 'Catania', // TIP 135
 		rooms: '8',
 		size: '147.32 m²',
 		price: '94.500 €',
 		status: 'AVAILABLE NOW',
-		imageSrc: cataniaF,
+		src: cataniaF,
+		link: '/model/' + 'Catania',
 		gallery: [
 			{
 				title: 'Vchod',
-				imageSrc: cataniaF
+				src: cataniaF
 			},
 			{
 				title: 'Nádvorie',
-				imageSrc: cataniaB
+				src: cataniaB
 			},		
 		],
 		plan: cataniaPlan,
@@ -183,22 +183,22 @@ const houses = [
 			'terasa': '15.71',
 		}
 	},	
-
 	{
 		title: 'Rimini',
 		rooms: '4',
 		size: '167.14 m²',
 		price: '116.900 €',
 		status: 'AVAILABLE NOW',
-		imageSrc: riminiF,
+		src: riminiF,
+		link: '/model/' + 'Rimini',
 		gallery: [
 			{
 				title: 'Vchod',
-				imageSrc: riminiF
+				src: riminiF
 			},
 			{
 				title: 'Nádvorie',
-				imageSrc: riminiB
+				src: riminiB
 			},		
 		],
 		plan: riminiPlan,
@@ -234,15 +234,16 @@ const houses = [
 		size: '132.24 m²',
 		price: '92.400 €',
 		status: 'PREORDER IN 2024',
-		imageSrc: odesaF,
+		src: odesaF,
+		link: '/model/' + 'Odesa',
 		gallery: [
 			{
 				title: 'Vchod',
-				imageSrc: odesaF
+				src: odesaF
 			},
 			{
 				title: 'Nádvorie',
-				imageSrc: odesaB
+				src: odesaB
 			},		
 		],
 		plan: odesaPlan,
@@ -270,22 +271,22 @@ const houses = [
 			'terasa': '12.11',
 		}
 	},		
-
 	{
 		title: 'Miami',
 		rooms: '7',
 		size: '121.97 m²',
 		price: '85.379 €',
 		status: 'PREORDER IN 2025',
-		imageSrc: miamiF,
+		src: miamiF,
+		link: '/model/' + 'Miami',
 		gallery: [
 			{
 				title: 'Vchod',
-				imageSrc: miamiF
+				src: miamiF
 			},
 			{
 				title: 'Nádvorie',
-				imageSrc: miamiB
+				src: miamiB
 			},		
 		],
 		plan: miamiPlan,
@@ -317,5 +318,3 @@ const houses = [
 		}
 	},			
 ];
-
-export default houses;

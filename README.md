@@ -1,15 +1,24 @@
 # Kinokuke
+
 - Real Estate website designed and developed for Kinokuke.
-### 🚀 LIVE 🌎 https://kinokuke.sk/
-##### <br />
+
+### 🚀 LIVE 🌎 https://kkprimetech.com/
+
+<br />
 
 ## 📺 DEMO
+
 ![](https://github.com/Philight/kinokuke/blob/master/src/assets/preview.gif)
 
+## 🖋️ SKETCH
+
 ## 🧰 BUILT WITH
+
 - React.js (React Router, Hooks, Refs)
 - CSS
+
 ### PLUGINS
+
 - react-whatsapp-chat-widget
 - google-map-react
 

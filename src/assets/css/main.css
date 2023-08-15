@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '@css/include/fonts';
+@import '@css/include/initial';
+@import '@css/include/utilities';
+
+@import '@css/variables';
+
+/*
+*/
+@import '@css/components';
+@import '@css/pages';
+
+/*
+@import '@css/customization';
+*/
+/*
+@import-normalize;
+*/

@@ -3,8 +3,9 @@
 
 # FOLDERS
 /node_modules
-/public
+/build
 
 # FILES
 ENV.js
+ENV.cjs
 sftp-config.json

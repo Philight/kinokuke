@@ -1,96 +1,79 @@
+@import '@css/theme';
 
-.contact-page__container {
-	position: relative;
-	padding-top: var(--navigation-height);
-    background-color: var(--hermes-orange-2);
+.contact-page__c {
+    @apply relative pt-[var(--navigation-height)] bg-hermes-orange-lighter;
+
+    .contact-page__map-wrapper {
+        @apply relative;
+
+        .image-banner__c {
+            @apply h-[120vh];
+        }
+
+        .google-map__c {
+            @apply h-4/5 bg-white w-[calc(100%-2*var(--space-outer))];
+
+            .google-map__map-title {
+                @apply px-[calc(var(--space-outer)/2)] py-[var(--space-outer)] bg-hermes-orange-lighter text-white;
+                @apply body body--lg;
+                @apply text-center;
+            }
+
+            .google-map__map-wrapper {
+                @apply flex-[1_1_80%] p-[calc(var(--space-outer)/2)];
+
+                .google-map__location {
+                    .icon__c {
+                        @apply absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12;
+                        @apply w-12 h-12;
+
+                        .icon {
+                            @apply bg-hermes-orange;
+                        }
+                    }
+                    span {
+                        @apply body body--md;
+                        @apply whitespace-nowrap font-semibold text-xl;
+                    }
+                }
+            }
+
+            .google-map__address {
+                @apply p-[var(--space-outer)] pt-[calc(var(--space-outer)/2)];
+
+                h3 {
+                    @apply body body--xl;
+                    @apply mb-3;
+                }
+                p {
+                    @apply body body--lg ;
+                    @apply tracking-1 mt-1;
+                }
+            }
+        }
+    }
 }
 
-.contact-page__container .contact-page__map-wrapper {
-	position: relative;
-}
 
-.contact-page__container .image-banner__container {
-	height: 120vh;
-}
-
-
-.contact-page__container .google-map__container {
-	display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    width: calc(100% - 2*var(--section-padding));
-
-    height: 80%;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-	/padding: calc(var(--section-padding) / 2);
-    box-sizing: border-box;
-}
-
-.contact-page__container .google-map__container .google-map__map-title {
-    margin: 0;
-    padding: calc(var(--section-padding) / 2);
-    background-color: var(--hermes-orange-2);
-    color: #fff;
-    font-weight: 400;
-    font-family: var(--font-heading-2);
-    font-size: 22px;
-    line-height: 1;
-    letter-spacing: 3px;
-    text-transform: initial;
-    text-align: center;
-    padding: var(--section-padding) calc(var(--section-padding) / 2);
-}
-
-.contact-page__container .google-map__container .google-map__map-wrapper {
-	flex: 1 1 80%;
-    padding: calc(var(--section-padding) / 2);
-}
-
-.contact-page__container .google-map__container .google-map__address {
-	flex: 1 1 0;
-    padding: var(--section-padding);
-	padding-top: calc(var(--section-padding) / 2);
-    box-sizing: border-box;
-}
-
-.contact-page__container .google-map__container .google-map__address h3,
-.contact-page__container .google-map__container .google-map__address p {
-	margin: 0;
-}
-
-.contact-page__container .google-map__container .google-map__address h3 {
-	letter-spacing: 2px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.contact-page__container .google-map__container .google-map__address p {
-    letter-spacing: 1px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #4a4a4a;
-}
+/*
 
 @media screen and (min-width: 1024px) {
-    .contact-page__container .image-banner__container {
+    .contact-page__c .image-banner__container {
         height: 200vh;
     }
 
-    .contact-page__container .google-map__container .google-map__map-title {
-        padding: calc(var(--section-padding) / 2);
+    .contact-page__c .google-map__c .google-map__map-title {
+        padding: calc(var(--space-outer) / 2);
         font-size: 24px;
     }
 
-    .contact-page__container .google-map__container .google-map__address h3 {
+    .contact-page__c .google-map__c .google-map__address h3 {
         font-size: 20px;
     }
 
-    .contact-page__container .google-map__container .google-map__address p {
+    .contact-page__c .google-map__c .google-map__address p {
         font-size: 16px;
     }
 }
+
+*/

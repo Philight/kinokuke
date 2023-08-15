@@ -1,0 +1,279 @@
+@import '@css/theme';
+
+.footer__c {
+	@apply bg-hermes-blue-dark text-white-primary py-[calc(var(--space-outer)*3/2)];
+	> .footer__navigation {
+		.footer__navigation-container-section {
+		    @apply flex;
+		    &.top {
+		    	@apply justify-between;
+		    }
+		    &.bottom {
+		    	@apply justify-end mt-6;
+			}
+
+			.footer__navigation-container {
+		    	@apply inline-flex flex-col tab-sm:flex-row;
+
+		    	.footer__navigation-item {
+					@apply heading heading--xs;
+					@apply text-white-primary lowercase;
+					@apply mt-1 tab-sm:mt-0;
+					&:first-child {
+						@apply mt-0;
+					}
+
+					@media screen(tab-sm) {
+						@apply ml-5;
+						&:first-child {
+							@apply ml-0;
+						}
+					}
+
+					&.findyourhome a {
+						@apply text-hermes-orange-lighter;
+					}
+
+					&.gdpr {
+						@apply heading--2xs opacity-90;
+					}
+				}
+			}
+		}
+	}
+
+	> .footer__bottom {
+		@apply flex justify-between mt-32;
+
+		.footer__logo-slogan {
+			@apply heading heading--2xs;
+			@apply capitalize tracking-2;
+			@apply inline-flex items-center;
+
+			.logo__c {
+				@apply w-9 h-9 mr-4;
+			}
+
+			.footer__logo-slogan-text span {
+			    @apply text-hermes-orange-lighter;
+			}
+		}
+
+		> .footer__social {
+			@apply flex items-end;
+
+			.icon__c {
+				@apply inline-flex mr-3;
+				@apply w-5 h-5;
+
+				&:last-child {
+					@apply mr-0;
+				}
+
+				&.icon-youtube {
+					@apply w-6 h-5 -mb-0.5;
+				}
+
+				> .icon {
+					@apply bg-white-primary;
+				}
+			}
+
+			.footer__social--instagram {
+				@apply flex mr-3;
+				.icon {
+					&:hover {
+						background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+					}
+				}
+			}
+		}
+	}
+
+	>  .footer-copyright {
+		@apply heading;
+		@apply tracking-2 text-[8px] opacity-60;
+		@apply mt-6;
+	}
+}
+
+
+
+/*
+
+.footer__c .footer__navigation-container-section {
+    flex: 0 0 100%;
+	display: flex;
+}
+
+.footer__c .footer__navigation-container-section.top {
+    justify-content: space-between;
+}
+.footer__c .footer__navigation-container-section.bottom {
+	margin-top: 20px;
+	justify-content: flex-end;
+}
+.footer__c .footer__navigation-container {
+	display: inline-flex;
+	list-style: none;
+	padding: 0;
+	margin:  0;
+	flex-direction: column;
+}
+
+.footer__c .footer__navigation-container.right {
+}
+
+@media screen and (min-width: 600px) {
+	.footer__c .footer__navigation-container {
+		flex-direction: row;
+	}
+}
+
+.footer__c .footer__navigation-item {
+	list-style: none;
+	text-transform: lowercase;
+	margin-top: 5px;
+}
+
+@media screen and (min-width: 600px) {
+	.footer__c .footer__navigation-item {
+		margin-left: 20px;
+	}
+	.footer__c .footer__navigation-item:first-child {
+		margin-left: 0;
+	}
+}
+
+.footer__c .footer__navigation-item.findyourhome a{
+	    color: var(--btn-color-1);
+}
+
+.footer__c .footer__navigation-item:first-child {
+	margin-top: 0;
+}
+
+.footer__c .footer__navigation-item:last-child {
+	margin-right: 0;
+}
+
+.footer__c .footer__navigation-item a {
+	color: #fff;
+	text-decoration: none;
+    font-family: var(--font-heading-1);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.footer__c .footer__navigation-container-section.bottom .footer__navigation-item a {
+	letter-spacing: 3px;
+    font-size: 10px;
+    color: #e4e4e4;
+}
+
+@media screen and (min-width: 600px) {
+	.footer__c .footer__navigation-item {
+		margin-top: 0;
+	}
+
+	.footer__c .footer__navigation-item a {
+    	font-size: 14px;
+
+	}
+	
+	.footer__c .footer__navigation-container-section.bottom .footer__navigation-item a {
+    	font-size: 12px;
+	}
+
+}
+
+
+
+
+.footer__c .footer__logo-slogan {
+	display: inline-flex;
+	align-items: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.footer__c .footer__logo-slogan-text span {
+    color: var(--btn-color-1);
+}
+
+.footer__c .kinokuke-logo__container {
+	margin-right: 10px;
+}
+
+@media screen and (min-width: 600px) {
+	.footer__c .footer__logo-slogan {
+    	font-size: 14px;
+	}
+
+	.footer__c .kinokuke-logo__container {
+		margin-right: 14px;
+	}
+}
+.footer__c .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer__c .footer__social {
+	display: inline-flex;
+	align-items: center;
+}
+
+.footer__c .footer__social .footer__social--instagram {
+	display: flex;
+	margin-right: 14px;
+}
+
+.footer__c .footer__social .footer__social--instagram .icon {
+	position: relative;
+	z-index: 1;
+  	background-color: #FFF;
+}
+
+.footer__c .footer__social .footer__social--instagram .icon:hover {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.footer__c .icon_container {
+	display: inline-flex;
+	margin-right: 14px;
+}
+
+.footer__c .icon_container:last-child {
+	margin-right: 0px;
+}
+
+.footer__c .footer__social .icon {
+	background-color: #FFF;
+	width: 24px; height: 24px;
+}
+
+.footer__c .icon_container.youtube {
+    margin-top: 2px;
+}
+
+.footer__c .icon_container.youtube .icon {
+	width: 27px;
+    height: 27px;
+}
+
+.footer__c .icon_container.linkedin {
+    margin-top: -1px;
+}
+
+.footer__c .footer-copyright {
+    font-family: var(--font-heading-2);
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    color: #c7c7c7;
+}
+*/

@@ -1,70 +1,56 @@
 
-.landing-page__container {
-	position: relative;
+.landing-page__c {
+	@apply relative;
 
-	/padding-top: var(--page-p-top);
-}
+	.intro-image {
+		@apply h-screen overflow-hidden;
 
-.landing-page__container .landing-page__intro-image {
-	height: 100vh ;
-	overflow: hidden;
-}
+		img {
+			@apply object-top;
+		}
 
-.landing-page__container .landing-page__intro-image img {
-	object-position: top;
-}
+		.image-banner__content {
+			@apply bottom-0 top-[unset] pb-[calc(var(--space-outer)+28px)];
 
-.landing-page__container .landing-page__intro-image .image-banner__content {
-	bottom: 0;
-	top: unset;
-	padding-bottom: var(--section-padding);
-}
+			.image-banner__title {
+				@apply m-0; 
+				span {
+					@apply text-hermes-orange-light;
+				}			
+			}			
+		}
 
-.landing-page__container .landing-page__intro-image .image-overlay {
-	background: linear-gradient(180deg, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.6) 40%,  rgba(0,0,0,0.1) 60%, rgba(0,0,0,0) 100%);
-	background: linear-gradient(180deg, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.1) 40%,  rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.8) 100%);
-    opacity: 1;
-}
-
-.landing-page__container .landing-page__intro-image h1 {
-	margin: 0;
-	font-family: CS1;
-	letter-spacing: 2px;
-}
-
-.landing-page__container .landing-page__intro-image h1 span {
-	color: var(--btn-color-1);
-}
-
-.landing-page__container .landing-page__find-your-home-image {
-	height: auto;
-}
-.landing-page__container .landing-page__find-your-home-image .image-banner__images-container {
-	height: 60vh;
-}
-
-@media screen and (min-width: 600px) {
-	.landing-page__container .landing-page__find-your-home-image .image-banner__images-container {
-		height: 80vh;
+		.image-banner__overlay {
+			@apply opacity-100;
+			background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%,  rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,1) 100%);
+			background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%,  rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,1) 100%);
+		}
 	}
-}
 
-.landing-page__container .landing-page__find-your-home-image .image-banner__content {
-	top: 50%;
-    transform: translateY(-50%);
-}
+	.landing-page__find-your-home-image {
+		@apply h-auto;
 
-.landing-page__container .landing-page__find-your-home-image .image-overlay {
-	background: linear-gradient(219deg, rgba(0,0,0,0.1) 30%, rgba(0,0,0,0.6) 52%, rgba(0,0,0,0.8) 80%);
-}
+		.image-banner__images-container {
+			@apply h-screen-3/5 tab-sm:h-screen-4/5;
+		}
 
-.landing-page__container .landing-page__find-your-home-image .cta-btn:hover {
+		.image-banner__content {
+			@apply top-1/2 -translate-y-1/2;
+			.image-banner__title span {
+				@apply text-hermes-orange-light;
+			}
+		}		
 
-}
+		.image-overlay {
+			@apply opacity-100;
+			background: linear-gradient(251deg, rgba(0,0,0,0.1) 30%, rgba(0,0,0,0.4) 52%, rgba(0,0,0,0.8) 80%);
+		}
+	}
 
-.landing-page__container .landing-video__container {
-	display: flex;
-}
-.landing-page__container .landing-video__container video {
-	max-width: 100%;
+	.landing-video__container {
+		@apply flex;
+		video {
+			@apply max-w-full;
+		}		
+	}
 }

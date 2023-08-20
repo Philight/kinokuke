@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import Image from '@components/graphic/Image';
 import Icon from '@components/graphic/Icon';
@@ -104,7 +105,7 @@ const GalleryCarousel = (props) => {
                       className='gallery-carousel__item f-grid-item'
                       id={`gallery-carousel__house-${index}`}
                     >
-                      {item.link && <a className='fill-absolute' href={item.link} />}
+                      {item.link && <Link to={item.link} className='fill-absolute' />}
                       <Image className='gallery-carousel__image-wrapper' src={item.src} />
                       <FullheightHeading heading1={item.title} heading2={`0${index + 1}`} />
                     </div>

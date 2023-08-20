@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Image from '@components/graphic/Image';
 import useDeviceDimensions, { createArrayGroups } from '@utils';
 
@@ -46,9 +47,9 @@ const ModelsHouses = (props) => {
       <div className='f-grid-group'>
         {createArrayGroups(COLUMNS, houses).map((houseRow, rowIndex) => (
           <div key={`f-grid-row-${rowIndex}`} className='f-grid-row'>
-            {houseRow.map((house, houseIndex) => (
+            { houseRow.map((house, houseIndex) => (
               <div className='models-houses__item f-grid-item ' key={houseIndex + house.title}>
-                <a className='fill-absolute' href={'/model/' + house.title} />
+                <Link to={'/model/' + house.title} className='fill-absolute' />
                 <div className='models-houses__item-inner f-col'>
                   <Image src={house.src} />
                   <div className='models-houses__item-content'>

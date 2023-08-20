@@ -164,7 +164,7 @@ const GalleryMasonry = (props) => {
 
       {loadBtnText && (
         <div className='gallery-masonry__load-btn-wrapper f-center' onClick={loadItems()}>
-          <a className='gallery-masonry__load-btn'>{loadBtnText}</a>
+          <a className='gallery-masonry__load-btn' role="button">{loadBtnText}</a>
         </div>
       )}
     </section>

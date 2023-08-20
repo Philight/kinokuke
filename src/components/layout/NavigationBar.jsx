@@ -70,13 +70,7 @@ const NavigationBar = (props) => {
       setMenuShown(true);
     }
   };
-  /*
-  const LinkWrap = ({ link, className, children }) => (
-    <Link to={link} className={className}>
-      {children}
-    </Link>
-  );
-*/
+
   return (
     <div
       className={`
@@ -89,14 +83,14 @@ const NavigationBar = (props) => {
     >
       <Layer className='navigation-bar__background' />
       <div className={`navigation-bar__wrapper `} ref={navRef}>
-        <a href='/' className='navigation-bar__logo' role='button'>
+        <Link to='/' className='navigation-bar__logo' role='button'>
           <KinoKukeLogo />
-        </a>
+        </Link>
 
         <div className='navigation-bar__findyourhome show-mobile'>
-          <a href='/findyourhome' className='navigation-bar__findyourhome-button' role='button'>
+          <Link to='/findyourhome' className='navigation-bar__findyourhome-button' role='button'>
             NÁJDI SVOJ DOMOV
-          </a>
+          </Link>
         </div>
 
         <div className='navigation-bar__burger'>
@@ -133,9 +127,9 @@ const NavigationBar = (props) => {
               className='navigation-bar__navigation-item navigation-bar__findyourhome show-desktop'
               data-level='1'
             >
-              <a href='/findyourhome' className='navigation-bar__findyourhome-button' role='button'>
+              <Link to='/findyourhome' className='navigation-bar__findyourhome-button' role='button'>
                 NÁJDI SVOJ DOMOV
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className='navigation-bar__navigation-container right' data-level='1'>

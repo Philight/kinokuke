@@ -21,7 +21,6 @@ const ModelsPage = (props) => {
   const introSectionRef = useRef(null);
   const scrollTo = (sectionRef) => () => {
     if (sectionRef.current) {
-      //			sectionRef.current.scrollIntoView({behavior: "smooth", block: "nearest"})
       window.scrollTo({
         left: 0,
         top: window.pageYOffset + sectionRef.current.getBoundingClientRect().top - 65,

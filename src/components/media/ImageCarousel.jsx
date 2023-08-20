@@ -113,8 +113,8 @@ const ImageCarousel = forwardRef((props, ref) => {
           <Layer className={`image-carousel__view-box-left`} />
           <Layer className={`image-carousel__view-box-center`} />
           <Layer className={`image-carousel__view-box-right`} />
-          <a
-            href='/process'
+          <Link
+            to='/process'
             rel='noopener noreferrer'
             className={`image-carousel__view-box-link absolute-fill`}
           />

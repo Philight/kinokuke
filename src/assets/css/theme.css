@@ -27,11 +27,11 @@
 }
 
 .nav-arrow.icon__c {
-  @apply flex items-center z-10 scale-y-[2];
+  @apply z-10 flex scale-y-[2] items-center;
   @apply cursor-pointer;
-  @apply w-7 h-7;
+  @apply h-7 w-7;
   @media screen(tab-sm) {
-    @apply w-9 h-9 p-1;
+    @apply h-9 w-9 p-1;
   }
 
   &.disabled {
@@ -47,7 +47,7 @@
     @apply absolute left-1/2 -translate-x-1/2 -translate-y-10 rotate-90;
   }
   &.flying {
-    @apply absolute top-1/2 -translate-y-1/2; 
+    @apply absolute top-1/2 -translate-y-1/2;
     @apply scale-y-[2];
   }
   &.highlight {
@@ -73,7 +73,7 @@
     }
   }
   .icon {
-    @apply w-5 h-5;
+    @apply h-5 w-5;
   }
 }
 
@@ -128,7 +128,7 @@
 }
 .body--sm {
   @apply text-sm;
-  @apply tracking-3; 
+  @apply tracking-3;
 }
 
 .btn-text {
@@ -166,13 +166,15 @@
 /* BUTTON VARIANTS */
 
 .btn {
-  @apply cursor-pointer rounded-full inline-flex items-center;
+  @apply inline-flex cursor-pointer items-center rounded-full;
 }
 
 .btn--standard {
   @apply btn-text btn-text--sm;
   @apply bg-white-primary;
-  transition: background-color 0.5s ease-in-out, color 0.4s ease-in-out;
+  transition:
+    background-color 0.5s ease-in-out,
+    color 0.4s ease-in-out;
   &:hover {
     @apply bg-tertiary text-white-primary;
   }
@@ -181,14 +183,16 @@
 .btn--primary {
   @apply bg-tertiary text-white-primary;
 
-  transition: background-color 0.5s ease-in-out, color 0.4s ease-in-out;
+  transition:
+    background-color 0.5s ease-in-out,
+    color 0.4s ease-in-out;
   &:hover {
   }
 }
 
 .btn--outline {
   @apply font-light;
-  @apply bg-transparent border border-white-primary/70 text-white-primary;
+  @apply border border-white-primary/70 bg-transparent text-white-primary;
 
   transition: opacity ease-in-out 0.4s;
   &:hover {
@@ -198,7 +202,7 @@
 
 .btn--lg {
   @apply btn-text btn-text--lg;
-  @apply px-6 pt-px pb-0 h-8;
+  @apply h-8 px-6 pb-0 pt-px;
   @media screen(tab-sm) {
     @apply h-10 px-8;
   }

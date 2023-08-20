@@ -13,8 +13,9 @@ html {
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: var(--font-heading-1), 'Product Sans', 'Gilroy', 'Gotham', 'Avenir LT Std', sans-serif;
-  scroll-behavior: smooth;  
+  font-family: var(--font-heading-1), 'Product Sans', 'Gilroy', 'Gotham', 'Avenir LT Std',
+    sans-serif;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
@@ -33,7 +34,8 @@ dialog {
   padding: 0;
 }
 
-ul, li {
+ul,
+li {
   @apply list-none;
 }
 
@@ -44,7 +46,9 @@ img {
   object-position: center;
 }
 
-figure { margin: 0; }
+figure {
+  margin: 0;
+}
 
 button,
 body,

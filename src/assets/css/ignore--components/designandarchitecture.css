@@ -1,36 +1,33 @@
 @import '@css/theme';
 
 .design-and-architecture__c {
-	--f-grid-gap: 0px !important;
-	@apply relative;
+  --f-grid-gap: 0px !important;
+  @apply relative;
 
-    .design-and-architecture__tiles-group {
-    	@apply grid justify-stretch grid-cols-1;
-    	@media (desk-sm) {
-    		@apply grid-cols-2 auto-rows-fr;
-    	}
-	}
+  .design-and-architecture__tiles-group {
+    @apply grid grid-cols-1 justify-stretch;
+    @media (desk-sm) {
+      @apply auto-rows-fr grid-cols-2;
+    }
+  }
 
-	img {
-		@apply flex;
-	}
+  img {
+    @apply flex;
+  }
 
-	.btn-wrapper {
-		@apply flex justify-end;
-    	@apply desk-sm:justify-start;
-	}
+  .btn-wrapper {
+    @apply flex justify-end;
+    @apply desk-sm:justify-start;
+  }
 
-	.design-and-architecture__cta {
-		@apply btn btn--outline btn--sm;
-		@apply mt-4;
-		@media (desk-sm) {
-			padding: var(--btn-padding-lg);
-		}		
-	}
+  .design-and-architecture__cta {
+    @apply btn btn--outline btn--sm;
+    @apply mt-4;
+    @media (desk-sm) {
+      padding: var(--btn-padding-lg);
+    }
+  }
 }
-
-
-
 
 /*
 .design-and-architecture__c img {

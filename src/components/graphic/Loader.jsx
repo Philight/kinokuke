@@ -20,9 +20,9 @@ const Loader = (props) => {
   return (
     <figure className={`loader__c full-screen f-center ${className}`}>
       <canvas className={'loader__background absolute-center fill-parent'} />
-      <Image 
+      <Image
         className={`loader__icon`}
-        src={LogoImage} 
+        src={LogoImage}
         animate={ANIM_PULSE.animate}
         transition={ANIM_PULSE.transition}
       />

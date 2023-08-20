@@ -1,14 +1,14 @@
 @import '@css/theme';
 
 .gallery-page__c {
-    @apply relative pt-[var(--navigation-height)] bg-hermes-orange-lighter z-0;
+  @apply relative z-0 bg-hermes-orange-lighter pt-[var(--navigation-height)];
 
-    .background-image {
-        @apply absolute h-[calc(100%-var(--navigation-height))] -z-10;
-    }
+  .background-image {
+    @apply absolute -z-10 h-[calc(100%-var(--navigation-height))];
+  }
 
-    .gallery-page__inner-section {
-        @apply page-max-w py-[var(--space-outer)];
-        @apply bg-transparent;
-    }
+  .gallery-page__inner-section {
+    @apply page-max-w py-[var(--space-outer)];
+    @apply bg-transparent;
+  }
 }

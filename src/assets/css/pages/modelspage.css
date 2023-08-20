@@ -1,139 +1,141 @@
 @import '@css/theme';
 
 .models-page__c {
-	@apply relative;
+  @apply relative;
 
-	.intro-image .image-banner__overlay {
-		@apply opacity-100;
-		background: radial-gradient(circle, rgba(0,0,0,0) 20%, rgba(0,0,0,0.1) 40%,  rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.9) 80%, rgba(0,0,0,1) 100%);
-	}
+  .intro-image .image-banner__overlay {
+    @apply opacity-100;
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.1) 40%,
+      rgba(0, 0, 0, 0.7) 60%,
+      rgba(0, 0, 0, 0.9) 80%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
 
-	.models-houses__c {
-		@apply my-[calc(var(--space-outer)*2)];
-		--f-grid-gap: theme(space.4);
+  .models-houses__c {
+    @apply my-[calc(var(--space-outer)*2)];
+    --f-grid-gap: theme(space.4);
 
-	    .models-houses__item {
-	    	@apply relative;
+    .models-houses__item {
+      @apply relative;
 
-	    	a {
-	    		@apply z-10;
-	    	}
+      a {
+        @apply z-10;
+      }
 
-			.models-houses__item-content {
-				@apply p-2 bg-[#F1F1F2];
+      .models-houses__item-content {
+        @apply bg-[#F1F1F2] p-2;
 
-				.models-houses__item-inner-content {
-					@apply px-3 py-4 border border-[#c1c1c1];
-				}
+        .models-houses__item-inner-content {
+          @apply border border-[#c1c1c1] px-3 py-4;
+        }
 
-    			.models-houses__item-tags {
-    				@apply flex justify-center;
-    				span {
-    					@apply tag tag--sm;
-    					@apply text-white-primary mr-2;
+        .models-houses__item-tags {
+          @apply flex justify-center;
+          span {
+            @apply tag tag--sm;
+            @apply mr-2 text-white-primary;
 
-						&.models-houses__item-status {
-							@apply bg-hermes-orange;
-						}
-						&.models-houses__item-status.preorder {
-							@apply bg-hermes-orange-lighter;
-						}
-						&.models-houses__item-rooms {
-							@apply bg-hermes-green;
-						}
-						&.models-houses__item-rooms.large {
-							@apply bg-hermes-blue;
-						}
-					}
-				}
+            &.models-houses__item-status {
+              @apply bg-hermes-orange;
+            }
+            &.models-houses__item-status.preorder {
+              @apply bg-hermes-orange-lighter;
+            }
+            &.models-houses__item-rooms {
+              @apply bg-hermes-green;
+            }
+            &.models-houses__item-rooms.large {
+              @apply bg-hermes-blue;
+            }
+          }
+        }
 
-				h4 {
-					@apply inline-block w-1/2;
-				    @apply body body--md text-[#5c5c5c];
-				    @apply font-semibold tracking-2;
-				}
+        h4 {
+          @apply inline-block w-1/2;
+          @apply body body--md text-[#5c5c5c];
+          @apply font-semibold tracking-2;
+        }
 
-				.models-houses__item-title {
-				    @apply body body--xl text-[#484848];
-					@apply mt-6 uppercase;
-				}
+        .models-houses__item-title {
+          @apply body body--xl text-[#484848];
+          @apply mt-6 uppercase;
+        }
 
-				.models-houses__item-size {
-					@apply translate-x-0.5;
-				}
+        .models-houses__item-size {
+          @apply translate-x-0.5;
+        }
 
-				.models-houses__item-price {
-					@apply mt-1 text-right;
-				}
-			}			
-		}
-	}
+        .models-houses__item-price {
+          @apply mt-1 text-right;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
-	.models-page__c .models-houses__c .models-houses__item {
-		display: flex;
-	}
+  .models-page__c .models-houses__c .models-houses__item {
+    display: flex;
+  }
 
-	.models-page__c .models-houses__c .models-houses__item a .image-wrapper {
-		flex: 1;
-	}
+  .models-page__c .models-houses__c .models-houses__item a .image-wrapper {
+    flex: 1;
+  }
 
-	.models-page__c .models-houses__c.col-3 {
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
+  .models-page__c .models-houses__c.col-3 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-	.models-page__c .models-houses__c.col-3 .models-houses__item {
-		flex: 0 0 calc((100% - 1*var(--grid-gap)) / 2);
-		margin-right: var(--grid-gap);
-	}
+  .models-page__c .models-houses__c.col-3 .models-houses__item {
+    flex: 0 0 calc((100% - 1 * var(--grid-gap)) / 2);
+    margin-right: var(--grid-gap);
+  }
 
-	.models-page__c .models-houses__c.col-3 .models-houses__item:nth-of-type(2n+2) {
-		margin-right: 0;
-	}
+  .models-page__c .models-houses__c.col-3 .models-houses__item:nth-of-type(2n + 2) {
+    margin-right: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-	.models-page__c .models-houses__c.col-3 .models-houses__item {
-		flex: 0 0 calc((100% - 2*var(--grid-gap)) / 3);
-		margin-right: var(--grid-gap);
-	}
-	
-	.models-page__c .models-houses__c.col-3 .models-houses__item:nth-of-type(2n+2) {
-		margin-right: var(--grid-gap);
-	}
+  .models-page__c .models-houses__c.col-3 .models-houses__item {
+    flex: 0 0 calc((100% - 2 * var(--grid-gap)) / 3);
+    margin-right: var(--grid-gap);
+  }
 
-	.models-page__c .models-houses__c.col-3 .models-houses__item:nth-of-type(3n+3) {
-		margin-right: 0;
-	}
+  .models-page__c .models-houses__c.col-3 .models-houses__item:nth-of-type(2n + 2) {
+    margin-right: var(--grid-gap);
+  }
+
+  .models-page__c .models-houses__c.col-3 .models-houses__item:nth-of-type(3n + 3) {
+    margin-right: 0;
+  }
 }
 
 @media screen and (min-width: 600px) {
-	.models-page__c .models-houses__c .models-houses__item-heading {
-		justify-content: flex-end;
-	}
+  .models-page__c .models-houses__c .models-houses__item-heading {
+    justify-content: flex-end;
+  }
 }
-
-
-
 
 @media screen and (min-width: 600px) {
-	.models-page__c .models-houses__c  .models-houses__item-content span.models-houses__item-rooms {
-		margin-left: 10px;
-	}
+  .models-page__c .models-houses__c .models-houses__item-content span.models-houses__item-rooms {
+    margin-left: 10px;
+  }
 }
-
 
 @media screen and (min-width: 600px) {
-	.models-page__c .models-houses__c .models-houses__item-characteristics {
-		columns: 2;
-		-webkit-columns: 2;
-		-moz-columns: 2;
-	}
+  .models-page__c .models-houses__c .models-houses__item-characteristics {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
 
-	.models-page__c .models-houses__c .models-houses__item-characteristics li {
-	    margin-top: 10px;
-	}
+  .models-page__c .models-houses__c .models-houses__item-characteristics li {
+    margin-top: 10px;
+  }
 }
-

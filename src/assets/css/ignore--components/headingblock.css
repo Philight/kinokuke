@@ -1,16 +1,16 @@
 @import '@css/theme';
 
 .heading-block__c {
-    @apply absolute left-1/2 -translate-x-1/2 top-[calc(var(--navigation-height)+50vh)];
-    @apply rounded-full bg-white-primary z-10 px-8 py-2 pt-3 min-w-[70%];    
+  @apply absolute left-1/2 top-[calc(var(--navigation-height)+50vh)] -translate-x-1/2;
+  @apply z-10 min-w-[70%] rounded-full bg-white-primary px-8 py-2 pt-3;
 
-    h2 {
-        @apply heading heading--sm;
-        @apply text-center lowercase font-semibold;
-    }
-    h3 {
-        @apply body body--sm;
-        @apply tracking-2 text-center uppercase;
-        @apply opacity-70;
-    }
+  h2 {
+    @apply heading heading--sm;
+    @apply text-center font-semibold lowercase;
+  }
+  h3 {
+    @apply body body--sm;
+    @apply text-center uppercase tracking-2;
+    @apply opacity-70;
+  }
 }

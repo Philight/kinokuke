@@ -1,56 +1,74 @@
-
 .landing-page__c {
-	@apply relative;
+  @apply relative;
 
-	.intro-image {
-		@apply h-screen overflow-hidden;
+  .intro-image {
+    @apply h-screen overflow-hidden;
 
-		img {
-			@apply object-top;
-		}
+    img {
+      @apply object-top;
+    }
 
-		.image-banner__content {
-			@apply bottom-0 top-[unset] pb-[calc(var(--space-outer)+28px)];
+    .image-banner__content {
+      @apply bottom-0 top-[unset] pb-[calc(var(--space-outer)+28px)];
 
-			.image-banner__title {
-				@apply m-0; 
-				span {
-					@apply text-hermes-orange-light;
-				}			
-			}			
-		}
+      .image-banner__title {
+        @apply m-0;
+        span {
+          @apply text-hermes-orange-light;
+        }
+      }
+    }
 
-		.image-banner__overlay {
-			@apply opacity-100;
-			background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%,  rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,1) 100%);
-			background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%,  rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,1) 100%);
-		}
-	}
+    .image-banner__overlay {
+      @apply opacity-100;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 20%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.7) 80%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 20%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.3) 60%,
+        rgba(0, 0, 0, 0.7) 80%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+  }
 
-	.landing-page__find-your-home-image {
-		@apply h-auto;
+  .landing-page__find-your-home-image {
+    @apply h-auto;
 
-		.image-banner__images-container {
-			@apply h-screen-3/5 tab-sm:h-screen-4/5;
-		}
+    .image-banner__images-container {
+      @apply h-screen-3/5 tab-sm:h-screen-4/5;
+    }
 
-		.image-banner__content {
-			@apply top-1/2 -translate-y-1/2;
-			.image-banner__title span {
-				@apply text-hermes-orange-light;
-			}
-		}		
+    .image-banner__content {
+      @apply top-1/2 -translate-y-1/2;
+      .image-banner__title span {
+        @apply text-hermes-orange-light;
+      }
+    }
 
-		.image-overlay {
-			@apply opacity-100;
-			background: linear-gradient(251deg, rgba(0,0,0,0.1) 30%, rgba(0,0,0,0.4) 52%, rgba(0,0,0,0.8) 80%);
-		}
-	}
+    .image-overlay {
+      @apply opacity-100;
+      background: linear-gradient(
+        251deg,
+        rgba(0, 0, 0, 0.1) 30%,
+        rgba(0, 0, 0, 0.4) 52%,
+        rgba(0, 0, 0, 0.8) 80%
+      );
+    }
+  }
 
-	.landing-video__container {
-		@apply flex;
-		video {
-			@apply max-w-full;
-		}		
-	}
+  .landing-video__container {
+    @apply flex;
+    video {
+      @apply max-w-full;
+    }
+  }
 }

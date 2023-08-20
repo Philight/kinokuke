@@ -1,49 +1,49 @@
 @import '@css/theme';
 
 .text-block__c {
-    @apply page-max-w;
-    @apply mt-[calc(var(--space-outer)*2)];
+  @apply page-max-w;
+  @apply mt-[calc(var(--space-outer)*2)];
 
-    .text-block__inner {
-        @apply relative px-[var(--space-outer)] py-[calc(var(--space-outer)*2)];
-        @apply bg-gray-light;
+  .text-block__inner {
+    @apply relative px-[var(--space-outer)] py-[calc(var(--space-outer)*2)];
+    @apply bg-gray-light;
 
-        .tooltip {
-            @apply absolute top-[var(--space-outer)] left-1/2 -translate-x-1/2 w-6 h-6;
+    .tooltip {
+      @apply absolute left-1/2 top-[var(--space-outer)] h-6 w-6 -translate-x-1/2;
 
-            .icon {
-                @apply bg-hermes-orange;
-            }
-        }
+      .icon {
+        @apply bg-hermes-orange;
+      }
     }
+  }
 
-    p {
-        @apply body body--md;
-        @apply mt-[var(--space-outer)];
-    }
+  p {
+    @apply body body--md;
+    @apply mt-[var(--space-outer)];
+  }
 
-    .section-subheading {
-        @apply heading heading--lg;
-        @apply tracking-1 font-normal lowercase text-black-primary;
-    }
+  .section-subheading {
+    @apply heading heading--lg;
+    @apply font-normal lowercase tracking-1 text-black-primary;
+  }
 }
 
 @media screen and (min-width: 600px) {
-    .text-block__c .text-block__inner {
-        flex-direction: row;
-    }
+  .text-block__c .text-block__inner {
+    flex-direction: row;
+  }
 
-    .text-block__c .section-subheading {
-        padding-bottom: var(--space-outer);
-    }
+  .text-block__c .section-subheading {
+    padding-bottom: var(--space-outer);
+  }
 
-    .text-block__c p {
-        font-size: 18px;
-    }
+  .text-block__c p {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .text-block__c .section-subheading {
-        padding-right: 0;
-    }
+  .text-block__c .section-subheading {
+    padding-right: 0;
+  }
 }

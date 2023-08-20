@@ -1,24 +1,30 @@
-
 .about-page__c {
-	@apply relative;
+  @apply relative;
 
-	.intro-image {
-		.image-banner__overlay {
-			@apply opacity-100;
-			background: linear-gradient(360deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%,  rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,1) 100%);
-		}
-		img {
-			object-position: 20% top;
-		}
-	}
+  .intro-image {
+    .image-banner__overlay {
+      @apply opacity-100;
+      background: linear-gradient(
+        360deg,
+        rgba(0, 0, 0, 0) 20%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.7) 80%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+    img {
+      object-position: 20% top;
+    }
+  }
 
-	.our-values-text {
-		@apply mb-[var(--space-outer)];
-	}
+  .our-values-text {
+    @apply mb-[var(--space-outer)];
+  }
 }
 
 @media screen and (min-width: 600px) {
-	.about-page__c .image-banner__container img {
-	    object-position: top;
-	}
+  .about-page__c .image-banner__container img {
+    object-position: top;
+  }
 }

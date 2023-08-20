@@ -4,12 +4,12 @@ const Image = (props) => {
   let { className, src, alt, style, onClick, animate, transition } = props;
 
   return (
-    <motion.figure 
-      className={`image__c js-enabled ${className}`} 
-      style={style} 
+    <motion.figure
+      className={`image__c js-enabled ${className}`}
+      style={style}
       onClick={onClick}
       animate={animate}
-      transition={transition}     
+      transition={transition}
     >
       <img
         className='image__img lazyload lazypreload'

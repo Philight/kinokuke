@@ -49,7 +49,7 @@
 }
 
 .f-full {
-  @apply grow-0 shrink-0 basis-full;
+  @apply shrink-0 grow-0 basis-full;
 }
 
 .carousel-view {
@@ -100,11 +100,11 @@
   --f-grid-gap: theme(space.2); /* gap-2 */
 
   .f-grid-group {
-    @apply flex f-full flex-wrap h-full;
+    @apply f-full flex h-full flex-wrap;
   }
 
   .f-grid-row {
-    @apply flex f-full;
+    @apply f-full flex;
   }
 
   .f-grid-item {
@@ -135,10 +135,10 @@
       }
       &.rows-3 .f-grid-row {
         @apply h-[calc((100%+var(--f-grid-gap))/3)];
-      }      
+      }
       &.rows-4 .f-grid-row {
         @apply h-[calc((100%+var(--f-grid-gap))/4)];
-      }            
+      }
     }
   }
 }
@@ -156,53 +156,101 @@
       * 12R x 16C GRID: 12 elements
       */
     .masonry-grid-container {
-      @apply grid-rows-12 grid-cols-16;
+      @apply grid-cols-16 grid-rows-12;
     }
 
     .masonry-grid-item {
-      &:nth-child(12n+1) {  @apply col-span-16 row-span-1; } /* 1 ROWS */
+      &:nth-child(12n + 1) {
+        @apply col-span-16 row-span-1;
+      } /* 1 ROWS */
 
-      &:nth-child(12n+2) {  @apply col-span-8 row-span-3;  } /* 3 ROWS */
-      &:nth-child(12n+3) {  @apply col-span-8 row-span-2;  }
-      &:nth-child(12n+4) {  @apply col-span-8 row-span-1;  }
+      &:nth-child(12n + 2) {
+        @apply col-span-8 row-span-3;
+      } /* 3 ROWS */
+      &:nth-child(12n + 3) {
+        @apply col-span-8 row-span-2;
+      }
+      &:nth-child(12n + 4) {
+        @apply col-span-8 row-span-1;
+      }
 
-      &:nth-child(12n+5) {  @apply col-span-7 row-span-3;  } /* 5 ROWS */
-      &:nth-child(12n+6) {  @apply col-span-9 row-span-2;  }
-      &:nth-child(12n+7) {  @apply col-span-9 row-span-3;  }
-      &:nth-child(12n+8) {  @apply col-span-7 row-span-1;  }
-      &:nth-child(12n+9) {  @apply col-span-7 row-span-1;  }
+      &:nth-child(12n + 5) {
+        @apply col-span-7 row-span-3;
+      } /* 5 ROWS */
+      &:nth-child(12n + 6) {
+        @apply col-span-9 row-span-2;
+      }
+      &:nth-child(12n + 7) {
+        @apply col-span-9 row-span-3;
+      }
+      &:nth-child(12n + 8) {
+        @apply col-span-7 row-span-1;
+      }
+      &:nth-child(12n + 9) {
+        @apply col-span-7 row-span-1;
+      }
 
-      &:nth-child(12n+10) {  @apply col-span-16 row-span-2;  } /* 2 ROWS */
+      &:nth-child(12n + 10) {
+        @apply col-span-16 row-span-2;
+      } /* 2 ROWS */
 
-      &:nth-child(12n+11) {  @apply col-span-8 row-span-1;  } /* 1 ROW */
-      &:nth-child(12n+12) {  @apply col-span-8 row-span-1;  }
+      &:nth-child(12n + 11) {
+        @apply col-span-8 row-span-1;
+      } /* 1 ROW */
+      &:nth-child(12n + 12) {
+        @apply col-span-8 row-span-1;
+      }
     }
   }
- 
+
   &.cols-3 {
     /**
       * 24R x 24C GRID: 12 elements
       */
     .masonry-grid-container {
-      @apply grid-rows-24 grid-cols-24;
+      @apply grid-cols-24 grid-rows-24;
     }
 
     .masonry-grid-item {
-      &:nth-child(12n+1) {  @apply col-span-24 row-span-4; } /* 1 ROWS */
+      &:nth-child(12n + 1) {
+        @apply col-span-24 row-span-4;
+      } /* 1 ROWS */
 
-      &:nth-child(12n+2) {  @apply col-span-8 row-span-4;  } /* 4 ROWS */
-      &:nth-child(12n+3) {  @apply col-span-10 row-span-4;  }
-      &:nth-child(12n+4) {  @apply col-span-6 row-span-8;  }
-      &:nth-child(12n+5) {  @apply col-span-10 row-span-4;  } /* 5 ROWS */
-      &:nth-child(12n+6) {  @apply col-span-8 row-span-4;  }
+      &:nth-child(12n + 2) {
+        @apply col-span-8 row-span-4;
+      } /* 4 ROWS */
+      &:nth-child(12n + 3) {
+        @apply col-span-10 row-span-4;
+      }
+      &:nth-child(12n + 4) {
+        @apply col-span-6 row-span-8;
+      }
+      &:nth-child(12n + 5) {
+        @apply col-span-10 row-span-4;
+      } /* 5 ROWS */
+      &:nth-child(12n + 6) {
+        @apply col-span-8 row-span-4;
+      }
 
-      &:nth-child(12n+7) {  @apply col-span-4 row-span-12;  }
-      &:nth-child(12n+8) {  @apply col-span-8 row-span-8;  }
-      &:nth-child(12n+9) {  @apply col-span-12 row-span-4;  }
-      &:nth-child(12n+10) {  @apply col-span-12 row-span-4;  } /* 2 ROWS */
+      &:nth-child(12n + 7) {
+        @apply col-span-4 row-span-12;
+      }
+      &:nth-child(12n + 8) {
+        @apply col-span-8 row-span-8;
+      }
+      &:nth-child(12n + 9) {
+        @apply col-span-12 row-span-4;
+      }
+      &:nth-child(12n + 10) {
+        @apply col-span-12 row-span-4;
+      } /* 2 ROWS */
 
-      &:nth-child(12n+11) {  @apply col-span-12 row-span-4;  } /* 1 ROW */
-      &:nth-child(12n+12) {  @apply col-span-8 row-span-4;  }
+      &:nth-child(12n + 11) {
+        @apply col-span-12 row-span-4;
+      } /* 1 ROW */
+      &:nth-child(12n + 12) {
+        @apply col-span-8 row-span-4;
+      }
     }
   }
 
@@ -211,38 +259,86 @@
       * 24R x 24C GRID: 24 elements
       */
     .masonry-grid-container {
-      @apply grid-rows-24 grid-cols-24;
+      @apply grid-cols-24 grid-rows-24;
     }
 
     .masonry-grid-item {
-      &:nth-child(24n+1) {  @apply col-span-24 row-span-4; } /* 1 ROWS */
+      &:nth-child(24n + 1) {
+        @apply col-span-24 row-span-4;
+      } /* 1 ROWS */
 
-      &:nth-child(24n+2) {  @apply col-span-9 row-span-4;  } /* 4 ROWS */
-      &:nth-child(24n+3) {  @apply col-span-5 row-span-4;  }
-      &:nth-child(24n+4) {  @apply col-span-4 row-span-4;  }
-      &:nth-child(24n+5) {  @apply col-span-6 row-span-5;  } /* 5 ROWS */
+      &:nth-child(24n + 2) {
+        @apply col-span-9 row-span-4;
+      } /* 4 ROWS */
+      &:nth-child(24n + 3) {
+        @apply col-span-5 row-span-4;
+      }
+      &:nth-child(24n + 4) {
+        @apply col-span-4 row-span-4;
+      }
+      &:nth-child(24n + 5) {
+        @apply col-span-6 row-span-5;
+      } /* 5 ROWS */
 
-      &:nth-child(24n+6) {  @apply col-span-7 row-span-3;  }
-      &:nth-child(24n+7) {  @apply col-span-3 row-span-7;  }
-      &:nth-child(24n+8) {  @apply col-span-8 row-span-4;  }
-      &:nth-child(24n+9) {  @apply col-span-6 row-span-3;  }
-      &:nth-child(24n+10) {  @apply col-span-7 row-span-2;  } /* 2 ROWS */
-      &:nth-child(24n+11) {  @apply col-span-6 row-span-3;  } /* 1 ROW */
-      &:nth-child(24n+12) {  @apply col-span-8 row-span-3;  }
+      &:nth-child(24n + 6) {
+        @apply col-span-7 row-span-3;
+      }
+      &:nth-child(24n + 7) {
+        @apply col-span-3 row-span-7;
+      }
+      &:nth-child(24n + 8) {
+        @apply col-span-8 row-span-4;
+      }
+      &:nth-child(24n + 9) {
+        @apply col-span-6 row-span-3;
+      }
+      &:nth-child(24n + 10) {
+        @apply col-span-7 row-span-2;
+      } /* 2 ROWS */
+      &:nth-child(24n + 11) {
+        @apply col-span-6 row-span-3;
+      } /* 1 ROW */
+      &:nth-child(24n + 12) {
+        @apply col-span-8 row-span-3;
+      }
 
-      &:nth-child(24n+13) {  @apply col-span-7 row-span-4;  }
-      &:nth-child(24n+14) {  @apply col-span-5 row-span-3;  }
-      &:nth-child(24n+15) {  @apply col-span-6 row-span-2;  }
-      &:nth-child(24n+16) {  @apply col-span-6 row-span-2;  }
-      &:nth-child(24n+17) {  @apply col-span-7 row-span-4;  }
-      &:nth-child(24n+18) {  @apply col-span-4 row-span-5;  }
-      &:nth-child(24n+19) {  @apply col-span-8 row-span-4;  }
-      &:nth-child(24n+20) {  @apply col-span-5 row-span-3;  }
+      &:nth-child(24n + 13) {
+        @apply col-span-7 row-span-4;
+      }
+      &:nth-child(24n + 14) {
+        @apply col-span-5 row-span-3;
+      }
+      &:nth-child(24n + 15) {
+        @apply col-span-6 row-span-2;
+      }
+      &:nth-child(24n + 16) {
+        @apply col-span-6 row-span-2;
+      }
+      &:nth-child(24n + 17) {
+        @apply col-span-7 row-span-4;
+      }
+      &:nth-child(24n + 18) {
+        @apply col-span-4 row-span-5;
+      }
+      &:nth-child(24n + 19) {
+        @apply col-span-8 row-span-4;
+      }
+      &:nth-child(24n + 20) {
+        @apply col-span-5 row-span-3;
+      }
 
-      &:nth-child(24n+21) {  @apply col-span-12 row-span-3;  }
-      &:nth-child(24n+22) {  @apply col-span-4 row-span-3;  }
-      &:nth-child(24n+23) {  @apply col-span-4 row-span-3;  }
-      &:nth-child(24n+24) {  @apply col-span-4 row-span-2;  }
+      &:nth-child(24n + 21) {
+        @apply col-span-12 row-span-3;
+      }
+      &:nth-child(24n + 22) {
+        @apply col-span-4 row-span-3;
+      }
+      &:nth-child(24n + 23) {
+        @apply col-span-4 row-span-3;
+      }
+      &:nth-child(24n + 24) {
+        @apply col-span-4 row-span-2;
+      }
     }
-  }  
+  }
 }

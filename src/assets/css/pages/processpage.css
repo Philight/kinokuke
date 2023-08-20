@@ -1,138 +1,148 @@
 @import '@css/theme';
 
 .process-page__c {
-	@apply relative pb-[calc(var(--space-outer)*2)];
+  @apply relative pb-[calc(var(--space-outer)*2)];
 
-	.intro-image .image-banner__overlay {
-		@apply opacity-100;
-		background: linear-gradient(192deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%,  rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.7) 80%, rgba(0,0,0,1) 100%);
-	}
+  .intro-image .image-banner__overlay {
+    @apply opacity-100;
+    background: linear-gradient(
+      192deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.1) 60%,
+      rgba(0, 0, 0, 0.7) 80%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
 
-	.process-steps__c {
-		@apply page-max-w;
+  .process-steps__c {
+    @apply page-max-w;
 
-		&.enable-hover .process-step__c {
-			&.revealed {
-				.icon__c {
-					@apply scale-100;
-				}
-				h3, p {
-					@apply max-h-128 opacity-100;
-				}				
-			}
+    &.enable-hover .process-step__c {
+      &.revealed {
+        .icon__c {
+          @apply scale-100;
+        }
+        h3,
+        p {
+          @apply max-h-128 opacity-100;
+        }
+      }
 
-			.icon__c {
-				@apply scale-150;
-				transition: transform .6s ease-in-out;
-			}
-			h3, p {
-				@apply max-h-0 opacity-0;
-				transition: opacity .6s ease-in, max-height .9s ease-in;
-			}
-		}
+      .icon__c {
+        @apply scale-150;
+        transition: transform 0.6s ease-in-out;
+      }
+      h3,
+      p {
+        @apply max-h-0 opacity-0;
+        transition:
+          opacity 0.6s ease-in,
+          max-height 0.9s ease-in;
+      }
+    }
 
-		.process-step__c {
-			@apply relative w-full pt-full;
-			@apply bg-white;
+    .process-step__c {
+      @apply relative w-full pt-full;
+      @apply bg-white;
 
-		    .process-step__background,
-		    .process-step__overlay {
-		    	@apply bg-cover bg-center bg-no-repeat;
+      .process-step__background,
+      .process-step__overlay {
+        @apply bg-cover bg-center bg-no-repeat;
 
-			    transition: opacity .3s ease-in-out;
-			}
-			.process-step__background {
-				@apply opacity-90;
-				background-image: var(--step-background);
-			}			
-			.process-step__overlay {
-				@apply opacity-70;
-				@apply bg-[var(--step-overlay-color)];
-			}
+        transition: opacity 0.3s ease-in-out;
+      }
+      .process-step__background {
+        @apply opacity-90;
+        background-image: var(--step-background);
+      }
+      .process-step__overlay {
+        @apply opacity-70;
+        @apply bg-[var(--step-overlay-color)];
+      }
 
-			.process-step__content {
-				@apply w-4/5 text-center text-white;
+      .process-step__content {
+        @apply w-4/5 text-center text-white;
 
-				.icon__c {
-					@apply w-16 h-16;
-					.icon {
-						@apply bg-white;
-					}
-				}
-				h3, p {
-					@apply mt-2;
-				}
-				h3 {
-					@apply heading heading--md;
-					@apply tracking-1 lowercase font-bold;
-				}
-				p {
-					@apply body body--sm;
-					@apply tracking-1;
-				}
-			}
+        .icon__c {
+          @apply h-16 w-16;
+          .icon {
+            @apply bg-white;
+          }
+        }
+        h3,
+        p {
+          @apply mt-2;
+        }
+        h3 {
+          @apply heading heading--md;
+          @apply font-bold lowercase tracking-1;
+        }
+        p {
+          @apply body body--sm;
+          @apply tracking-1;
+        }
+      }
+    }
+  }
 
-		}
-	}
+  .design-studio-page__wall-types-description {
+    .image-banner__content {
+      @apply top-1/2 -translate-y-1/2;
+    }
+  }
 
-	.design-studio-page__wall-types-description {
-		.image-banner__content {
-			@apply top-1/2 -translate-y-1/2;
-		}
-	}
-
-	.design-studio-page__wall-types-image {
-		@apply max-h-screen-1/2;
-		.image-carousel__images-view img {
-			@apply px-[var(--space-outer)];
-			@apply object-contain;
-		}
-	}
-}
-
-
-@media screen and (min-width: 600px) {
-	.process-page__c .image-banner__container.design-studio-page__wall-types-description {
-		height: 60vh;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.process-page__c .image-carousel__container .image-carousel__images-container {
-		padding-left: var(--space-outer);
-		padding-right: var(--space-outer);
-	}
-
-	.process-page__c .image-carousel__container .image-wrapper {
-		flex: 0 0 calc(100% / 3);
-		/flex: 0 0 50%;
-	}
-
-	.process-page__c .image-carousel__container .image-wrapper img {
-		width: 100%;
-		object-fit: contain;
-	}
-
-	.process-page__c .design-studio-page__wall-types-description .image-banner__content {
-		padding-top: calc(var(--space-outer) / 2);
-	}
+  .design-studio-page__wall-types-image {
+    @apply max-h-screen-1/2;
+    .image-carousel__images-view img {
+      @apply px-[var(--space-outer)];
+      @apply object-contain;
+    }
+  }
 }
 
 @media screen and (min-width: 600px) {
-	.process-page__c .design-studio-page__wall-types-tooltip .icon_container {
-		left: 14px;
-	}
+  .process-page__c .image-banner__container.design-studio-page__wall-types-description {
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .process-page__c .image-carousel__container .image-carousel__images-container {
+    padding-left: var(--space-outer);
+    padding-right: var(--space-outer);
+  }
+
+  .process-page__c .image-carousel__container .image-wrapper {
+    flex: 0 0 calc(100% / 3);
+    /flex: 0 0 50%;
+  }
+
+  .process-page__c .image-carousel__container .image-wrapper img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .process-page__c .design-studio-page__wall-types-description .image-banner__content {
+    padding-top: calc(var(--space-outer) / 2);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .process-page__c .design-studio-page__wall-types-tooltip .icon_container {
+    left: 14px;
+  }
 }
 @media screen and (min-width: 1024px) {
-	.process-page__c .design-studio-page__wall-types-tooltip .icon_container {
-		left: 34px;
-    	top: calc(var(--space-outer) - 1px);
-	}
+  .process-page__c .design-studio-page__wall-types-tooltip .icon_container {
+    left: 34px;
+    top: calc(var(--space-outer) - 1px);
+  }
 }
 @media screen and (min-width: 1024px) {
-	.process-page__c .design-studio-page__wall-types-tooltip .icon_container .icon {
-		width: 24px;
-	    height: 24px;
-	    background-color: #5a5a5a;
-	}
+  .process-page__c .design-studio-page__wall-types-tooltip .icon_container .icon {
+    width: 24px;
+    height: 24px;
+    background-color: #5a5a5a;
+  }
 }

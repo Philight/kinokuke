@@ -1,75 +1,72 @@
 @import '@css/theme';
 
 @media screen and (min-width: 1024px) {
-    .contact-us-modal__c {
-        --field-spacing: 6px;
-    }
+  .contact-us-modal__c {
+    --field-spacing: 6px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .contact-us-modal__c .contact-us-modal__close {
-    }
+  .contact-us-modal__c .contact-us-modal__close {
+  }
 }
 
 @media screen and (min-width: 600px) {
-    .contact-us-modal__c .contact-us-modal__form-wrapper {
-        right: 15px;
-        bottom: 60px;
-        padding: 0;
-        width: 270px;
-        height: auto;
-        border: 1px solid #d3d3d3;
-        border-radius: 14px;
-    }
-    .contact-us-modal__c .contact-us-modal__form-background {
-        display: none;
-    }
+  .contact-us-modal__c .contact-us-modal__form-wrapper {
+    right: 15px;
+    bottom: 60px;
+    padding: 0;
+    width: 270px;
+    height: auto;
+    border: 1px solid #d3d3d3;
+    border-radius: 14px;
+  }
+  .contact-us-modal__c .contact-us-modal__form-background {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .contact-us-modal__c .contact-us-modal__form-wrapper {
-        /padding: calc(var(--space-outer) / 4) var(--space-outer);
-    }
-}
-
-
-@media screen and (min-width: 600px) {
-    .contact-us-modal__c .contact-us-modal__notices {
-        display: none;
-    }
+  .contact-us-modal__c .contact-us-modal__form-wrapper {
+    /padding: calc(var(--space-outer) / 4) var(--space-outer);
+  }
 }
 
 @media screen and (min-width: 600px) {
-    .contact-us-modal__c .contact-us-modal__heading {
-        padding: calc(var(--space-outer) / 2) var(--space-outer);
-        border-radius: 14px 14px 0px 0;
-    }
+  .contact-us-modal__c .contact-us-modal__notices {
+    display: none;
+  }
 }
-
-@media screen and (min-width: 1024px) {
-    .contact-us-modal__c .contact-us-modal__heading {
-        padding: calc(var(--space-outer) / 4);
-    }
-}
-
 
 @media screen and (min-width: 600px) {
-    .contact-us-modal__c .contact-us-modal__form {
-        padding: calc(var(--space-outer) / 2);
-        border-radius: 0 0 14px 14px;
-    }
+  .contact-us-modal__c .contact-us-modal__heading {
+    padding: calc(var(--space-outer) / 2) var(--space-outer);
+    border-radius: 14px 14px 0px 0;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .contact-us-modal__c .contact-us-modal__form {
-        padding: calc(var(--space-outer) / 4);
-    }
+  .contact-us-modal__c .contact-us-modal__heading {
+    padding: calc(var(--space-outer) / 4);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contact-us-modal__c .contact-us-modal__form {
+    padding: calc(var(--space-outer) / 2);
+    border-radius: 0 0 14px 14px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .contact-us-modal__c .contact-us-modal__form input,
-    .contact-us-modal__c .contact-us-modal__form textarea {
-        padding: var(--btn-padding-md);
-    }
+  .contact-us-modal__c .contact-us-modal__form {
+    padding: calc(var(--space-outer) / 4);
+  }
 }
 
+@media screen and (min-width: 1024px) {
+  .contact-us-modal__c .contact-us-modal__form input,
+  .contact-us-modal__c .contact-us-modal__form textarea {
+    padding: var(--btn-padding-md);
+  }
+}

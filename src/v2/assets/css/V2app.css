@@ -1,193 +1,187 @@
-
 .v2.landing-layout__container {
-	box-sizing: border-box;
+  box-sizing: border-box;
 
-    height: 100vh;
-    overflow-y: scroll;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-    
-    scroll-behavior: smooth;
+  height: 100vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 
-	--nav-bar-padding-h: 0px;
-	--nav-bar-padding-v: 100px;
-	--btn-padding: 24px 40px;
-	--section-padding: 30px;
-	--section-padding-vertical: 140px;
+  scroll-behavior: smooth;
+
+  --nav-bar-padding-h: 0px;
+  --nav-bar-padding-v: 100px;
+  --btn-padding: 24px 40px;
+  --section-padding: 30px;
+  --section-padding-vertical: 140px;
 }
 
 @media screen and (min-width: 768px) {
-	.v2.landing-layout__container {
-		--nav-bar-padding-h: 130px;
-		--section-padding: 400px;
-	}
+  .v2.landing-layout__container {
+    --nav-bar-padding-h: 130px;
+    --section-padding: 400px;
+  }
 }
 
-
-.v2::-webkit-scrollbar  {
-    display: none;  /* Safari and Chrome */
-    width: 0;
-    height: 0;
-    background: transparent;  /* Optional: just make scrollbar invisible */
+.v2::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+  width: 0;
+  height: 0;
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 /* Optional: show position indicator in red */
 .v2::-webkit-scrollbar-thumb {
-    /background: #FF0000;
+  /background: #ff0000;
 }
 
-
-
 .nav-bar__container {
-	position: fixed;
-	z-index: 100;
-	top: 0;
-	left: 0;
-		width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .nav-bar__container .nav-bar__wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    padding: 50px var(--section-padding);
-    box-sizing: border-box;
-    transition: background 1.2s ease-in-out, border 1s ease-in-out;
-    border-bottom: 1px solid transparent;
-
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 50px var(--section-padding);
+  box-sizing: border-box;
+  transition:
+    background 1.2s ease-in-out,
+    border 1s ease-in-out;
+  border-bottom: 1px solid transparent;
 }
 
 .nav-bar__container.submenu-shown .nav-bar__wrapper {
-	background-color: #fff;
-    border-bottom: 1px solid #e5e5e5;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .nav-bar__container .nav-bar__navigation {
-    position: absolute;
-    top: -400px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 100%;
-    padding: 50px 0;
-    background-color: #fff;
-    transition: top 1s ease-in-out;
+  position: absolute;
+  top: -400px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  padding: 50px 0;
+  background-color: #fff;
+  transition: top 1s ease-in-out;
 }
 
 .nav-bar__container.submenu-shown .nav-bar__navigation {
-    top: 136px;
+  top: 136px;
 }
 
 @media screen and (min-width: 768px) {
-	.nav-bar__container {
-		top: var(--nav-bar-padding-v);
-		left: var(--nav-bar-padding-h);
-		width: auto;
-	}
+  .nav-bar__container {
+    top: var(--nav-bar-padding-v);
+    left: var(--nav-bar-padding-h);
+    width: auto;
+  }
 
-	.nav-bar__container .nav-bar__wrapper {
-    	flex-direction: column;
-    	padding: 0;
-    	align-items: flex-start;
-	}
+  .nav-bar__container .nav-bar__wrapper {
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-start;
+  }
 
-	.nav-bar__container .nav-bar__navigation {
-	    margin-top: 20px;
-		position: relative;
-		width: auto;
-		top: 0;
-		left: initial;
-		transform: none;
-		padding: 0;
-		background: transparent;
-    	text-align: left;
-	}
+  .nav-bar__container .nav-bar__navigation {
+    margin-top: 20px;
+    position: relative;
+    width: auto;
+    top: 0;
+    left: initial;
+    transform: none;
+    padding: 0;
+    background: transparent;
+    text-align: left;
+  }
 }
-
-
 
 .nav-bar__container .kinokuke-logo__container .logo-wrapper {
-	width: 60px;
+  width: 60px;
 }
 @media screen and (min-width: 768px) {
-	.nav-bar__container .kinokuke-logo__container .logo-wrapper {
-		width: 80px;
-		margin-right: 10px;
-	}
+  .nav-bar__container .kinokuke-logo__container .logo-wrapper {
+    width: 80px;
+    margin-right: 10px;
+  }
 }
 
 .nav-bar__container .kinokuke-logo__container .logo-wrapper img {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-bar__container .burger-menu-closed .icon,
 .nav-bar__container .burger-menu-open .icon {
-	background-color: #fff;
-	width: 30px;
-	height: 30px;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
 }
 
 .nav-bar__container .burger-menu-open .icon {
-	background-color: #000;
+  background-color: #000;
 }
 
 .nav-bar__container .kinokuke-logo__container.menu-open,
 .nav-bar__container.submenu-shown .kinokuke-logo__container.menu-closed,
 .nav-bar__container .burger-menu-open .icon,
 .nav-bar__container.submenu-shown .burger-menu-closed .icon {
-	display: none;
+  display: none;
 }
 
 .nav-bar__container .kinokuke-logo__container.menu-closed,
 .nav-bar__container.submenu-shown .kinokuke-logo__container.menu-open,
 .nav-bar__container .burger-menu-closed .icon,
 .nav-bar__container.submenu-shown .burger-menu-open .icon {
-	display: block;
+  display: block;
 }
 
 .nav-bar__container .nav-bar__navigation-container {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
 
 .nav-bar__container .nav-bar__navigation-item {
-	margin-top: 16px;
+  margin-top: 16px;
 }
 @media screen and (min-width: 768px) {
-	.nav-bar__container .nav-bar__navigation-item {
-		margin-top: 8px;
-	}
+  .nav-bar__container .nav-bar__navigation-item {
+    margin-top: 8px;
+  }
 }
 .nav-bar__container a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .nav-bar__container .nav-bar__navigation-item-label {
-    letter-spacing: 1px;
-    color: #fff;
-    color: #000;
-    font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  color: #000;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
-	.nav-bar__container .nav-bar__navigation-item-label {
-	    color: #fff;
-	}
+  .nav-bar__container .nav-bar__navigation-item-label {
+    color: #fff;
+  }
 }
 
 .cta-btn {
-	cursor: pointer;
-	transition: opacity .3s ease;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .v2 .cta-btn:hover {
-	opacity: 0.8;
+  opacity: 0.8;
 }
 
 .icon_container {
-	display: inline-flex;
+  display: inline-flex;
 }

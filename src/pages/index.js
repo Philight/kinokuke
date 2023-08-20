@@ -1,7 +1,7 @@
-export {default as AboutPage} from './AboutPage';
-export {default as GalleryPage} from './GalleryPage';
+export { default as AboutPage } from './AboutPage';
+export { default as GalleryPage } from './GalleryPage';
 
-//export { AboutPage, ContactPage };
+// export { AboutPage, ContactPage };
 /*
 export { default } from './DesignPage';
 export { default } from './GalleryPage';

@@ -12,8 +12,8 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        'plugin:react/jsx-runtime',
-        'plugin:react-hooks/recommended',        
+        "plugin:react/jsx-runtime",
+        "plugin:react-hooks/recommended",        
         // Make sure this is last / eslint-config-prettier
         "prettier" 
     ],
@@ -203,7 +203,7 @@
         // the functionality is the same.
         //
         "max-depth": 0, // specify the maximum depth that blocks can be nested (off by default)
-        "max-len": [2, 200, 2], // specify the maximum length of a line in your program (off by default)
+        "max-len": [0, 200], // specify the maximum length of a line in your program (off by default)
         "max-params": [2, 5], // limits the number of parameters that can be used in the function declaration. (off by default)
         "max-statements": 0, // specify the maximum number of statement allowed in a function (off by default)
         "no-bitwise": 0, // disallow use of bitwise operators (off by default)

@@ -7,6 +7,6 @@
     "printWidth": 100,
     "tabWidth": 2,
     "plugins": [
-        require('prettier-plugin-tailwindcss'),
+        "prettier-plugin-tailwindcss"
     ],
 }

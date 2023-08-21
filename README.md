@@ -1,6 +1,6 @@
-# Kinokuke
+# KKPrimetech
 
-- Real Estate website designed and developed for Kinokuke.
+- Real Estate website designed and developed for KKPrimetech.
 
 ### 🚀 LIVE 🌎 https://kkprimetech.com/
 
@@ -14,8 +14,19 @@
 
 ## 🧰 BUILT WITH
 
-- React.js (React Router, Hooks, Refs)
-- CSS
+- React.js [ *Router, Hooks, Refs* ]
+- CSS [ *TailwindCSS* ]
+- framer-motion
+- eslint, Prettier
+
+#### PLUGINS
+
+- google-map-react
+- react-whatsapp-chat-widget
+
+#### BUILD & DEPLOYMENT
+
+- vite
 
 ### PLUGINS
 
@@ -26,4 +37,12 @@
 
 In the project directory, you can run:
 
-### `npm run start`
+### `npm run dev`
+
+### `npm run build`
+
+### `npm run git:pull`
+
+### `npm run git:force-pull`
+
+### `npm run format`

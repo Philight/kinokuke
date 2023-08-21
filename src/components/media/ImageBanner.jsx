@@ -32,7 +32,7 @@ const ImageBanner = (props) => {
         {text && <p className='image-banner__text'>{strReplaceNewline(text)}</p>}
         {btnText && (
           <div className='image-banner__btn-wrapper btn-wrapper'>
-            <a href={btnSrc} className='image-banner__btn cta-btn' role="button">
+            <a href={btnSrc} className='image-banner__btn cta-btn' role='button'>
               {btnText}
             </a>
           </div>

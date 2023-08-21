@@ -5,8 +5,8 @@ const Logo = (props) => {
 
   return (
     <figure className={`logo__c ${isWhite ? 'white' : 'black'} ${className}`}>
-      { !isWhite && <img src={LOGO_PRIMETECH} loading={'lazy'} /> }
-      { isWhite && <img src={LOGO_PRIMETECH} loading={'lazy'} /> }
+      {!isWhite && <img src={LOGO_PRIMETECH} loading={'lazy'} />}
+      {isWhite && <img src={LOGO_PRIMETECH} loading={'lazy'} />}
     </figure>
   );
 };

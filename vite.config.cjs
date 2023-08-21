@@ -6,6 +6,7 @@ import path from 'path';
 
 export default defineConfig({
   //  root: path.join(__dirname, "src"),
+  base: "./",
   root: './',
   build: {
     outDir: path.join(__dirname, 'build'),

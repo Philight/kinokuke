@@ -125,7 +125,11 @@ const NavigationBar = (props) => {
               className='navigation-bar__navigation-item navigation-bar__findyourhome show-desktop'
               data-level='1'
             >
-              <Link to='/findyourhome' className='navigation-bar__findyourhome-button' role='button'>
+              <Link
+                to='/findyourhome'
+                className='navigation-bar__findyourhome-button'
+                role='button'
+              >
                 NÁJDI SVOJ DOMOV
               </Link>
             </li>

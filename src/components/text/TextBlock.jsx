@@ -7,9 +7,13 @@ const TextBlock = forwardRef((props, ref) => {
   return (
     <section className={`text-block__c f-col ${className}`} ref={ref}>
       <div className='text-block__inner'>
-        { !!heading && <h2 className={`text-block__subheading newline-text ${className}`}>{strReplaceNewline(heading)}</h2> } 
-        { !isHTML && <p className='newline-text'>{strReplaceNewline(text)}</p>}
-        { !!isHTML && <div dangerouslySetInnerHTML={{ __html: text }} />}
+        {!!heading && (
+          <h2 className={`text-block__subheading newline-text ${className}`}>
+            {strReplaceNewline(heading)}
+          </h2>
+        )}
+        {!isHTML && <p className='newline-text'>{strReplaceNewline(text)}</p>}
+        {!!isHTML && <div dangerouslySetInnerHTML={{ __html: text }} />}
         {children}
       </div>
     </section>

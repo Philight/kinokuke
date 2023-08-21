@@ -47,7 +47,7 @@ const ModelsHouses = (props) => {
       <div className='f-grid-group'>
         {createArrayGroups(COLUMNS, houses).map((houseRow, rowIndex) => (
           <div key={`f-grid-row-${rowIndex}`} className='f-grid-row'>
-            { houseRow.map((house, houseIndex) => (
+            {houseRow.map((house, houseIndex) => (
               <div className='models-houses__item f-grid-item ' key={houseIndex + house.title}>
                 <Link to={'/model/' + house.title} className='fill-absolute' />
                 <div className='models-houses__item-inner f-col'>

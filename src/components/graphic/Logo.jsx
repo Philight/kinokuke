@@ -1,6 +1,6 @@
 import LOGO_PRIMETECH from '@images/logo/kk-primetech.png';
 
-const KinoKukeLogo = (props) => {
+const Logo = (props) => {
   let { className, isWhite } = props;
 
   return (
@@ -11,4 +11,4 @@ const KinoKukeLogo = (props) => {
   );
 };
 
-export default KinoKukeLogo;
+export default Logo;

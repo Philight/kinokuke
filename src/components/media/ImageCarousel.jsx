@@ -1,10 +1,8 @@
 import { useState, useRef, useEffect, forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import Layer from '@components/graphic/Layer';
-import Icon from '@components/graphic/Icon';
-import Functions from '@components/util/Functions';
-import useDeviceDimensions from '@utils';
+import { Icon, Layer } from '@components/graphic';
+import { strReplaceNewline, useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {
@@ -156,7 +154,7 @@ const ImageCarousel = forwardRef((props, ref) => {
 
       <div className='image-carousel__content'>
         {!isHTML && heading && (
-          <h2 className='image-carousel__content-title'>{Functions.strReplaceNewline(heading)}</h2>
+          <h2 className='image-carousel__content-title'>{strReplaceNewline(heading)}</h2>
         )}
         {isHTML && heading && (
           <h2

@@ -1,8 +1,0 @@
-@import '@css/theme';
-
-.heading-with-background__c {
-  h1 {
-    @apply body body--lg;
-    @apply bg-hermes-orange-lighter p-[var(--space-outer)] text-center text-white-primary;
-  }
-}

@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import NavigationBar from '@components/layout/NavigationBar';
-import Footer from '@components/layout/Footer';
+import { NavigationBar, Footer } from '@components/layout';
 
 import WhatsAppWidget from 'react-whatsapp-chat-widget';
 import 'react-whatsapp-chat-widget/index.css';

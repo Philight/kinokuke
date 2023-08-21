@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-import Functions from '@components/util/Functions';
-import Icon from '@components/graphic/Icon';
+import { arrReplaceNewline } from '@utils';
+import { Icon } from '@components/graphic';
 import { ENV } from '@data';
 
 const GOOGLE_API_KEY = ENV.GOOGLE_API_KEY;
@@ -22,7 +22,7 @@ const GoogleMap = (props) => {
   const [ textArray, setTextArray ] = useState([]);
 
   useEffect(() => {
-    setTextArray(Functions.arrReplaceNewline(location.address));
+    setTextArray(arrReplaceNewline(location.address));
   }, [ location ]);
 
   return (

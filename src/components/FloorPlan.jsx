@@ -1,6 +1,4 @@
-import React from 'react';
-
-import ImageBanner from '@components/media/ImageBanner';
+import { ImageBanner } from '@components/media';
 
 const FloorPlan = (props) => {
   let { className, plan, technicalCharacteristics, roomDetails } = props;

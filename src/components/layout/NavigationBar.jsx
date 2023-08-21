@@ -1,9 +1,7 @@
 import { useLayoutEffect, useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import Layer from '@components/graphic/Layer';
-import KinoKukeLogo from '@components/util/KinoKukeLogo';
-import Icon from '@components/graphic/Icon';
+import { Icon, Layer, Logo } from '@components/graphic';
 
 const NavigationBar = (props) => {
   let { className } = props;
@@ -84,7 +82,7 @@ const NavigationBar = (props) => {
       <Layer className='navigation-bar__background' />
       <div className={`navigation-bar__wrapper `} ref={navRef}>
         <Link to='/' className='navigation-bar__logo' role='button'>
-          <KinoKukeLogo />
+          <Logo />
         </Link>
 
         <div className='navigation-bar__findyourhome show-mobile'>

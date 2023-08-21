@@ -1,13 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 
-import HeadingBlock from '@components/text/HeadingBlock';
-import ImageBanner from '@components/media/ImageBanner';
-import TextBlock from '@components/text/TextBlock';
-import FullwidthHeading from '@components/text/FullwidthHeading';
 import DesignValues from '@components/DesignValues';
 import DesignAndArchitectureTiles from '@components/DesignAndArchitectureTiles';
-import ImageCarousel from '@components/media/ImageCarousel';
-import Icon from '@components/graphic/Icon';
+import { Icon } from '@components/graphic';
+import { ImageBanner, ImageCarousel } from '@components/media';
+import { FullwidthHeading, HeadingBlock, TextBlock } from '@components/text';
 
 import introBkg from '@images/page-bkg/design-features-page-bkg.png';
 

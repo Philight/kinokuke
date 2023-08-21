@@ -168,11 +168,7 @@
         @media screen(desk-sm) {
           @apply flex-row items-center;
         }
-        /*
-        &[data-level="1"] a {
-          @apply text-black;
-        }
-*/
+
         &[data-level='2'] {
           @apply absolute right-[-202%] top-0 z-[-1] w-full items-start rounded-[20px_0_0_20px] bg-[color:var(--main-color)] py-10 text-[white];
           transition:
@@ -241,11 +237,6 @@
   .navigation-bar__navigation-item.selected .icon-chevron-bold-bottom .icon {
     @apply bg-[color:var(--main-color)] desk-sm:bg-white;
   }
-  /*
-  .navigation-bar__wrapper.scrolling .icon-chevron-bold-bottom .icon {
-    @apply bg-black;
-  }
-*/
   .underline__container {
     @apply ml-0;
   }
@@ -253,13 +244,13 @@
 
 /* SECTION SETTINGS */
 
+/*
 .section {
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--space-outer);
   padding-right: var(--space-outer);
 }
-
 .section-heading,
 .section-subheading {
   margin: 0;
@@ -298,7 +289,7 @@
     font-size: 22px;
   }
 }
-
+*/
 .cta-btn {
   border-radius: 100px;
   cursor: pointer;
@@ -1217,7 +1208,7 @@
     @apply mt-[var(--space-outer)];
   }
 
-  .section-subheading {
+  .text-block__subheading {
     @apply heading heading--lg;
     @apply font-normal lowercase tracking-1 text-black-primary;
   }

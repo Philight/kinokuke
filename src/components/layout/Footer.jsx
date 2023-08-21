@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import Layer from '@components/graphic/Layer';
-import KinoKukeLogo from '@components/util/KinoKukeLogo';
-import Icon from '@components/graphic/Icon';
-import useDeviceDimensions from '@utils';
+import { Icon, Layer, Logo } from '@components/graphic';
+import { useDeviceDimensions } from '@utils';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/kkprimetech/';
 
@@ -52,7 +50,7 @@ const Footer = (props) => {
       </nav>
       <div className='footer__bottom'>
         <div className='footer__logo-slogan'>
-          <KinoKukeLogo isWhite />
+          <Logo isWhite />
           {IS_MOBILE && (
             <span className='footer__logo-slogan-text'>
               Lepší Začiatok.

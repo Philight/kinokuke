@@ -1,9 +1,7 @@
 import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 
-import Icon from '@components/graphic/Icon';
-import Image from '@components/graphic/Image';
-import Layer from '@components/graphic/Layer';
-import Functions from '@components/util/Functions';
+import { Icon, Image, Layer } from '@components/graphic';
+import { strReplaceNewline } from '@utils';
 
 const CompanyValues = (props) => {
   let { className, title, text, icon, imageSrc, id } = props;
@@ -136,8 +134,8 @@ const CompanyValues = (props) => {
         <Layer className='company-values__overlay' style={{ opacity: overlayOpacityRef.current }} />
         <Icon className='absolute-center' icon={icon} ref={iconRef} />
         <div className='company-values__content fill-parent absolute-center f-center f-col'>
-          <h2 className='company-values__title'>{Functions.strReplaceNewline(title)}</h2>
-          <h3 className='company-values__text text-newline'>{Functions.strReplaceNewline(text)}</h3>
+          <h2 className='company-values__title'>{strReplaceNewline(title)}</h2>
+          <h3 className='company-values__text text-newline'>{strReplaceNewline(text)}</h3>
         </div>
       </div>
     </section>

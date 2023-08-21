@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import Image from '@components/graphic/Image';
-import Icon from '@components/graphic/Icon';
-import FullheightHeading from '@components/text/FullheightHeading';
-import useDeviceDimensions, { createArrayGroups } from '@utils';
+import { Icon, Image } from '@components/graphic';
+import { FullheightHeading } from '@components/text';
+import { createArrayGroups, useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {

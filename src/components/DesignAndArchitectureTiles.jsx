@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import HeadingUnderline from '@components/text/HeadingUnderline';
-import Image from '@components/graphic/Image';
+import { HeadingUnderline } from '@components/text';
+import { Image } from '@components/graphic';
 
 const DesignAndArchitectureTiles = (props) => {
   let { tile, className, showText } = props;

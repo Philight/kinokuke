@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
-import Image from '@components/graphic/Image';
-import Layer from '@components/graphic/Layer';
-import useDeviceDimensions, { createArrayGroups } from '@utils';
+import { Image, Layer } from '@components/graphic';
+import { createArrayGroups, useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {

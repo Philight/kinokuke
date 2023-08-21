@@ -1,7 +1,3 @@
-import React from 'react';
-
-// import "./../assets/css/components/headingblock.css";
-
 const FullwidthHeading = (props) => {
   let { heading1, heading2, className } = props;
   return (

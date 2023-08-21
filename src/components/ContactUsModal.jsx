@@ -1,9 +1,7 @@
 import { useState, useRef } from 'react';
 
-import Icon from '@components/graphic/Icon';
-import Layer from '@components/graphic/Layer';
-import HeadingWithBackground from '@components/text/HeadingWithBackground';
-
+import { Icon, Layer } from '@components/graphic';
+import { HeadingWithBackground } from '@components/text';
 import { ENV } from '@data';
 
 const NOTICE_MESSAGES = {

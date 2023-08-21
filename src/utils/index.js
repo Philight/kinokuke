@@ -1,2 +1,3 @@
+export { strReplaceNewline, arrReplaceNewline } from './helpers';
 export { createArrayGroups } from './createArrayGroups';
-export { default } from './useDeviceDimensions';
+export { default as useDeviceDimensions } from './useDeviceDimensions';

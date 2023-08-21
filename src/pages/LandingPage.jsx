@@ -1,11 +1,9 @@
 import { useRef } from 'react';
 
-import ImageBanner from '@components/media/ImageBanner';
-import GalleryCarousel from '@components/GalleryCarousel';
 import DesignAndArchitecture from '@components/DesignAndArchitecture';
-import SocialGrid from '@components/media/SocialGrid';
 import NewsletterSection from '@components/NewsletterSection';
-import Icon from '@components/graphic/Icon';
+import { Icon } from '@components/graphic';
+import { GalleryCarousel, ImageBanner, SocialGrid } from '@components/media';
 
 import newsletterImage from '@images/newsletter-image.jpg';
 import landingPageBkg from '@images/landing-page-background.png';

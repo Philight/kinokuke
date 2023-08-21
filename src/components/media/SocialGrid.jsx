@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 
-import FullwidthHeading from '@components/text/FullwidthHeading';
-import Image from '@components/graphic/Image';
-import Icon from '@components/graphic/Icon';
+import { FullwidthHeading } from '@components/text';
+import { Icon, Image } from '@components/graphic';
 import { CONSTANTS } from '@data';
-import useDeviceDimensions, { createArrayGroups } from '@utils';
+import { createArrayGroups, useDeviceDimensions } from '@utils';
 
 const INSTAGRAM_URL = CONSTANTS.INSTAGRAM_URL;
 

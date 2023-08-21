@@ -1,8 +1,7 @@
 import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 
-import ImageBanner from '@components/media/ImageBanner';
-import HeadingWithBackground from '@components/text/HeadingWithBackground';
-
+import { ImageBanner } from '@components/media';
+import { HeadingWithBackground } from '@components/text';
 import { GDPR_BASIC, GDPR_COOKIES } from '@data';
 
 const PAGE_TITLES = {

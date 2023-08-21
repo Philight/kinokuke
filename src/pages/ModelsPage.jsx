@@ -1,12 +1,10 @@
 import { useRef } from 'react';
 
-import HeadingBlock from '@components/text/HeadingBlock';
-import ImageBanner from '@components/media/ImageBanner';
-import TextBlock from '@components/text/TextBlock';
 import ModelsHouses from '@components/ModelsHouses';
 import ContactUsModal from '@components/ContactUsModal';
-import Icon from '@components/graphic/Icon';
-
+import { Icon } from '@components/graphic';
+import { ImageBanner } from '@components/media/';
+import { HeadingBlock, TextBlock } from '@components/text';
 import { HOUSES } from '@data';
 
 const images = [

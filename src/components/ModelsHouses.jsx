@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Image from '@components/graphic/Image';
-import useDeviceDimensions, { createArrayGroups } from '@utils';
+import { Image } from '@components/graphic';
+import { createArrayGroups, useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {

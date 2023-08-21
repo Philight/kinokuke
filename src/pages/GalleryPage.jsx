@@ -1,7 +1,5 @@
-import ImageBanner from '@components/media/ImageBanner';
-import GalleryMasonry from '@components/media/GalleryMasonry';
-import HeadingWithBackground from '@components/text/HeadingWithBackground';
-
+import { GalleryMasonry, ImageBanner } from '@components/media';
+import { HeadingWithBackground } from '@components/text';
 import { SOCIAL } from '@data';
 
 const images = [

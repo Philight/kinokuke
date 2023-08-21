@@ -1,13 +1,11 @@
 import GoogleMap from '@components/plugin/GoogleMap';
-import ImageBanner from '@components/media/ImageBanner';
-import HeadingWithBackground from '@components/text/HeadingWithBackground';
+import { ImageBanner } from '@components/media';
+import { HeadingWithBackground } from '@components/text';
 
 import bannerImg from '@images/contact-background.png';
 
 const AboutPage = (props) => {
   let { className } = props;
-
-  //	const valueRefs = useRef([]);
 
   const images = [
     {

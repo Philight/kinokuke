@@ -1,15 +1,12 @@
 import { useRef } from 'react';
 import { useParams } from 'react-router-dom';
 
-import HeadingBlock from '@components/text/HeadingBlock';
-import ImageBanner from '@components/media/ImageBanner';
-import FullwidthHeading from '@components/text/FullwidthHeading';
-import GalleryCarousel from '@components/GalleryCarousel';
 import FloorPlan from '@components/FloorPlan';
 import ModelDescription from '@components/ModelDescription';
 import ContactUsModal from '@components/ContactUsModal';
-import Icon from '@components/graphic/Icon';
-
+import { Icon } from '@components/graphic';
+import { GalleryCarousel, ImageBanner } from '@components/media';
+import { FullwidthHeading, HeadingBlock } from '@components/text';
 import { HOUSES } from '@data';
 
 const ModelPage = (props) => {

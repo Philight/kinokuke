@@ -1,10 +1,9 @@
 import { useRef } from 'react';
 
 import CompanyValues from '@components/CompanyValues';
-import HeadingBlock from '@components/text/HeadingBlock';
-import ImageBanner from '@components/media/ImageBanner';
-import TextBlock from '@components/text/TextBlock';
-import Icon from '@components/graphic/Icon';
+import { ImageBanner } from '@components/media';
+import { HeadingBlock, TextBlock } from '@components/text';
+import { Icon } from '@components/graphic';
 
 import pageBkg from '@images/page-bkg/about-page-bkg.png';
 

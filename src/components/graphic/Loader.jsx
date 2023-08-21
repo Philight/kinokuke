@@ -1,4 +1,4 @@
-import Image from '@components/graphic/Image';
+import { Image } from '@components/graphic';
 
 import LogoImage from '@images/logo/kk-primetech--trans.png';
 

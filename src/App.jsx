@@ -13,7 +13,7 @@ const LandingPage = lazy(() => import('@pages/LandingPage'));
 const GalleryPage = lazy(() => import('@pages/GalleryPage'));
 const GDPRPage = lazy(() => import('@pages/GDPRPage'));
 
-import Loader from '@components/graphic/Loader';
+import { Loader } from '@components/graphic';
 import ScrollToTop from '@components/util/ScrollToTop';
 import LandingLayout from '@layouts/LandingLayout';
 

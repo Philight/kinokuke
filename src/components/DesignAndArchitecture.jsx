@@ -1,9 +1,9 @@
 import { useState, forwardRef } from 'react';
 
 import DesignAndArchitectureTiles from '@components/DesignAndArchitectureTiles';
-import FullwidthHeading from '@components/text/FullwidthHeading';
-import Icon from '@components/graphic/Icon';
-import useDeviceDimensions, { createArrayGroups } from '@utils';
+import { FullwidthHeading } from '@components/text';
+import { Icon } from '@components/graphic';
+import { createArrayGroups, useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {

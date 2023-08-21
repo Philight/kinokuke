@@ -1,5 +1,5 @@
-import Layer from '@components/graphic/Layer';
-import Functions from '@components/util/Functions';
+import { Layer } from '@components/graphic';
+import { strReplaceNewline } from '@utils';
 
 const ImageBanner = (props) => {
   let { className, images, isBkg, heading, text, btnText, btnSrc, showOverlay, isHTML } = props;
@@ -23,13 +23,13 @@ const ImageBanner = (props) => {
       </div>
       <div className='image-banner__content'>
         {!isHTML && heading && (
-          <h2 className='image-banner__title'>{Functions.strReplaceNewline(heading)}</h2>
+          <h2 className='image-banner__title'>{strReplaceNewline(heading)}</h2>
         )}
         {isHTML && heading && (
           <h2 className='image-banner__title' dangerouslySetInnerHTML={{ __html: heading }} />
         )}
 
-        {text && <p className='image-banner__text'>{Functions.strReplaceNewline(text)}</p>}
+        {text && <p className='image-banner__text'>{strReplaceNewline(text)}</p>}
         {btnText && (
           <div className='image-banner__btn-wrapper btn-wrapper'>
             <a href={btnSrc} className='image-banner__btn cta-btn' role="button">

@@ -1,5 +1,3 @@
-// import { motion } from 'framer-motion';
-
 const Layer = (props) => {
   let { className, style, onClick } = props;
 

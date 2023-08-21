@@ -1,9 +1,7 @@
 import { useState, useLayoutEffect, useRef } from 'react';
 
-import Image from '@components/graphic/Image';
-import Layer from '@components/graphic/Layer';
-import Icon from '@components/graphic/Icon';
-import useDeviceDimensions from '@utils';
+import { Icon, Image, Layer } from '@components/graphic';
+import { useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {

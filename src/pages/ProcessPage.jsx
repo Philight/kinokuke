@@ -1,12 +1,9 @@
 import { useRef } from 'react';
 
-import Icon from '@components/graphic/Icon';
-import HeadingBlock from '@components/text/HeadingBlock';
-import ImageBanner from '@components/media/ImageBanner';
-import TextBlock from '@components/text/TextBlock';
-import FullwidthHeading from '@components/text/FullwidthHeading';
 import ProcessSteps from '@components/ProcessSteps';
-import ImageCarousel from '@components/media/ImageCarousel';
+import { Icon } from '@components/graphic';
+import { FullwidthHeading, HeadingBlock, TextBlock } from '@components/text';
+import { ImageBanner, ImageCarousel } from '@components/media';
 
 import backgroundImg from '@images/page-bkg/process_page_background.png';
 import phaseA_step1 from '@images/process/vyberte_si_svoj_typ_steny.png';

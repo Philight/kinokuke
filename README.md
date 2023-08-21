@@ -14,6 +14,8 @@
 
 ## 🧰 BUILT WITH
 
+#### ⛰️ FRONTEND
+
 - React.js [ *Router, Hooks, Refs* ]
 - CSS [ *TailwindCSS* ]
 - framer-motion
@@ -27,11 +29,6 @@
 #### BUILD & DEPLOYMENT
 
 - vite
-
-### PLUGINS
-
-- react-whatsapp-chat-widget
-- google-map-react
 
 ## ⚙️ AVAILABLE SCRIPTS
 

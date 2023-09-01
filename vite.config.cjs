@@ -9,7 +9,7 @@ export default defineConfig({
   base: "./",
   root: './',
   build: {
-    outDir: path.join(__dirname, 'build'),
+    outDir: path.join(__dirname, 'build')
   },
   resolve: {
     alias: {

@@ -12,7 +12,6 @@
   },
   "scripts": {
     "dev": "concurrently --raw --kill-others --passthrough-arguments \"npm run dev:win || npm run dev:linux\"",
-    "dev2": "concurrently --raw --kill-others --passthrough-arguments \"npm run dev:linux\" \"npm run dev:win\"",
     "dev:linux": "vite --port $npm_package_config_PORT",
     "dev:win": "ver && vite --port %npm_package_config_PORT%",
     "build": "vite build && shx cp build/index.html build/404.html",

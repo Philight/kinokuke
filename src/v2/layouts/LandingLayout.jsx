@@ -1,15 +1,17 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 import NavBar from '../components/NavBar.jsx';
 // import Footer from "../components/Footer.jsx";
 
-const LandingLayout = ({ children }) => {
-  //	let { className, description } = props;
+const LandingLayout = ({ Page, ...rest }) => {
+  let { className } = rest;
 
   return (
-    <div className='v2 landing-layout__container'>
+    <div className={`v2 landing-layout__container ${className}`}>
       <NavBar />
-      {children}
+      {Page && <Page />}
+      <Outlet />
     </div>
   );
 };

@@ -4,14 +4,13 @@ import LandingCount from './../components/LandingCount';
 import LandingVideo from './../components/LandingVideo';
 import LandingImage from './../components/LandingImage';
 
-// import HeadingBlock from "./HeadingBlock.jsx";
-// import DescriptionWithImage from "./DescriptionWithImage.jsx";
-// import HousesShowcase from "./HousesShowcase.jsx";
-// import DesignAndArchitecture from "./DesignAndArchitecture.jsx";
-// import SocialGrid from "./SocialGrid.jsx";
-// import NewsletterSection from "./NewsletterSection.jsx";
-
 import './../assets/css/pages/landingpage.css';
+
+import introBkg1 from '../assets/images/intro_01.png';
+import introBkg2 from '../assets/images/intro_02.png';
+import introBkg3 from '../assets/images/intro_03.png';
+
+import introVideo from '../assets/videos/moving_in.mp4';
 
 import model1 from './../assets/images/landing_models/home-model1.png';
 import model2 from './../assets/images/landing_models/home-model2.png';
@@ -19,25 +18,13 @@ import model3 from './../assets/images/landing_models/home-model3.png';
 
 const LandingPage = (props) => {
   let { className } = props;
-  /*
-  const [ scrollOffset, setScrollOffset ] = useState(0);
-  const [ scrollDown, setScrollDown ] = useState(null);
-*/
-  // const prevScrollY = useRef(0);
-  // const [goingUp, setGoingUp] = useState(false);
 
   const [ touchStart, setTouchStart ] = useState(null);
   const [ touchEnd, setTouchEnd ] = useState(null);
-  /*
-  const [ wheelDown, setWheelDown ] = useState(null);
-  const [ swipeDown, setSwipeDown ] = useState(null);
-*/
+
   const [ windowHeight, setWindowHeight ] = useState(0);
   const [ isMobile, setIsMobile ] = useState(false);
-  /*
-  const [ movePageYOffset, setMovePageYOffset ] = useState(0);
-  const [ endPageYOffset, setEndPageYOffset ] = useState(0);
-*/
+
   const [ stage, setStage ] = useState(1);
   const [ mobStage, setMobStage ] = useState(1);
 
@@ -210,7 +197,7 @@ console.log('handleScroll');
 	};
 */
   return (
-    <div
+    <main
       className={`landing-page__container ${className} ${
         isMobile ? 'is-mobile' : ''
       } mobile-stage-${mobStage}`}
@@ -221,13 +208,6 @@ console.log('handleScroll');
       onTouchEnd={onTouchEnd}
       //			onScroll={handleScroll}
     >
-      {/*
-
-			<div style={{color: '#fff', position: 'fixed', zIndex: '100', top: 0, background: '#000'}}>
-				S:{stage},MS:{mobStage}, {wheelDown ? 'DOWN' : 'UP'}, H:{windowHeight}, isMob:{isMobile ? 'Y' : 'N'}, MoveTop:{movePageYOffset}, EndTop:{endPageYOffset}
-				<button onClick={testScroll}>SCROLL</button>
-			</div>
-*/}
       <section className={`intro-section section-1 ${stage >= 2 ? 'stage-2' : ''}`}>
         <div className='flex-row-2'>
           <LandingImage
@@ -239,7 +219,8 @@ console.log('handleScroll');
         </div>
         <LandingImage
           className='picture-1'
-          imageSrc='https://connect-homes.com/wp-content/uploads/2020/02/ConnectShowcaseMarVista_12-1600x1600-c-center.jpg'
+//          imageSrc='https://connect-homes.com/wp-content/uploads/2020/02/ConnectShowcaseMarVista_12-1600x1600-c-center.jpg'
+          imageSrc={introBkg1}
           showOverlay
           heading1='Vyberte si svoj Kino Kuke Domov'
           heading2='Vyberte si z 11 Kino Kuke Domovov a vybudujte si svoj dom snov za cenu ktorú si možete dovoliť.'
@@ -266,7 +247,8 @@ console.log('handleScroll');
         <div className='flex-row-2'>
           <LandingImage
             className='picture-2'
-            imageSrc='https://connect-homes.com/wp-content/uploads/2022/01/Fac-1-1600x1600-c-center.jpg'
+//            imageSrc='https://connect-homes.com/wp-content/uploads/2022/01/Fac-1-1600x1600-c-center.jpg'
+            imageSrc={introBkg2}
             showOverlay
             heading1='My ho postavíme'
             heading2='My vybudujeme Váš Kino Kuke Domov v našej prefab továrňi v Rakúsku. Myslíme, že všetky domy by mali byť takto budované.'
@@ -288,24 +270,25 @@ console.log('handleScroll');
         </div>
         <LandingImage
           className='picture-3'
-          imageSrc='https://connect-homes.com/wp-content/uploads/2020/01/home_install-1-1600x1600-c-center.jpg'
+//          imageSrc='https://connect-homes.com/wp-content/uploads/2020/01/home_install-1-1600x1600-c-center.jpg'
+          imageSrc={introBkg3}
           showOverlay
           heading1='My ho doručíme a nainštalujeme'
-          heading2='Náš tým sa postará o kompletnú donášku a inštaláciu. Vy nemusíte pohnúť ani prstom.'
+          heading2='Náš tým sa postará o kompletnú donášku a inštaláciu. Nemusíte pohnúť ani prstom.'
           btnText='Prečo Kino Kuke?'
           btnSrc='/v2/process'
         />
       </section>
       <section className={`intro-section section-4 ${stage >= 4 ? 'stage-4' : ''}`}>
         <LandingVideo
-          videoSrc='https://connect-homes.com/wp-content/themes/default/library/video/movein.mp4'
+          videoSrc={introVideo}
           heading1='Vy sa iba nasťahujete'
-          heading2='Nové susedctvo - nie je treba.'
+          heading2='Nové susedstvo - nie je treba.'
           btnText='Prezri si Kino Kuke Domovy'
           btnSrc='/v2/models'
         />
       </section>
-    </div>
+    </main>
   );
 };
 

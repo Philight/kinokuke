@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Icon, Layer } from '@components/graphic';
+import { Icon, Layer, Image } from '@components/graphic';
 import { strReplaceNewline, useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
@@ -129,6 +129,19 @@ const ImageCarousel = forwardRef((props, ref) => {
               key={`f-grid-item-${index}`}
               className={`image-carousel__image-wrapper f-center f-grid-item`}
             >
+              <Image
+                className={`image-carousel__image`}
+                src={image.src}
+                ref={(el) => (imgRefs.current[index] = el)}
+                onLoad={() =>
+                  index === 0 &&
+                  updateImageData(index, {
+                    width: imgRefs.current[index].offsetWidth,
+                    height: imgRefs.current[index].offsetHeight
+                  })
+                }
+              />
+              {/*
               <img
                 className={`image-carousel__image`}
                 src={image.src}
@@ -141,6 +154,7 @@ const ImageCarousel = forwardRef((props, ref) => {
                   })
                 }
               />
+*/}
               {showOverlay && <div className='image-carousel__image-overlay absolute-fill' />}
               {image.url && (
                 <Link to={image.url} className='absolute-fill'>

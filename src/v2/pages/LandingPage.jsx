@@ -219,7 +219,7 @@ console.log('handleScroll');
         </div>
         <LandingImage
           className='picture-1'
-//          imageSrc='https://connect-homes.com/wp-content/uploads/2020/02/ConnectShowcaseMarVista_12-1600x1600-c-center.jpg'
+          //          imageSrc='https://connect-homes.com/wp-content/uploads/2020/02/ConnectShowcaseMarVista_12-1600x1600-c-center.jpg'
           imageSrc={introBkg1}
           showOverlay
           heading1='Vyberte si svoj Kino Kuke Domov'
@@ -247,7 +247,7 @@ console.log('handleScroll');
         <div className='flex-row-2'>
           <LandingImage
             className='picture-2'
-//            imageSrc='https://connect-homes.com/wp-content/uploads/2022/01/Fac-1-1600x1600-c-center.jpg'
+            //            imageSrc='https://connect-homes.com/wp-content/uploads/2022/01/Fac-1-1600x1600-c-center.jpg'
             imageSrc={introBkg2}
             showOverlay
             heading1='My ho postavíme'
@@ -270,7 +270,7 @@ console.log('handleScroll');
         </div>
         <LandingImage
           className='picture-3'
-//          imageSrc='https://connect-homes.com/wp-content/uploads/2020/01/home_install-1-1600x1600-c-center.jpg'
+          //          imageSrc='https://connect-homes.com/wp-content/uploads/2020/01/home_install-1-1600x1600-c-center.jpg'
           imageSrc={introBkg3}
           showOverlay
           heading1='My ho doručíme a nainštalujeme'

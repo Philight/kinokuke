@@ -2,7 +2,7 @@
     1. mob-lg | 2. tab-sm | 3. tab-lg  | 4. desk-md 
 */
 
-export const getColumnsByDevice = (DEVICE_TYPE) => {
+const getColumnsByDevice = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {
     case 'MOBILE_SM':
     case 'MOBILE_LG':
@@ -20,6 +20,14 @@ export const getColumnsByDevice = (DEVICE_TYPE) => {
       return 1;
   }
 };
+
+export const ACTIVE_BREAKPOINTS = [
+  'DESKTOP_LG',
+  'DESKTOP_MD',
+  'TABLET_LG',
+  'TABLET_SM',
+  'MOBILE_LG'
+];
 
 export const BREAKPOINTS = {
   MOBILE_SM: {

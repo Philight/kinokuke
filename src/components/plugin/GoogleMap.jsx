@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 
 import { arrReplaceNewline } from '@utils';
@@ -37,9 +37,11 @@ const GoogleMap = (props) => {
         </GoogleMapReact>
       </div>
       <div className='google-map__address'>
-        {textArray.map((text, index) => {
-          return index === 0 ? <h3>{text}</h3> : <p>{text}</p>;
-        })}
+        {textArray.map((text, index) => (
+          <React.Fragment key={index}>
+            {index === 0 ? <h3>{text}</h3> : <p>{text}</p>}
+          </React.Fragment>
+        ))}
       </div>
     </section>
   );

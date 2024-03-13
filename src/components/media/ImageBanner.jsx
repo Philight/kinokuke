@@ -1,4 +1,4 @@
-import { Layer } from '@components/graphic';
+import { Layer, Image } from '@components/graphic';
 import { strReplaceNewline } from '@utils';
 
 const ImageBanner = (props) => {
@@ -7,15 +7,16 @@ const ImageBanner = (props) => {
   return (
     <section className={`image-banner__c ${className}`}>
       <div className='image-banner__images-container fill-parent'>
-        {images.map((image) => {
+        {images.map((image, index) => {
           return isBkg ? (
             <div
+              key={index}
               className='image-background fill-parent'
               style={{ background: `url(${image.src}) repeat` }}
             />
           ) : (
-            <div className='image-wrapper fill-parent'>
-              <img src={image.src} />
+            <div key={index} className='image-wrapper fill-parent'>
+              <Image src={image.src} />
               {showOverlay && <Layer className='image-banner__overlay' />}
             </div>
           );

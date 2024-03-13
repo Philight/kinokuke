@@ -12,6 +12,10 @@
 
 ## 🖋️ SKETCH
 
+<a href="https://www.figma.com/file/u4Z3JeIZetpskNddXBa5BL/%5B-project-%5D-KKPrimetech?type=design&node-id=0%3A1&mode=design&t=5dtQZvDAuXnhTwid-1" target="_blank">[ Figma ] Design document</a>
+
+<br />
+
 ## 🧰 BUILT WITH
 
 #### ⛰️ FRONTEND

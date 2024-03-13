@@ -27,7 +27,7 @@ import V2ModelsPage from './v2/pages/ModelsPage';
 
 import V2LandingLayout from './v2/layouts/LandingLayout';
 
-import "./v2/assets/css/V2app.css";
+import './v2/assets/css/V2app.css';
 
 const App = () => {
   return (

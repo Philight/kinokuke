@@ -6,8 +6,7 @@ import ProcessSteps from './../components/ProcessSteps.jsx';
 
 import './../assets/css/pages/processpage.css';
 
-import introImage from "./../assets/images/process.png";
-
+import introImage from './../assets/images/process.png';
 
 // import kinokukelogo from "./../assets/images/kinokuke-logo.png";
 // import newsletterImage from "./../assets/images/newsletter-image.jpg";
@@ -204,7 +203,7 @@ const ProcessPage = (props) => {
         btnText='štart'
         btnClick={(e) => handleStart(e)}
         //				showOverlay
-//        imageSrc='https://connect-homes.com/wp-content/uploads/2020/01/C6T-10-scaled-866x1108-c-center.jpg'
+        //        imageSrc='https://connect-homes.com/wp-content/uploads/2020/01/C6T-10-scaled-866x1108-c-center.jpg'
         imageSrc={introImage}
         ref={(e) => (sectionRefs.current[0] = e)}
       />

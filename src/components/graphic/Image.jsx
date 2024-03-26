@@ -114,7 +114,7 @@ const Image = forwardRef((props, ref) => {
       animate={animate}
       transition={transition}
     >
-      {/*renderSources('webp')*/}
+      {renderSources('webp')}
       {/*renderSources('jpeg')*/}
       {renderSources('png')}
       <img

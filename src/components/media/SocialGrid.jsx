@@ -2,30 +2,38 @@ import { useState, useEffect, useRef } from 'react';
 
 import { FullwidthHeading } from '@components/text';
 import { Icon, Image } from '@components/graphic';
-import { CONSTANTS } from '@data';
+import { DEFAULT_SIZES_BREAKPOINTS, CONSTANTS } from '@data';
 import { createArrayGroups, useDeviceDimensions } from '@utils';
 
 const INSTAGRAM_URL = CONSTANTS.INSTAGRAM_URL;
 
 const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {
-  case 'MOBILE_SM':
-  case 'MOBILE_LG':
-    return { rows: 2, cols: 1 };
-  case 'TABLET_SM':
-  case 'TABLET_MD':
-    return { rows: 2, cols: 2 };
-  case 'TABLET_LG':
-  case 'DESKTOP_SM':
-    return { rows: 2, cols: 3 };
-  case 'DESKTOP_MD':
-  case 'DESKTOP_LG':
   case 'DESKTOP_XL':
+  case 'DESKTOP_LG':
+  case 'DESKTOP_MD':
     return { rows: 2, cols: 4 };
+  case 'DESKTOP_SM':
+  case 'TABLET_LG':
+    return { rows: 2, cols: 3 };
+  case 'TABLET_MD':
+  case 'TABLET_SM':
+    return { rows: 2, cols: 2 };
+  case 'MOBILE_LG':
+  case 'MOBILE_SM':
+    return { rows: 2, cols: 1 };
   default:
     return { rows: 1, cols: 1 };
   }
 };
+
+const sizesBreakpoints = Object.keys(DEFAULT_SIZES_BREAKPOINTS).reduce(
+  (acc, bp) => ({
+    ...acc,
+    [bp]: `calc(100vw / ${getGridDimensions(bp).cols})`
+  }),
+  {}
+);
 
 const SocialGrid = (props) => {
   let { columns, rows, posts, enableAutoplay, interval } = props;
@@ -86,7 +94,7 @@ const SocialGrid = (props) => {
                 <div key={`f-grid-row-${rowIndex}`} className='f-grid-row'>
                   {gridRow.map((post, postIndex) => (
                     <div key={`f-grid-item-${postIndex}`} className='f-grid-item social-grid__post'>
-                      <Image src={post.imageSrc} />
+                      <Image src={post.imageSrc} sizesBreakpoints={sizesBreakpoints} withSizes />
                       <a href={INSTAGRAM_URL} target='_blank' rel='noreferrer'>
                         <div
                           className={`social-grid__post-content f-col f-center absolute-fill ${

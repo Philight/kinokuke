@@ -5,7 +5,8 @@ import { Icon } from '@components/graphic';
 import { FullwidthHeading, HeadingBlock, TextBlock } from '@components/text';
 import { ImageBanner, ImageCarousel } from '@components/media';
 
-import backgroundImg from '@images/page-bkg/process_page_background.png';
+import backgroundImg from '@images/page_background/process.png';
+
 import phaseA_step1 from '@images/process/vyberte_si_svoj_typ_steny.png';
 import phaseA_step2 from '@images/process/stresna_struktura.png';
 import phaseA_step3 from '@images/process/instalacia_exterieroveho_stolarstva.png';
@@ -22,11 +23,12 @@ import phaseTurnkey_step4 from '@images/process/sanitarna_keramika.png';
 import phaseTurnkey_step5 from '@images/process/vytvorenie_zakladu.png';
 
 // import wallA from "@images/wall-types/tip-a.png";
-import wallA from '@images/wall-types/tip-a-cut.png';
+import wallTypeBackground from '@images/banners/wall_types_banner.png';
+import wallA from '@images/wall_types/tip-a-cut.png';
 // import wallB from "@images/wall-types/tip-b.png";
-import wallB from '@images/wall-types/tip-b-cut.png';
+import wallB from '@images/wall_types/tip-b-cut.png';
 // import wallPasiv from "@images/wall-types/tip-pasiv.png";
-import wallPasiv from '@images/wall-types/tip-pasiv-cut.png';
+import wallPasiv from '@images/wall_types/tip-pasiv-cut.png';
 
 const images = [
   {
@@ -215,7 +217,7 @@ const ProcessPage = (props) => {
       <FullwidthHeading heading1={`výber`} heading2={`stien`} />
       <ImageBanner
         className='design-studio-page__wall-types-description'
-        images={[ { src: wallTypesBkg } ]}
+        images={[ { src: wallTypeBackground } ]}
         showOverlay
         heading='prefab domov'
         text='Chceme Vám dať bližší náhľad k technologií budovania prefabrikovaných domov, s charakteristikami inštalovaných materiálov. Kladieme špeciálny dôraz na typy stien, ktoré si môžete zvoliť pri výbere svojho domu.

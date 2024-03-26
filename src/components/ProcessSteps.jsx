@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-import { Icon, Layer } from '@components/graphic';
+import { Icon, Layer, Image } from '@components/graphic';
+import { DEFAULT_SIZES_BREAKPOINTS } from '@data';
 import { createArrayGroups, useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
@@ -21,6 +22,14 @@ const getGridDimensions = (DEVICE_TYPE) => {
   }
 };
 
+const sizesBreakpoints = Object.keys(DEFAULT_SIZES_BREAKPOINTS).reduce(
+  (acc, bp) => ({
+    ...acc,
+    [bp]: `calc(100vw / ${getGridDimensions(bp).cols})`
+  }),
+  {}
+);
+
 const ProcessStep = (props) => {
   let { className, step } = props;
 
@@ -40,9 +49,17 @@ const ProcessStep = (props) => {
       onClick={handleReveal}
       onMouseOver={handleReveal()}
     >
+{/*
       <Layer
         className={`process-step__background`}
         style={{ '--step-background': `url(${step.imageSrc})` }}
+      />
+*/}
+      <Image 
+        className={`process-step__background abs-fill-parent`} 
+        src={step.imageSrc} 
+        sizesBreakpoints={sizesBreakpoints} 
+        withSizes style={{ '--step-background': `url(${step.imageSrc})` }} 
       />
       <Layer className={`process-step__overlay`} style={{ '--step-overlay-color': step.color }} />
 

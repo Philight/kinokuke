@@ -58,7 +58,7 @@
   .design-page__process-phases {
     @apply h-screen-2/5 bg-hermes-blue;
 
-    .image-carousel__images-container .image-carousel__image {
+    .image-carousel__images-container .image-carousel__image img {
       @apply object-contain;
       padding: 50px 30px;
     }
@@ -536,8 +536,10 @@
         transition: opacity 0.3s ease-in-out;
       }
       .process-step__background {
-        @apply opacity-90;
+        @apply opacity-90 abs-fill-parent;
+        /*
         background-image: var(--step-background);
+        */
       }
       .process-step__overlay {
         @apply opacity-70;

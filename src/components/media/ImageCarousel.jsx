@@ -141,20 +141,6 @@ const ImageCarousel = forwardRef((props, ref) => {
                   })
                 }
               />
-              {/*
-              <img
-                className={`image-carousel__image`}
-                src={image.src}
-                ref={(el) => (imgRefs.current[index] = el)}
-                onLoad={() =>
-                  index === 0 &&
-                  updateImageData(index, {
-                    width: imgRefs.current[index].offsetWidth,
-                    height: imgRefs.current[index].offsetHeight
-                  })
-                }
-              />
-*/}
               {showOverlay && <div className='image-carousel__image-overlay absolute-fill' />}
               {image.url && (
                 <Link to={image.url} className='absolute-fill'>

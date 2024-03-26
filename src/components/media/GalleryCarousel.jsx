@@ -7,18 +7,18 @@ import { createArrayGroups, useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {
-  case 'MOBILE_SM':
-  case 'MOBILE_LG':
-    return { rows: 1, cols: 1 };
-  case 'TABLET_SM':
-  case 'TABLET_MD':
-  case 'TABLET_LG':
-    return { rows: 1, cols: 2 };
-  case 'DESKTOP_SM':
-  case 'DESKTOP_MD':
-  case 'DESKTOP_LG':
   case 'DESKTOP_XL':
+  case 'DESKTOP_LG':
+  case 'DESKTOP_MD':
+  case 'DESKTOP_SM':
     return { rows: 1, cols: 3 };
+  case 'TABLET_LG':
+  case 'TABLET_MD':
+  case 'TABLET_SM':
+    return { rows: 1, cols: 2 };
+  case 'MOBILE_LG':
+  case 'MOBILE_SM':
+    return { rows: 1, cols: 1 };
   default:
     return { rows: 1, cols: 1 };
   }
@@ -64,8 +64,8 @@ const GalleryCarousel = (props) => {
   useEffect(() => {
     console.log('autoplay');
     if (enableAutoplay) {
-      console.log(`gallery.length ${galleryLength}`);
-      console.log(COLUMNS);
+      //      console.log(`gallery.length ${galleryLength}`);
+      //      console.log(COLUMNS);
       timeoutRef.current = setTimeout(
         () =>
           setActiveIndex((prevIndex) =>

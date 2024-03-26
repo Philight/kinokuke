@@ -5,9 +5,8 @@ import NewsletterSection from '@components/NewsletterSection';
 import { Icon } from '@components/graphic';
 import { GalleryCarousel, ImageBanner, SocialGrid } from '@components/media';
 
-import newsletterImage from '@images/newsletter-image.jpg';
-import landingPageBkg from '@images/landing-page-background.png';
-import findYourHomeBkg from '@images/find-your-home-background.png';
+import landingPageBkg from '@images/page_background/landing.png';
+import findYourHomeBkg from '@images/banners/find-your-home-background.png';
 
 import lifeSpace from '@images/design-architecture/life-space.png';
 import greenLife from '@images/design-architecture/green-life.png';
@@ -132,7 +131,6 @@ const LandingPage = (props) => {
         heading={DATA_NEWSLETTER.heading}
         subheading={DATA_NEWSLETTER.subheading}
         text={DATA_NEWSLETTER.text}
-        imageSrc={newsletterImage}
       />
     </div>
   );

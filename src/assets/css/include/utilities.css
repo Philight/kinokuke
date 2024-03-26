@@ -28,6 +28,11 @@
   @apply absolute inset-0;
 }
 
+.abs-fill-parent {
+  @apply fill-parent;
+  @apply absolute left-0 top-0;
+}
+
 /* OTHER */
 
 .text-newline {

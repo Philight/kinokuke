@@ -8,8 +8,9 @@ const DesignAndArchitectureTiles = (props) => {
 
   return tile?.type === 'image' ? (
     <Image
-      src={tile.imageSrc}
       className={`design-and-architecture__tile image-tile ${className}`}
+      src={tile.imageSrc}
+      withSizes
     />
   ) : (
     <div

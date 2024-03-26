@@ -21,14 +21,6 @@ const getColumnsByDevice = (DEVICE_TYPE) => {
   }
 };
 
-export const ACTIVE_BREAKPOINTS = [
-  'DESKTOP_LG',
-  'DESKTOP_MD',
-  'TABLET_LG',
-  'TABLET_SM',
-  'MOBILE_LG'
-];
-
 export const BREAKPOINTS = {
   MOBILE_SM: {
     px: 0,
@@ -67,3 +59,31 @@ export const BREAKPOINTS = {
     em: 120,
   },
 };
+
+/**
+ * Default size breakpoints = 100vw 
+ */
+export const DEFAULT_SIZES_BREAKPOINTS = {
+  'DESKTOP_XL': '100vw',
+  'DESKTOP_LG': '100vw',
+  'DESKTOP_MD': '100vw',
+  'DESKTOP_SM': '100vw',
+  'TABLET_LG': '100vw',
+  'TABLET_MD': '100vw',
+  'TABLET_SM': '100vw',
+  'MOBILE_LG': '100vw',
+  'MOBILE_SM': '100vw',
+};
+
+/**
+ * Available sets of image sources
+ * 6 image sizes
+ */
+export const SRC_SETS = [
+  { size: 'xs', width: '640w' },
+  { size: 'sm', width: '768w' },
+  { size: 'md', width: '1024w' },
+  { size: 'lg', width: '1366w' },
+  { size: 'xl', width: '1600w' },
+  { size: '2xl', width: '1920w' }
+];

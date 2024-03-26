@@ -16,7 +16,7 @@ const ImageBanner = (props) => {
             />
           ) : (
             <div key={index} className='image-wrapper fill-parent'>
-              <Image src={image.src} />
+              <Image src={image.src} withSizes />
               {showOverlay && <Layer className='image-banner__overlay' />}
             </div>
           );

@@ -9,7 +9,7 @@ ROOT_DIR = os.getcwd()
 IMAGES_DIR = os.getcwd() + r"\src\assets\images"
 
 # CONVERT SETTINGS
-CONVERT_SOURCE = IMAGES_DIR + r"\banners"
+CONVERT_SOURCE = IMAGES_DIR + r"\social"
 CONVERT_FORMATS = {
   'bmp': ['jpg', 'webp'],
   'png': ['jpg', 'webp'],
@@ -17,7 +17,7 @@ CONVERT_FORMATS = {
 }
 
 # RESIZE SETTINGS
-RESIZE_SOURCE = IMAGES_DIR + r"\banners"
+RESIZE_SOURCE = IMAGES_DIR + r"\social"
 RESIZE_FORMATS = ['jpg', 'webp']
 # Start with largest image size
 RESIZE_SIZES = {
@@ -42,7 +42,7 @@ def batch_resize():
     dirname = os.path.dirname(directory)
     found_sizes.append(os.path.basename(dirname))
 
-  # FIND DIRECTORY WITH LARGEST IMAGE SIZES (COPY SOURCE)
+  # FIND DIRECTORY WITH LARGEST IMAGE SIZE (COPY SOURCE)
 
   resize_start_size = ''
   for image_size in list(RESIZE_SIZES):

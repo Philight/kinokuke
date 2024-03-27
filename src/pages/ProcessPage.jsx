@@ -5,22 +5,22 @@ import { Icon } from '@components/graphic';
 import { FullwidthHeading, HeadingBlock, TextBlock } from '@components/text';
 import { ImageBanner, ImageCarousel } from '@components/media';
 
-import backgroundImg from '@images/page_background/process.png';
+import backgroundImg from '@images/page_background/process.jpg';
 
-import phaseA_step1 from '@images/process/vyberte_si_svoj_typ_steny.png';
-import phaseA_step2 from '@images/process/stresna_struktura.png';
-import phaseA_step3 from '@images/process/instalacia_exterieroveho_stolarstva.png';
-import phaseA_step4 from '@images/process/vyberte_si_farbu_fasady.png';
-import phaseA_step5 from '@images/process/klampiarske_prace.png';
-import phaseA_step6 from '@images/process/sadrove_maliarske_prace.png';
-import phaseA_step7 from '@images/process/instalacia_hadic.png';
-import phaseA_step8 from '@images/process/malovanie_drevenych_povrchov.png';
+import phaseA_step1 from '@images/process/vyberte_si_svoj_typ_steny.jpg';
+import phaseA_step2 from '@images/process/stresna_struktura.jpg';
+import phaseA_step3 from '@images/process/instalacia_exterieroveho_stolarstva.jpg';
+import phaseA_step4 from '@images/process/vyberte_si_farbu_fasady.jpg';
+import phaseA_step5 from '@images/process/klampiarske_prace.jpg';
+import phaseA_step6 from '@images/process/sadrove_maliarske_prace.jpg';
+import phaseA_step7 from '@images/process/instalacia_hadic.jpg';
+import phaseA_step8 from '@images/process/malovanie_drevenych_povrchov.jpg';
 
-import phaseTurnkey_step1 from '@images/process/elektroinstalacie.png';
-import phaseTurnkey_step2 from '@images/process/kuchyna_a_kupelna.png';
-import phaseTurnkey_step3 from '@images/process/podlaha_a_izbove_dvere.png';
-import phaseTurnkey_step4 from '@images/process/sanitarna_keramika.png';
-import phaseTurnkey_step5 from '@images/process/vytvorenie_zakladu.png';
+import phaseTurnkey_step1 from '@images/process/elektroinstalacie.jpg';
+import phaseTurnkey_step2 from '@images/process/kuchyna_a_kupelna.jpg';
+import phaseTurnkey_step3 from '@images/process/podlaha_a_izbove_dvere.jpg';
+import phaseTurnkey_step4 from '@images/process/sanitarna_keramika.jpg';
+import phaseTurnkey_step5 from '@images/process/vytvorenie_zakladu.jpg';
 
 // import wallA from "@images/wall-types/tip-a.png";
 import wallTypeBackground from '@images/banners/wall_types_banner.png';

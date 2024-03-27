@@ -49,17 +49,19 @@ const ProcessStep = (props) => {
       onClick={handleReveal}
       onMouseOver={handleReveal()}
     >
-{/*
+      {/*
       <Layer
         className={`process-step__background`}
         style={{ '--step-background': `url(${step.imageSrc})` }}
       />
 */}
-      <Image 
-        className={`process-step__background abs-fill-parent`} 
-        src={step.imageSrc} 
-        sizesBreakpoints={sizesBreakpoints} 
-        withSizes style={{ '--step-background': `url(${step.imageSrc})` }} 
+      <Image
+        className={`process-step__background abs-fill-parent`}
+        src={step.imageSrc}
+        sizesBreakpoints={sizesBreakpoints}
+        withSizes
+        largestSize='md'
+        style={{ '--step-background': `url(${step.imageSrc})` }}
       />
       <Layer className={`process-step__overlay`} style={{ '--step-overlay-color': step.color }} />
 

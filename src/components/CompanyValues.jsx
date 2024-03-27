@@ -130,7 +130,7 @@ const CompanyValues = (props) => {
 					${showContent ? 'show-content' : ''}
 					${isRevealed ? 'revealed' : ''}`}
       >
-        <Image src={imageSrc} />
+        <Image src={imageSrc} withSizes />
         <Layer className='company-values__overlay' style={{ opacity: overlayOpacityRef.current }} />
         <Icon className='absolute-center' icon={icon} ref={iconRef} />
         <div className='company-values__content fill-parent absolute-center f-center f-col'>

@@ -1,6 +1,7 @@
 import { useState, useLayoutEffect, useRef } from 'react';
 
 import { Icon, Image, Layer } from '@components/graphic';
+import { DEFAULT_SIZES_BREAKPOINTS } from '@data';
 import { useDeviceDimensions } from '@utils';
 
 const getGridDimensions = (DEVICE_TYPE) => {
@@ -21,6 +22,14 @@ const getGridDimensions = (DEVICE_TYPE) => {
     return { rows: 0, cols: 2 };
   }
 };
+
+const sizesBreakpoints = Object.keys(DEFAULT_SIZES_BREAKPOINTS).reduce(
+  (acc, bp) => ({
+    ...acc,
+    [bp]: `calc(100vw / ${getGridDimensions(bp).cols})`
+  }),
+  {}
+);
 
 const getItemsLimit = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {
@@ -155,6 +164,9 @@ const GalleryMasonry = (props) => {
                 src={item.imageSrc}
                 data-item-index={index}
                 onClick={showModal(index)}
+                withSizes
+                sizesBreakpoints={sizesBreakpoints}
+                largestSize='sm'
               />
             )
         )}

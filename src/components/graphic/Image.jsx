@@ -26,11 +26,12 @@ const Image = forwardRef((props, ref) => {
     imgRef,
     onLoad,
     withSizes,
-    sizesBreakpoints
+    sizesBreakpoints,
+    largestSize
   } = props;
 
   const isMounted = useRef(false);
-  const [fallback, setFallback] = useState(null);
+  const [ fallback, setFallback ] = useState(null);
 
   useLayoutEffect(() => {
     if (!document.lazyLoadInstance) {
@@ -51,15 +52,9 @@ const Image = forwardRef((props, ref) => {
 
   const sizesBps = sizesBreakpoints ?? DEFAULT_SIZES_BREAKPOINTS;
 
-  const sizePrefix = '--';
   const splitName = getFilename(src).split('.');
-//console.log('src', src);
-//console.log('splitName', splitName);
   const [ fileExtension, fileName ] = [ splitName.pop(), splitName.join('.') ];
-  const basename = fileName.split(sizePrefix)[0];
-//console.log('fileExtension', fileExtension);
-//console.log('fileName', fileName);
-/*
+  /*
   '@images/social/social-24.png'
   '@images/social/social-24--xl.png'
   '@images/social/social-24--xl.raw.png'
@@ -67,27 +62,40 @@ const Image = forwardRef((props, ref) => {
   '@images/social/md/social-24--md.png'
 
 */
-  const defaultSrc = withSizes ? src.replace(`${fileName}.${fileExtension}`, `md/${basename}${sizePrefix}md.${fileExtension}`) : src;
-
-
+  const defaultSrc = withSizes
+    ? src.replace(
+      `${fileName}.${fileExtension}`,
+      `${largestSize ?? 'md'}/${fileName}.${fileExtension}`
+    )
+    : src;
 
   /**
    * Image names should be /path/to/image/[image_name]--[size].[format]
    * @returns {string} img srcset
    */
   const getSrcSets = (format) => {
-    if (!withSizes) return;
-//    const splitName = getFilename(src).split('.');
-//    const [ fileName, fileExtension ] = [ splitName[0], splitName.pop() ];
-    const imageExtension = format ?? fileExtension;
+    if (!withSizes) {
+      return;
+    }
 
+    const imageFormat = format === 'jpeg' ? 'jpg' : format;
+    const imageExtension = imageFormat ?? fileExtension;
+
+    let isLargestSize = false;
     const mapped = SRC_SETS.map((set) => {
-      const original = `${fileName}.${fileExtension}`;
-      const replacement = `${set.size}/${basename}${sizePrefix}${set.size}.${imageExtension} ${set.width}`;
-      return src.replace(original, replacement);
-    }).join(',');
+      if (isLargestSize) {
+        return null;
+      }
+      if (largestSize === set.size) {
+        isLargestSize = true;
+      }
 
-//    console.log(mapped)
+      const original = `${fileName}.${fileExtension}`;
+      const replacement = `${set.size}/${fileName}.${imageExtension} ${set.width}`;
+      return src.replace(original, replacement);
+    })
+      .filter((e) => e !== null)
+      .join(',');
 
     return mapped;
   };
@@ -98,12 +106,18 @@ const Image = forwardRef((props, ref) => {
    * @returns {string} img sizes attribute
    * @example "(min-width: 1200px) 740px, (min-width: 768px) 700px, calc(100vw - 36px)"
    */
-  const getSizes = () => withSizes &&
+  const getSizes = () =>
+    withSizes &&
     Object.keys(DEFAULT_SIZES_BREAKPOINTS)
-      .map(bp => `(min-width: ${BREAKPOINTS[bp].px}px) ${sizesBps[bp] ?? '100vw'}`)
+      .map((bp) => `(min-width: ${BREAKPOINTS[bp].px}px) ${sizesBps[bp] ?? '100vw'}`)
       .join(',');
 
-  const renderSources = (format) => withSizes ? <source type={`image/${format}`} srcSet={fallback ?? getSrcSets(format)} sizes={getSizes()} /> : <></>;
+  const renderSources = (format) =>
+    withSizes ? (
+      <source type={`image/${format}`} srcSet={fallback ?? getSrcSets(format)} sizes={getSizes()} />
+    ) : (
+      <></>
+    );
 
   return (
     <motion.picture
@@ -115,22 +129,21 @@ const Image = forwardRef((props, ref) => {
       transition={transition}
     >
       {renderSources('webp')}
-      {/*renderSources('jpeg')*/}
-      {renderSources('png')}
+      {renderSources('jpeg')}
       <img
         className='image__img lazyload lazypreload'
         ref={imgRef}
         src={defaultSrc}
         alt={alt ?? 'Image'}
         loading='lazy'
-//        srcSet={getSrcSets()}
-//        sizes={getSizes()}
+        //        srcSet={getSrcSets()}
+        //        sizes={getSizes()}
         data-widths={withSizes && `[${SRC_SETS.map((set) => set.width)}]`}
-        data-aspectratio='{{ image.aspect_ratio }}' // calc from image ?
+        data-aspectratio='{{ image.aspect_ratio }}' // calc from image ? CDN ?
         onLoad={onLoad}
-        onError={e => { 
+        onError={(e) => {
           console.log('error', defaultSrc);
-          e.target.onerror = null; 
+          e.target.onerror = null;
           setFallback(defaultSrc);
         }}
       />

@@ -2,9 +2,12 @@ import { GalleryMasonry, ImageBanner } from '@components/media';
 import { HeadingWithBackground } from '@components/text';
 import { SOCIAL } from '@data';
 
+import backgroundImg from '@images/page_background/gallery.jpg';
+
 const images = [
   {
-    src: 'https://admin.domtera.rs/server//storage/site/galerija/nova-dimenzija-planinskih-kuca-2.jpeg'
+    //    src: 'https://admin.domtera.rs/server//storage/site/galerija/nova-dimenzija-planinskih-kuca-2.jpeg'
+    src: backgroundImg
   }
 ];
 

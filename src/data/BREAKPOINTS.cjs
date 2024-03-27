@@ -2,22 +2,21 @@
     1. mob-lg | 2. tab-sm | 3. tab-lg  | 4. desk-md 
 */
 
-const getColumnsByDevice = (DEVICE_TYPE) => {
+const getGridDimensions = (DEVICE_TYPE) => {
   switch (DEVICE_TYPE) {
-    case 'MOBILE_SM':
-    case 'MOBILE_LG':
-    case 'TABLET_SM':
-    case 'TABLET_MD':
-      return 1;
-    case 'TABLET_LG':
-    case 'DESKTOP_SM':
-      return 3;
-    case 'DESKTOP_MD':
-    case 'DESKTOP_LG':
-    case 'DESKTOP_XL':
-      return 4;
-    default:
-      return 1;
+  case 'MOBILE_SM':
+  case 'MOBILE_LG':
+    return { rows: 8, cols: 1 };
+  case 'TABLET_SM':
+  case 'TABLET_MD':
+  case 'TABLET_LG':
+  case 'DESKTOP_SM':
+  case 'DESKTOP_MD':
+  case 'DESKTOP_LG':
+  case 'DESKTOP_XL':
+    return { rows: 4, cols: 2 };
+  default:
+    return { rows: 8, cols: 1 };
   }
 };
 
@@ -74,6 +73,14 @@ export const DEFAULT_SIZES_BREAKPOINTS = {
   'MOBILE_LG': '100vw',
   'MOBILE_SM': '100vw',
 };
+
+const sizesBreakpoints = Object.keys(DEFAULT_SIZES_BREAKPOINTS).reduce(
+  (acc, bp) => ({
+    ...acc,
+    [bp]: `calc(100vw / ${getGridDimensions(bp).cols})`
+  }),
+  {}
+);
 
 /**
  * Available sets of image sources

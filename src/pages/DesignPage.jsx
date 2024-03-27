@@ -6,8 +6,8 @@ import { Icon } from '@components/graphic';
 import { ImageBanner, ImageCarousel } from '@components/media';
 import { FullwidthHeading, HeadingBlock, TextBlock } from '@components/text';
 
-import introBkg from '@images/page_background/design.png';
-import bannerImage from '@images/banners/green_life.png';
+import introBkg from '@images/page_background/design.jpg';
+import bannerImage from '@images/banners/green_life.jpg';
 
 import processStep1 from '@images/process/process_steps/process-step-1.png';
 import processStep2 from '@images/process/process_steps/process-step-2.png';
@@ -22,7 +22,6 @@ import BLImage from '@images/design-values/balanced-living.png';
 import GLImage from '@images/design-values/green-life.png';
 import HOImage from '@images/design-values/home-hq.png';
 import HSImage from '@images/design-values/home-spa.png';
-
 import LSImage from '@images/design-values/life-space.png';
 import LWImage from '@images/design-values/live-well.png';
 import MCImage from '@images/design-values/master-chef.png';
@@ -81,8 +80,8 @@ const processPhases = [
 const tiles = [
   {
     type: 'image',
-    imageSrc: bannerImage,
-//      'https://www.impressiveinteriordesign.com/wp-content/uploads/2014/09/Eco-Friendly-House-With-A-Contemporary-Design-1.jpg'
+    imageSrc: bannerImage
+    //      'https://www.impressiveinteriordesign.com/wp-content/uploads/2014/09/Eco-Friendly-House-With-A-Contemporary-Design-1.jpg'
   },
   {
     type: 'content',
@@ -90,7 +89,7 @@ const tiles = [
     slogan: 'Udržateľnosť. Energetická úspornosť. Zeleň.',
     text: 'Program, ktorý sa zaväzuje realizovať udržateľné stavebné prvky - od energeticky úsporných spotrebičov až po solárne vylepšenia, ktoré v konečnom dôsledku majú pozitívny efekt na životné prostredie.',
     imageSrc: bannerImage,
-//      'https://www.impressiveinteriordesign.com/wp-content/uploads/2014/09/Eco-Friendly-House-With-A-Contemporary-Design-1.jpg',
+    //      'https://www.impressiveinteriordesign.com/wp-content/uploads/2014/09/Eco-Friendly-House-With-A-Contemporary-Design-1.jpg',
     backgroundColor: '#a8b53a'
   }
 ];

@@ -5,7 +5,10 @@ import { ImageBanner } from '@components/media';
 import { HeadingBlock, TextBlock } from '@components/text';
 import { Icon } from '@components/graphic';
 
-import pageBkg from '@images/page-bkg/about-page-bkg.png';
+import pageBkg from '@images/page_background/about.jpg';
+import valueV1 from '@images/company_values/beginning.jpg';
+import valueV2 from '@images/company_values/home.jpg';
+import valueV3 from '@images/company_values/life.jpg';
 
 const images = [
   {
@@ -21,22 +24,24 @@ const companyValues = [
     title: 'Lepší Začiatok',
     text: 'Rozumieme, aky náročný je proces vybrať si ten správný domov.<br/>Dbáme na to ako vyzerá, akú energiu vyžaruje a ako sa v ňom budete cítiť.<br/>U nás - stojíme vždy pri Vás.',
     icon: 'v1',
-    imageSrc: 'https://dsqqu7oxq6o1v.cloudfront.net/preview-562653-9Knu8vNR8PdSgTuM-large.JPG',
+    //    imageSrc: 'https://dsqqu7oxq6o1v.cloudfront.net/preview-562653-9Knu8vNR8PdSgTuM-large.JPG',
+    imageSrc: valueV1,
     isFixed: false
   },
   {
     title: 'Lepší domov',
     text: 'Budovanie každého domu nám dáva hlboký pocit naplnenia, každý deň sa usilujeme prispieť k lepšiemu prostrediu, podporovať komunity a to všetko s vedomím pre spoločenskú integritu',
     icon: 'v2',
-    imageSrc: 'https://i.pinimg.com/originals/c5/4b/f3/c54bf387f6fd7e8563e2c42d7ee93f17.jpg',
+    //    imageSrc: 'https://i.pinimg.com/originals/c5/4b/f3/c54bf387f6fd7e8563e2c42d7ee93f17.jpg',
+    imageSrc: valueV2,
     isFixed: false
   },
   {
     title: 'Lepší život',
     text: 'Každý z nás zdieľame rovnaký názor, že každý nový domov je nová príležitosť vybudovať niečo lepšie.<br/> Na nové a lepšie začiatky',
     icon: 'v3',
-    imageSrc:
-      'https://www.nerdwallet.com/assets/blog/wp-content/uploads/2021/05/GettyImages-905902144-2400x1440.jpg',
+    //    imageSrc: 'https://www.nerdwallet.com/assets/blog/wp-content/uploads/2021/05/GettyImages-905902144-2400x1440.jpg',
+    imageSrc: valueV3,
     isFixed: false
   }
 ];

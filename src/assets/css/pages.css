@@ -536,7 +536,7 @@
         transition: opacity 0.3s ease-in-out;
       }
       .process-step__background {
-        @apply opacity-90 abs-fill-parent;
+        @apply abs-fill-parent opacity-90;
         /*
         background-image: var(--step-background);
         */

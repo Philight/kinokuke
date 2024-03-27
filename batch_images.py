@@ -9,14 +9,15 @@ ROOT_DIR = os.getcwd()
 IMAGES_DIR = os.getcwd() + r"\src\assets\images"
 
 # CONVERT SETTINGS
-CONVERT_SOURCE = IMAGES_DIR + r"\wall_types"
+CONVERT_SOURCE = IMAGES_DIR + r"\banners"
 CONVERT_FORMATS = {
+  'bmp': ['jpg', 'webp'],
   'png': ['jpg', 'webp'],
   'jpg': ['webp'],
 }
 
 # RESIZE SETTINGS
-RESIZE_SOURCE = IMAGES_DIR + r"\process"
+RESIZE_SOURCE = IMAGES_DIR + r"\banners"
 RESIZE_FORMATS = ['jpg', 'webp']
 # Start with largest image size
 RESIZE_SIZES = {
@@ -95,7 +96,7 @@ def batch_convert():
 
     with open(TEMP_LIST, 'w', encoding='utf-8') as f:
       for file in glob.glob(CONVERT_SOURCE + r"/**/*." + source_format, recursive=True):
-#        print(file)
+        print(file)
         f.write(file)
         f.write('\n')
 
@@ -123,7 +124,7 @@ if __name__ == "__main__":
   # PARSE SCRIPT ARGUMENTS
 
   parser = argparse.ArgumentParser(
-      description="Script that adds 3 numbers from CMD"
+      description="Batch images processing using IrfanView"
   )
   parser.add_argument("--mode", required=True, type=str)
   args = parser.parse_args()

@@ -6,9 +6,9 @@ import { HeadingBlock, TextBlock } from '@components/text';
 import { Icon } from '@components/graphic';
 
 import pageBkg from '@images/page_background/xs/about.jpg';
-import valueV1 from '@images/company_values/beginning.jpg';
-import valueV2 from '@images/company_values/home.jpg';
-import valueV3 from '@images/company_values/life.jpg';
+import valueV1 from '@images/company_values/xs/beginning.jpg';
+import valueV2 from '@images/company_values/xs/home.jpg';
+import valueV3 from '@images/company_values/xs/life.jpg';
 
 const images = [
   {

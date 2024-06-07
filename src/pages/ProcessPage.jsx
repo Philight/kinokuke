@@ -23,7 +23,7 @@ import phaseTurnkey_step4 from '@images/process/xs/sanitarna_keramika.jpg';
 import phaseTurnkey_step5 from '@images/process/xs/vytvorenie_zakladu.jpg';
 
 // import wallA from "@images/wall-types/tip-a.png";
-import wallTypeBackground from '@images/banners/wall_types_banner.png';
+import wallTypeBackground from '@images/banners/xs/wall_types_banner.jpg';
 import wallA from '@images/wall_types/tip-a-cut.png';
 // import wallB from "@images/wall-types/tip-b.png";
 import wallB from '@images/wall_types/tip-b-cut.png';

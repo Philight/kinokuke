@@ -5,13 +5,13 @@ import NewsletterSection from '@components/NewsletterSection';
 import { Icon } from '@components/graphic';
 import { GalleryCarousel, ImageBanner, SocialGrid } from '@components/media';
 
-import pageBkg from '@images/page_background/xs/landing.png';
-import findYourHomeBkg from '@images/banners/xs/find-your-home-background.png';
+import pageBkg from '@images/page_background/xs/landing.jpg';
+import findYourHomeBkg from '@images/banners/xs/find-your-home-background.jpg';
 
-import lifeSpace from '@images/design-architecture/xs/life-space.png';
-import greenLife from '@images/design-architecture/xs/green-life.png';
-import balancedLiving from '@images/design-architecture/xs/balanced-living.png';
-import smartHome from '@images/design-architecture/xs/smart-home.png';
+import lifeSpace from '@images/design-architecture/xs/life-space.jpg';
+import greenLife from '@images/design-architecture/xs/green-life.jpg';
+import balancedLiving from '@images/design-architecture/xs/balanced-living.jpg';
+import smartHome from '@images/design-architecture/xs/smart-home.jpg';
 
 import { HOUSES, SOCIAL } from '@data';
 

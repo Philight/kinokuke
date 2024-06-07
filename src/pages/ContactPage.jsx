@@ -2,7 +2,7 @@ import GoogleMap from '@components/plugin/GoogleMap';
 import { ImageBanner } from '@components/media';
 import { HeadingWithBackground } from '@components/text';
 
-import bannerImg from '@images/page_background/contact.jpg';
+import bannerImg from '@images/page_background/xs/contact.jpg';
 
 const AboutPage = (props) => {
   let { className } = props;

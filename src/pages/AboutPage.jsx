@@ -5,7 +5,7 @@ import { ImageBanner } from '@components/media';
 import { HeadingBlock, TextBlock } from '@components/text';
 import { Icon } from '@components/graphic';
 
-import pageBkg from '@images/page_background/about.jpg';
+import pageBkg from '@images/page_background/xs/about.jpg';
 import valueV1 from '@images/company_values/beginning.jpg';
 import valueV2 from '@images/company_values/home.jpg';
 import valueV3 from '@images/company_values/life.jpg';

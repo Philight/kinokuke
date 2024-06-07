@@ -52,25 +52,35 @@ const Image = forwardRef((props, ref) => {
 
   const sizesBps = sizesBreakpoints ?? DEFAULT_SIZES_BREAKPOINTS;
 
-  const splitName = getFilename(src).split('.');
-  const [ fileExtension, fileName ] = [ splitName.pop(), splitName.join('.') ];
-  /*
+  // const splitName = getFilename(src).split('.');
+  const splitName = src.split('.');
+  const [ 
+    fileExtension, 
+    filePath 
+  ] = [
+    splitName.pop(),  // 'png'
+    splitName.join('.'), // '@images/social/social-24.raw'
+  ];
+
+/*
   '@images/social/social-24.png'
-  '@images/social/social-24--xl.png'
-  '@images/social/social-24--xl.raw.png'
+  '@images/social/xs/social-24.png'
 
-  '@images/social/md/social-24--md.png'
-
+  '@images/social/md/social-24.png'
 */
+  const splitPaths = filePath.split('/');
+  const fileName = splitPaths.pop();
+  const defaultSize = splitPaths.pop();
+
   const defaultSrc = withSizes
     ? src.replace(
-      `${fileName}.${fileExtension}`,
+      `${defaultSize}/${fileName}.${fileExtension}`,
       `${largestSize ?? 'md'}/${fileName}.${fileExtension}`
     )
     : src;
 
   /**
-   * Image names should be /path/to/image/[image_name]--[size].[format]
+   * Image names should be /path/to/image/[image_name].[format]
    * @returns {string} img srcset
    */
   const getSrcSets = (format) => {
@@ -90,7 +100,7 @@ const Image = forwardRef((props, ref) => {
         isLargestSize = true;
       }
 
-      const original = `${fileName}.${fileExtension}`;
+      const original = `${defaultSize}/${fileName}.${fileExtension}`;
       const replacement = `${set.size}/${fileName}.${imageExtension} ${set.width}`;
       return src.replace(original, replacement);
     })

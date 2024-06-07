@@ -5,13 +5,13 @@ import NewsletterSection from '@components/NewsletterSection';
 import { Icon } from '@components/graphic';
 import { GalleryCarousel, ImageBanner, SocialGrid } from '@components/media';
 
-import landingPageBkg from '@images/page_background/landing.png';
-import findYourHomeBkg from '@images/banners/find-your-home-background.png';
+import pageBkg from '@images/page_background/xs/landing.png';
+import findYourHomeBkg from '@images/banners/xs/find-your-home-background.png';
 
-import lifeSpace from '@images/design-architecture/life-space.png';
-import greenLife from '@images/design-architecture/green-life.png';
-import balancedLiving from '@images/design-architecture/balanced-living.png';
-import smartHome from '@images/design-architecture/smart-home.png';
+import lifeSpace from '@images/design-architecture/xs/life-space.png';
+import greenLife from '@images/design-architecture/xs/green-life.png';
+import balancedLiving from '@images/design-architecture/xs/balanced-living.png';
+import smartHome from '@images/design-architecture/xs/smart-home.png';
 
 import { HOUSES, SOCIAL } from '@data';
 
@@ -94,7 +94,7 @@ const LandingPage = (props) => {
     <div className={`landing-page__c ${className}`}>
       <ImageBanner
         className='intro-image'
-        images={[ { src: landingPageBkg } ]}
+        images={[ { src: pageBkg } ]}
         heading='Lepší Začiatok<br/>Lepší Domov<br/><span>Lepší Život</span>'
         btnText='Naše Hodnoty'
         btnSrc='/about'

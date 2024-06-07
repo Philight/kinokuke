@@ -6,8 +6,8 @@ import { Icon } from '@components/graphic';
 import { ImageBanner, ImageCarousel } from '@components/media';
 import { FullwidthHeading, HeadingBlock, TextBlock } from '@components/text';
 
-import introBkg from '@images/page_background/design.jpg';
-import bannerImage from '@images/banners/green_life.jpg';
+import pageBkg from '@images/page_background/xs/design.jpg';
+import bannerImage from '@images/banners/xs/green_life.jpg';
 
 import processStep1 from '@images/process/process_steps/process-step-1.png';
 import processStep2 from '@images/process/process_steps/process-step-2.png';
@@ -30,7 +30,7 @@ import SHImage from '@images/design-values/smart-home.png';
 const images = [
   {
     //			src: 'https://www.nwhm.com/sites/default/files/2018-06/DFeatures_Banner_2160x723px_1_2.jpg'
-    src: introBkg
+    src: pageBkg
   }
 ];
 

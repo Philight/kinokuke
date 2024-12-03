@@ -22,7 +22,7 @@
     "prettier:fix": "prettier --write \"./**/*.{js,cjs,ts,tsx,css,scss,md,json}\" --config ./.prettierrc.config.js --cache",
     "format": "npm run prettier:fix && npm run lint:fix",
     "git:is-repo": "git -C . rev-parse",
-    "git:init": "git init && cross-var git remote add origin $npm_package_config_REPOSITORY && git fetch && git checkout -t origin/main",
+    "git:init": "git init && cross-var git remote add origin $npm_package_config_REPOSITORY && git fetch && git reset origin/main && git checkout -t origin/main",
     "git:pull": "npm run git:is-repo && cross-var git pull $npm_package_config_REPOSITORY --verbose || npm run git:init",
     "git:force-pull": "cross-var git remote add origin $npm_package_config_REPOSITORY ; git fetch --all && git reset --hard origin/main"
   },
